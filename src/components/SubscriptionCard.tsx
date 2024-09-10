@@ -3,7 +3,6 @@
 "use client";
 
 import { cn } from "@/app/utils/merger";
-import { ImageExport } from "@/shared/images";
 import Link from "next/link";
 import React, { Fragment } from "react";
 
@@ -30,6 +29,29 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
   cardData,
   mainStyle,
 }) => {
+  const styleText = (text: string) => {
+    // Regular expression to match "10% off" and "Abdomax"
+    const regex = /(10% off|Abdomax)/gi;
+    
+    return text.split(regex).map((part, index) => {
+      if (part.toLowerCase() === "10% off") {
+        return (
+          <span key={index} className="text-lightGreen">
+            {part}
+          </span>
+        );
+      } else if (part.toLowerCase() === "abdomax") {
+        return (
+          <span key={index} className="text-lightGreen">
+            {part}
+          </span>
+        );
+      } else {
+        return part;
+      }
+    });
+  };
+
   return (
     <Fragment>
       {cardData.map((data) => (
@@ -52,7 +74,7 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
                 </span>
               </sup>
             </h2>
-            <div className="flex justify-between items-center gap-2">
+            <div className="flex justify-between items-center gap-2 borderCenter pb-5 mb-5 mt-1">
               <p className="text-sm font-medium font-Public_Sans text-lightBlue uppercase">
                 {data.noOfSessions}
               </p>
@@ -62,20 +84,13 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({
                 </p>
               )}
             </div>
-            <div className="w-full py-7">
-              <img
-                src={ImageExport.FAQBORDER}
-                alt="border"
-                className="w-full"
-              />
-            </div>
             <div className="flex flex-col gap-5">
               {data.listData.map((item) => (
                 <p
                   className="text-sm font-Public_Sans font-medium text-white"
                   key={item.id}
                 >
-                  + {item.listText}
+                  + {styleText(item.listText)}
                 </p>
               ))}
             </div>
