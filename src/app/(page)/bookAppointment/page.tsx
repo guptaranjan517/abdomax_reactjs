@@ -36,7 +36,7 @@ const selectTime = () => {
         <div className="w-full flex justify-center px-5">
           {step === 1 && <SelectDate onClick={handleNext} />}
           {step === 2 && <SelectTime onClick={handleNext} />}
-          {step === 3 && <PersonalDetails onClick={handleNext} />}
+          {step === 3 && <PersonalDetails />}
         </div>
       </div>
       {<AppointmentConfirmed isOpen={openModal} setIsOpen={setOpenModal} />}

@@ -497,10 +497,12 @@ export const appointmentData = [
       {
         id: 2,
         time: "08:45 AM",
+        available: true,
       },
       {
         id: 3,
         time: "09:45 AM",
+        unAvailable: true,
       },
       {
         id: 4,

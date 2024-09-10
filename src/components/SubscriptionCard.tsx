@@ -3,6 +3,7 @@
 "use client";
 
 import { cn } from "@/app/utils/merger";
+import { ImageExport } from "@/shared/images";
 import Link from "next/link";
 import React, { Fragment } from "react";
 

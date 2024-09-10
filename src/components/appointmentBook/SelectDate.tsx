@@ -6,6 +6,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { ImageExport } from "@/shared/images";
 import { format, addDays } from "date-fns";
+import { cn } from "@/app/utils/merger";
 
 interface SelectDateProps {
   onClick: React.MouseEventHandler<HTMLButtonElement> | undefined;
@@ -91,7 +92,10 @@ const SelectDate: React.FC<SelectDateProps> = ({ onClick }) => {
         <div className="mt-4 flex justify-end">
           <Button
             textButton="Next"
-            restStyle="!w-48 !justify-between"
+            restStyle={cn(
+              "!w-48 !justify-between",
+              selectedDate === null ? "pointer-events-none" : ""
+            )}
             onClick={onClick}
           />
         </div>

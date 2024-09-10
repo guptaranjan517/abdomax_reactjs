@@ -1,5 +1,5 @@
 "use client";
-import React, { Fragment, InputHTMLAttributes } from "react";
+import React, { InputHTMLAttributes } from "react";
 
 interface InputFieldProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
@@ -9,12 +9,12 @@ interface InputFieldProps extends InputHTMLAttributes<HTMLInputElement> {
 
 const InputField: React.FC<InputFieldProps> = (props) => {
   return (
-    <Fragment>
-      <div className="relative z-0 w-full mb-10 group">
+    <div className="mb-10">
+      <div className="relative z-0 w-full group mb-2">
         <input
           {...props}
           placeholder={props.placeholder || " "} 
-          className="block py-4 px-0 w-full text-md text-placeholdertxt bg-transparent border-0 border-b gradient-border-bottom appearance-none dark:text-white dark:border-gray-600 dark:focus:border-lightGreen focus:outline-none focus:ring-0 focus:border-lightGreen peer"
+          className="relative block py-4 px-2 w-full text-md text-placeholdertxt bg-transparent border-0 border-b gradient-border-bottom appearance-none dark:text-white dark:border-gray-600 dark:focus:border-lightGreen focus:outline-none focus:ring-0 focus:border-lightGreen peer"
         />
         <label
           htmlFor={props.htmlFor}
@@ -24,11 +24,11 @@ const InputField: React.FC<InputFieldProps> = (props) => {
         </label>
       </div>
       {props.error && (
-        <p className="text-red-500 font-bold font-openSans text-sm pl-1">
+        <p className="text-red-500 font-bold font-openSans text-sm ml-2">
           {props.error}
         </p>
       )}
-    </Fragment>
+    </div>
   );
 };
 

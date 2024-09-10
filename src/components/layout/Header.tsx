@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 // component/layout/Header
+
 "use client";
 
 import { cn } from "@/app/utils/merger";
@@ -140,7 +141,7 @@ const Header = () => {
             </Link>
           </div>
         </div>
-        <div className="flex items-center gap-5 absolute right-5">
+        <div className="flex items-center gap-5 absolute sm:right-14 right-7">
           <div className="relative">
             <div
               className="border border-white rounded-xl px-4 w-fit h-10 flex gap-2 items-center justify-center bg-transparent text-sm text-white font-medium font-Public_Sans cursor-pointer"
