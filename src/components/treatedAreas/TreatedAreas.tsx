@@ -82,7 +82,7 @@ const TreatedAreas: React.FC = () => {
           })}
         </div>
       </div>
-      <div className="w-full flex justify-center mt-8">{renderComponent()}</div>
+      <div className="w-full flex justify-center">{renderComponent()}</div>
     </>
   );
 };

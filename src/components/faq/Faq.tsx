@@ -5,7 +5,7 @@ import FaqSection from "./FaqSection";
 
 const Faq = () => {
   return (
-    <div className="py-20 flex justify-end px-10 mobile:px-5 2xl:px-20">
+    <div className="md:py-20 mobile:py-10 flex justify-end px-10 mobile:px-5 2xl:px-20">
       <div className="xl:max-w-screen-lg 2xl:max-w-screen-xl w-full">
         <div className="flex gap-1">
           <img

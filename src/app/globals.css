@@ -289,7 +289,7 @@
   }
 
   .selectDate .react-datepicker__current-month {
-    font-size: 12px !important;
+    font-size: 20px !important;
   }
 
   .selectDate .react-datepicker__day-name,

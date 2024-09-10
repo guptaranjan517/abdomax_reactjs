@@ -28,6 +28,10 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleMobileMenuClose = () => {
+    setIsMobileMenu(false);
+  };
   return (
     <div className="z-30 fixed top-0 left-0 right-0 w-full bg-black">
       <div className="w-full sm:px-14 px-7 mobile:h-20 h-16 flex items-center justify-between relative">
@@ -77,6 +81,7 @@ const Header = () => {
                   href={data.path}
                   className="flex items-center gap-5 xl:mb-0 mb-5"
                   key={data.id}
+                  onClick={handleMobileMenuClose}
                 >
                   <h2
                     className={cn(
@@ -127,7 +132,8 @@ const Header = () => {
               );
             })}
             <Link
-              href="/bookAppointment"
+              href="/contactUs"
+              onClick={handleMobileMenuClose}
               className="border border-lightGreen rounded-xl px-4 w-fit h-10 flex items-center justify-center bg-transparent hover:bg-lightGreen hover:text-white text-sm text-lightGreen font-medium font-Public_Sans transition-all duration-300 ease-out sm:hidden"
             >
               Contact Us

@@ -25,7 +25,7 @@ const ListOfPrice = () => {
           />
         </div>
       </div>
-      <div className="pb-10">
+      <div className="md:pb-10">
         <Review />
       </div>
       <div className="pb-10">

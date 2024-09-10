@@ -8,7 +8,7 @@ import ReviewSlider from "./ReviewSlider";
 const Review = () => {
   return (
     <Fragment>
-      <div className="w-full flex flex-col items-center pt-20 px-5">
+      <div className="w-full flex flex-col items-center lg:pt-20 px-5">
         <div className="flex gap-1 justify-center items-start">
           <img
             src={ImageExport.STARTLINE}

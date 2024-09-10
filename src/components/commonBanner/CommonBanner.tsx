@@ -25,7 +25,7 @@ const CommonBanner: React.FC<CommonBannerProps> = ({
       )}
     >
       <div className="w-full flex flex-col items-center gap-3">
-        <h2 className="font-bold font-DIN text-white 2xl:text-7xl lg:text-6xl md:text-5xl mobile:text-3xl text-center text-xl">
+        <h2 className="font-bold font-DIN text-white 2xl:text-7xl lg:text-6xl md:text-5xl mobile:text-4xl text-center text-3xl">
           {title}
           <span className="text-lightGreen"> {colorTitle}</span>
         </h2>
