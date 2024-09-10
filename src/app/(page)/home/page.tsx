@@ -60,7 +60,7 @@ const Home = () => {
       <div className="pb-10 background-container-works px-5">
         <AbdomaxWorks />
       </div>
-      <div className="bg-bgAnyQuestion w-full lg:bg-cover bg-right bg-no-repeat h-full lg:py-24 py-16 md:pl-20">
+      <div className="bg-bgAnyQuestion w-full lg:bg-cover bg-right bg-no-repeat h-full lg:py-24 py-16 md:pl-20 mb-10 lg:mb-0">
         <div className="w-full flex flex-col px-5">
           <div className="flex gap-1">
             <img
