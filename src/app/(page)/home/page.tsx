@@ -51,7 +51,7 @@ const Home = () => {
       <div className="bg-bgTreatedArea w-full">
         <TreatedAreas />
       </div>
-      <div className="bg-black w-full flex justify-center px-5">
+      <div className="bg-black w-full flex justify-center px-10">
         <TreatmentCards />
       </div>
       <div className="bg-bgAbout pb-10">
@@ -60,7 +60,7 @@ const Home = () => {
       <div className="pb-10 background-container-works px-5">
         <AbdomaxWorks />
       </div>
-      <div className="bg-bgAnyQuestion w-full lg:bg-cover bg-right bg-no-repeat h-full lg:py-24 py-16 md:pl-20 mb-10 lg:mb-0">
+      <div className="bg-bgAnyQuestion w-full bg-cover bg-right bg-no-repeat h-full lg:py-24 py-16 desktop:pl-20 mb-10 lg:mb-0">
         <div className="w-full flex flex-col px-5">
           <div className="flex gap-1">
             <img
@@ -73,7 +73,7 @@ const Home = () => {
               <span className="text-lightGreen"> questions?</span>
             </h2>
           </div>
-          <p className="2xl:text-xl md:text-lg text-sm font-normal font-Public_Sans text-lightBlack my-5 mobile:ml-10 ml-6">
+          <p className="2xl:text-xl md:text-lg text-sm font-normal font-Public_Sans text-lightBlack my-5 mobile:ml-10 ml-6 2xl:ml-14">
             If you have any questions, do not hesitate to contact us!
           </p>
         </div>

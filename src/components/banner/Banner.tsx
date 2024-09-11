@@ -48,7 +48,7 @@ const Banner = () => {
         <Slider ref={sliderRef} {...settings}>
           {bannerData.map((items) => (
             <div key={items.id}>
-              <div className="w-full h-screen 2xl:h-[90vh] lg:px-20 sm:px-14 mobile:px-12 px-7 md:pt-24 pt-14 pb-8  grid desktop:grid-cols-1 grid-cols-1 bg-bgBanner bg-no-repeat sm:bg-right-top bg-top">
+              <div className="w-full h-screen 2xl:h-[90vh] lg:px-20 sm:px-14 mobile:px-12 px-7 md:pt-24 pt-14 pb-8 flex items-end 2xl:items-center bg-bgBanner bg-no-repeat sm:bg-right-top bg-top">
                 <div className="desktop:max-w-xl w-full flex flex-col gap-5 mb-7 pr-5 desktop:pr-0">
                   <h2 className="font-bold font-DIN text-white lg:text-7xl md:text-6xl mobile:text-4xl text-3xl">
                     <span className="text-lightGreen">20,000 abs </span>

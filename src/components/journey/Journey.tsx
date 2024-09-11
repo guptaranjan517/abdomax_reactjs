@@ -33,8 +33,8 @@ const Journey = () => {
 
   return (
     <Fragment>
-      <div className="bg-bgJourney bg-left-top w-full bg-28% bg-no-repeat h-fit lg:py-20 py-16 md:px-20 px-5">
-        <div className="w-full flex flex-col md:items-center items-start lg:px-5 px-4">
+      <div className="bg-bgJourney bg-left-top w-full bg-28% bg-no-repeat h-fit lg:py-20 md:py-10 md:px-20 px-5">
+        <div className="w-full flex flex-col md:items-center items-start lg:px-l pl-14">
           <div className="flex gap-1 text-center">
             <img
               src={ImageExport.STARTLINE}
@@ -49,7 +49,7 @@ const Journey = () => {
         </div>
 
         <div className="w-full flex md:flex-row flex-col desktop:gap-10 gap-5 justify-between items-center lg:px-0 px-4">
-          <div className="block md:w-1/2 w-full">
+          <div className="block md:w-1/2 w-full pt-8">
             <p className="mt-2 mb-8 block text-white text-base font-Public_Sans py-2 lg:text-left text-start">
               We’d love to hear from you! Let’s get <br />
               in touch
