@@ -68,12 +68,12 @@ const Home = () => {
               alt="line"
               className="2xl:h-12 sm:h-8 mobile:h-6 h-5 mt-1"
             />
-            <h2 className="font-bold font-DIN text-black lg:text-4xl md:text-3xl mobile:text-3xl text-xl uppercase">
+            <h2 className="font-bold font-DIN text-black 2xl:text-6xl lg:text-4xl md:text-3xl mobile:text-3xl text-xl uppercase">
               Do you have any
               <span className="text-lightGreen"> questions?</span>
             </h2>
           </div>
-          <p className="md:text-lg text-sm font-normal font-Public_Sans text-lightBlack my-5 mobile:ml-10 ml-6">
+          <p className="2xl:text-xl md:text-lg text-sm font-normal font-Public_Sans text-lightBlack my-5 mobile:ml-10 ml-6">
             If you have any questions, do not hesitate to contact us!
           </p>
         </div>

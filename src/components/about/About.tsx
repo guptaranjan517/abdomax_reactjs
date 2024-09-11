@@ -88,7 +88,7 @@ const About = () => {
                     improving the tone and strength of your muscles.
                   </p>
                   <Link
-                    href="/bookAppointment"
+                    href="#"
                     className="text-lightBlue md:text-lg text-base font-medium font-Public_Sans underline underline-offset-4 mb-5"
                   >
                     Read More
