@@ -13,7 +13,7 @@ import React from "react";
 
 const Progress = () => {
   return (
-    <div className="w-full bg-black pt-20">
+    <div className="w-full bg-black mobile:pt-20 pt-16">
       <CommonBanner
         title="Abdomax "
         colorTitle="Progress"
@@ -155,7 +155,7 @@ const Progress = () => {
           background="desktop:!bg-bgTickCardRight !bg-bgTickCardLeft"
         />
       </div>
-      <div className="pb-10">
+      <div className="py-10">
         <Review />
       </div>
       <div className="pb-10">

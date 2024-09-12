@@ -5,7 +5,7 @@
 import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import AppointmentButton from "../AppointmentButton";
-import { bannerData } from "@/shared/config";
+import { bannerData, mobileBannerData } from "@/shared/config";
 import { cn } from "@/app/utils/merger";
 
 const PrevArrow = () => <div className="hidden"></div>;
@@ -23,6 +23,8 @@ const Banner = () => {
     speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    fade: true,
+    cssEase: "linear",
     autoplay: true,
     afterChange: (current: number) => setCount(current),
     prevArrow: <PrevArrow />,
@@ -43,32 +45,78 @@ const Banner = () => {
   };
 
   return (
-    <div className="relative bg-bgBannercolor bannerSlider">
-      <div className="relative overflow-hidden">
+    <div className="relative max-w-screen-2xl w-full">
+      <div className="relative bannerSlider overflow-hidden hidden desktop:block">
         <Slider ref={sliderRef} {...settings}>
           {bannerData.map((items) => (
             <div key={items.id}>
-              <div className="w-full h-screen 2xl:h-[90vh] lg:px-20 sm:px-14 mobile:px-12 px-7 md:pt-24 pt-14 pb-8 flex items-end 2xl:items-center bg-bgBanner bg-no-repeat sm:bg-right-top bg-top">
-                <div className="desktop:max-w-xl w-full flex flex-col gap-5 mb-7 pr-5 desktop:pr-0">
-                  <h2 className="font-bold font-DIN text-white lg:text-7xl md:text-6xl mobile:text-4xl text-3xl">
-                    <span className="text-lightGreen">20,000 abs </span>
-                    <br className="desktop:block hidden" />
-                    comfortably and effortlessly in
-                    <span className="text-lightBlue">
-                      <br className="desktop:block hidden" /> 30 minutes
-                    </span>
-                  </h2>
-                  <p className="text-white font-Public_Sans font-normal md:text-lg text-sm mb-5 sm:pr-40 mobile:pr-20">
-                    Sculpt your core in 30 minutes! Our revolutionary method
-                    uses advanced tech for effortless, painless toning. No
-                    sweat, no strain, just results.
-                  </p>
-                  <AppointmentButton href="/bookAppointment" />
-                </div>
+              <div
+                className="w-full h-screen md:h-[75vh] desktop:h-[115vh] 2xl:h-[100vh] 3xl:h-[88vh] lg:px-20 sm:px-14 mobile:px-12 px-7 md:pt-24 pt-14 pb-8 flex items-end 2xl:items-center bg-bgBanner bg-no-repeat sm:bg-right-top bg-top"
+                style={{ backgroundImage: `url(${items.img})` }}
+              >
+                {/* Empty div to allow Slider to work properly */}
               </div>
             </div>
           ))}
         </Slider>
+      </div>
+
+      {/* Static text and button */}
+      <div className="absolute inset-0 desktop:flex flex-col items-start justify-center z-10 text-center md:pt-24 pt-14 pb-8 bg-bgBlush bg-right-bottom bg-no-repeat hidden">
+        <div className="w-fit flex flex-col gap-5 mb-7 pr-5 desktop:pr-0 pl-7 2xl:pl-0">
+          <h2 className="font-bold font-DIN text-white 2xl:text-8xl lg:text-7xl md:text-6xl text-5xl text-start">
+            <span className="text-lightGreen">20,000 abs </span>
+            <br className="desktop:block hidden" />
+            comfortably and <br className="desktop:block hidden" /> effortlessly
+            in
+            <span className="text-lightBlue">
+              <br className="desktop:block hidden" /> 30 minutes
+            </span>
+          </h2>
+          <p className="desktop:max-w-screen-sm text-white font-Public_Sans font-normal md:text-lg text-sm mb-5 sm:pr-40 mobile:pr-20 text-start leading-9">
+            Sculpt your core in 30 minutes! Our revolutionary method uses
+            advanced tech for effortless, painless toning. No sweat, no strain,
+            just results.
+          </p>
+          <AppointmentButton href="/bookAppointment" />
+        </div>
+      </div>
+
+      <div className="relative bannerSliderMobile overflow-hidden block desktop:hidden">
+        <Slider ref={sliderRef} {...settings}>
+          {mobileBannerData.map((items) => (
+            <div key={items.id}>
+              <div
+                className="w-full h-72 lg:px-20 sm:px-14 mobile:px-12 px-7 md:pt-24 pt-14 flex items-end 2xl:items-center bg-no-repeat bg-center"
+                style={{ backgroundImage: `url(${items.img})` }}
+              >
+                <div className="h-full w-full bg-mobileBlushImg bg-bottom bg-no-repeat"></div>
+                {/* Empty div to allow Slider to work properly */}
+              </div>
+            </div>
+          ))}
+        </Slider>
+
+        {/* Static text and button */}
+        <div className="flex flex-col items-start justify-center z-10 text-center pb-8  desktop:hidden">
+          <div className="w-fit flex flex-col gap-5 mb-7 pr-5 desktop:pr-0 pl-7 2xl:pl-0">
+            <h2 className="font-bold font-DIN text-white 2xl:text-8xl lg:text-7xl md:text-6xl text-5xl text-start">
+              <span className="text-lightGreen">20,000 abs </span>
+              <br className="desktop:block hidden" />
+              comfortably and <br className="desktop:block hidden" />{" "}
+              effortlessly in
+              <span className="text-lightBlue">
+                <br className="desktop:block hidden" /> 30 minutes
+              </span>
+            </h2>
+            <p className="desktop:max-w-screen-sm text-white font-Public_Sans font-normal md:text-lg text-sm mb-5 sm:pr-40 mobile:pr-20 text-start leading-9">
+              Sculpt your core in 30 minutes! Our revolutionary method uses
+              advanced tech for effortless, painless toning. No sweat, no
+              strain, just results.
+            </p>
+            <AppointmentButton href="/bookAppointment" />
+          </div>
+        </div>
       </div>
     </div>
   );

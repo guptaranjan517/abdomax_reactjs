@@ -126,6 +126,7 @@ const PersonalDetails: React.FC<PersonalDetailsProps> = ({ onClick }) => {
               type="submit"
               textButton="Book an appointment"
               onClick={onClick}
+              restStyle="w-72"
             />
           </div>
         </form>

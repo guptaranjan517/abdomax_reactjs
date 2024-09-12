@@ -11,6 +11,7 @@ const config: Config = {
       screens: {
         mobile: "475px",
         desktop: "991px",
+        "3xl": "1800px"
       },
       backgroundSize: {
         '50%': '50%',
@@ -32,6 +33,9 @@ const config: Config = {
         "selecttimebggradient":
           "linear-gradient(to right, transparent 10%, #33c7de0d 60%, transparent 100%)",    
         bgAbs: "url('/images/absBg.png')",
+        bgBlush: "url('/images/blushImg.svg')",
+        mobileBlushImg: "url('/images/mobileBlushImg.svg')",
+        bgStar: "url('/images/bgStar.png')",
         bgAbout:
           "linear-gradient(to bottom right, rgba(149, 219, 50, 0.15) 0%, #0c0c0c 50%)",
         bgBannercolor:
@@ -40,6 +44,7 @@ const config: Config = {
           "linear-gradient(to bottom, rgba(149, 219, 50, 0.07) 0%, #0c0c0c 100%)",
       
         bgAnyQuestion: "url('/images/anyQusetion.png')",
+        bgAnyQuestionMobile: "url('/images/anyQusetion-mobile.svg')",
         bgBanner: "url('/images/banner.png')",
         bgJourney: "url('/images/journey.png')",
         SelectDatebg: "url('/images/datebanner.png')",
@@ -78,6 +83,7 @@ const config: Config = {
         inputfieldtxt: "#ffffffb3",
         popuptext: "#000000b3",
         bgSubscriptionCard: "#383C42",
+        bgReview: "#131212"
       },
       height: {
         "10p": "10px",

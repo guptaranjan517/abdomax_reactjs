@@ -12,9 +12,9 @@ const AbdomaxWorks = () => {
           <img
             src={ImageExport.STARTLINE}
             alt="line"
-            className="2xl:h-12 sm:h-8 mobile:h-6 h-5 mt-1"
+            className="2xl:h-14 mobile:h-11"
           />
-          <h2 className="font-bold font-DIN text-white 2xl:text-6xl lg:text-4xl md:text-3xl mobile:text-3xl text-xl uppercase">
+          <h2 className="font-bold font-DIN text-white 2xl:text-7xl mobile:text-6xl text-5xl uppercase">
             How <span className="text-lightGreen"> AbdoMax </span>works?
           </h2>
         </div>

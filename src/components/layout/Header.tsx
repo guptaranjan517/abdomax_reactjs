@@ -34,21 +34,28 @@ const Header = () => {
     setIsMobileMenu(false);
   };
   return (
-    <div className="z-30 fixed top-0 left-0 right-0 w-full bg-black">
+    <div
+      className={cn(
+        "z-30 fixed top-0 left-0 right-0 w-full",
+        scrollPosition >= 30 ? "backdrop-blur-md" : "bg-white bg-opacity-5"
+      )}
+    >
       <div className="w-full sm:px-14 px-7 mobile:h-20 h-16 flex items-center justify-between relative">
-        <div className="flex items-center lg:justify-start justify-between gap-5">
-          <div className="mobile:w-40 w-32 mobile:h-20 h-14">
-            <img
-              src={ImageExport.LOGO}
-              className="w-full h-full"
-              alt="United Ai"
-            />
-          </div>
+        <div className="w-full sm:w-fit flex items-center lg:justify-start justify-between gap-5">
+          <Link href="/home">
+            <div className="mobile:w-40 w-32 mobile:h-20 h-14">
+              <img
+                src={ImageExport.LOGO}
+                className="w-full h-full"
+                alt="United Ai"
+              />
+            </div>
+          </Link>
           <div className="h-full lg:block hidden">
             <img src={ImageExport.MENUBORDER} className="h-full" />
           </div>
           <div
-            className="lg:hidden block mobile:size-7 size-5"
+            className="lg:hidden block mobile:size-9 size-8"
             onClick={() => setIsMobileMenu(true)}
           >
             <img
@@ -80,7 +87,7 @@ const Header = () => {
               return (
                 <Link
                   href={data.path}
-                  className="flex items-center gap-5 xl:mb-0 mb-5"
+                  className="flex items-center gap-5 mb-5 lg:mb-0"
                   key={data.id}
                   onClick={handleMobileMenuClose}
                 >
@@ -132,6 +139,29 @@ const Header = () => {
                 </Link>
               );
             })}
+            <div className="relative block sm:hidden mb-5">
+              <div
+                className="border border-white rounded-xl px-4 w-fit h-10 flex gap-2 items-center justify-center bg-transparent text-sm text-white font-medium font-Public_Sans cursor-pointer"
+                onClick={() => setIsLanguage(!isLanguage)}
+              >
+                English
+                <img
+                  src={ImageExport.BOTTOMARROW}
+                  className=""
+                  alt="bottom arrow"
+                />
+              </div>
+              <div
+                className={cn(
+                  "absolute top-12 border rounded-xl w-full border-lightGreen px-5 flex flex-col gap-5 py-3",
+                  isLanguage ? "block" : "hidden"
+                )}
+              >
+                <p className="text-white font-medium font-Public_Sans text-sm cursor-pointer hover:text-lightGreen transition-colors duration-300">
+                  French
+                </p>
+              </div>
+            </div>
             <Link
               href="/contactUs"
               onClick={handleMobileMenuClose}
@@ -142,7 +172,7 @@ const Header = () => {
           </div>
         </div>
         <div className="flex items-center gap-5 absolute sm:right-14 right-7">
-          <div className="relative">
+          <div className="relative sm:block hidden">
             <div
               className="border border-white rounded-xl px-4 w-fit h-10 flex gap-2 items-center justify-center bg-transparent text-sm text-white font-medium font-Public_Sans cursor-pointer"
               onClick={() => setIsLanguage(!isLanguage)}

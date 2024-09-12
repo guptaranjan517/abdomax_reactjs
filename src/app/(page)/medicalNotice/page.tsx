@@ -13,7 +13,7 @@ import React from "react";
 
 const MedicalNotice = () => {
   return (
-    <div className="w-full bg-black pt-20">
+    <div className="w-full bg-black mobile:pt-20 pt-16">
       <CommonBanner
         title="Medical"
         colorTitle="Notice"

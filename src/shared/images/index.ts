@@ -52,4 +52,7 @@ export const ImageExport = {
   MAPIMG: "/images/mapImg.png",
   CLEFTARROW: "/images/calenderLeftArrow.svg",
   CRIGHTARROW: "/images/calenderRightArrow.svg",
+  MOBILEBODYPARTS: "/images/mobileBodyParts.svg",
+  ABSBG: "/images/absBg.png",
+  MOBILEBANNER: "/images/mobileBanner.png",
 };

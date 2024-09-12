@@ -20,12 +20,12 @@ const CommonBanner: React.FC<CommonBannerProps> = ({
   return (
     <div
       className={cn(
-        "w-full h-600 bg-no-repeat bg-cover bg-center flex items-end",
+        "w-full h-600 bg-no-repeat bg-cover bg-center 2xl:bg-top flex items-end",
         mainStyle
       )}
     >
       <div className="w-full flex flex-col items-center gap-3">
-        <h2 className="font-bold font-DIN text-white 2xl:text-7xl lg:text-6xl md:text-5xl mobile:text-4xl text-center text-3xl">
+        <h2 className="font-bold font-DIN text-white 2xl:text-8xl lg:text-7xl mobile:text-6xl text-5xl text-center">
           {title}
           <span className="text-lightGreen"> {colorTitle}</span>
         </h2>

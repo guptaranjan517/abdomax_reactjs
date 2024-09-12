@@ -19,7 +19,7 @@ const FaqSection: React.FC<FaqProps> = ({ question, answer, isOpen, onToggle }) 
     <Fragment>
       <div className="w-full h-auto sm:pt-10 pt-5 sm:pr-8 pr-1 borderCenter pb-5 sm:pb-10">
         <div
-          className="flex items-start justify-between mobile:gap-3 gap-1 cursor-pointer"
+          className="flex items-start justify-between mobile:gap-3 gap-5 cursor-pointer"
           onClick={onToggle}
         >
           <h2 className="w-[calc(100%-20px)] 2xl:text-xl sm:text-lg text-base font-semibold font-Public_Sans text-white">

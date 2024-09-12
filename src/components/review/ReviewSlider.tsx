@@ -26,7 +26,7 @@ const ReviewSlider = () => {
     nextArrow: <NextArrow />,
     responsive: [
       {
-        breakpoint: 767,
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -36,38 +36,43 @@ const ReviewSlider = () => {
   };
 
   return (
-    <div className="relative bannerSlider flex justify-center px-5 lg:px-0">
-      <div className="relative overflow-hidden max-w-screen-lg arrowStyle">
-        <img src={ImageExport.FAQBORDER} alt="border" className="w-full" />
-        <Slider ref={sliderRef} {...settings}>
-          {reviewData.map((items) => (
-            <div key={items.id}>
-              <div className="mobile:px-20 px-10 flex flex-col gap-5 border-r first:border-l border-txtArrow border-opacity-10 py-10">
-                <p className="font-normal text-base font-Public_Sans text-white">
-                  {items.reviewText}
-                </p>
-                <div className="flex items-center gap-1">
-                  <img src={ImageExport.STAR} alt="star" />
-                  <img src={ImageExport.STAR} alt="star" />
-                  <img src={ImageExport.STAR} alt="star" />
-                  <img src={ImageExport.STAR} alt="star" />
-                  <img src={ImageExport.STAR} alt="star" />
-                </div>
-                <div className="flex items-center gap-2">
-                  <img
-                    src={items.userImg}
-                    alt="user"
-                    className="bg-txtArrow rounded-full size-14"
-                  />
-                  <p className="text-base font-medium text-white">
-                    {items.userName}
-                  </p>
+    <div className="relative bannerSlider flex justify-center sm:px-5 px-0 lg:px-0 pb-10">
+      <div className="relative overflow-hidden max-w-screen-lg arrowStyle sm:px-5 px-0">
+        <div className="borderCenterRating"></div>
+        <div className="borderLeft borderRight relative">
+          <div className="borderRight h-full absolute left-1/2 sm:block hidden"></div>
+          <Slider ref={sliderRef} {...settings}>
+            {reviewData.map((items) => (
+              <div key={items.id}>
+                <div className="pb-16">
+                  <div className="flex flex-col gap-5 mobile:px-10 px-5 py-12 bg-bgReview sm:bg-transparent">
+                    <p className="font-normal text-base font-Public_Sans text-white">
+                      {items.reviewText}
+                    </p>
+                    <div className="flex items-center gap-1">
+                      <img src={ImageExport.STAR} alt="star" />
+                      <img src={ImageExport.STAR} alt="star" />
+                      <img src={ImageExport.STAR} alt="star" />
+                      <img src={ImageExport.STAR} alt="star" />
+                      <img src={ImageExport.STAR} alt="star" />
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <img
+                        src={items.userImg}
+                        alt="user"
+                        className="bg-txtArrow rounded-full size-14"
+                      />
+                      <p className="text-base font-medium text-white">
+                        {items.userName}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Slider>
-        <img src={ImageExport.FAQBORDER} alt="border" className="w-full" />
+            ))}
+          </Slider>
+        </div>
+        <div className="borderCenterRating"></div>
       </div>
     </div>
   );

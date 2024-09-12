@@ -3,21 +3,16 @@ import { ImageExport } from "../images";
 export const menuData = [
   {
     id: 1,
-    menu: "Home",
-    path: "/home",
-  },
-  {
-    id: 2,
     menu: "Progress",
     path: "/progress",
   },
   {
-    id: 3,
+    id: 2,
     menu: "List of price",
     path: "/listOfPrice",
   },
   {
-    id: 4,
+    id: 3,
     menu: "Medical notice",
     path: "/medicalNotice",
   },
@@ -264,6 +259,21 @@ export const bannerData = [
   {
     id: 3,
     img: ImageExport.BANNER,
+  },
+];
+
+export const mobileBannerData = [
+  {
+    id: 1,
+    img: ImageExport.MOBILEBANNER,
+  },
+  {
+    id: 2,
+    img: ImageExport.MOBILEBANNER,
+  },
+  {
+    id: 3,
+    img: ImageExport.MOBILEBANNER,
   },
 ];
 

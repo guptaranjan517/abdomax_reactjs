@@ -10,14 +10,14 @@ import React from "react";
 
 const ListOfPrice = () => {
   return (
-    <div className="w-full bg-black pt-20">
+    <div className="w-full bg-black mobile:pt-20 pt-16">
       <CommonBanner
         title="List of"
         colorTitle="Price"
         desc="Sculpt your core in 30 minutes! Our revolutionary method uses advanced tech for effortless, painless toning. No sweat, no strain, just results."
         mainStyle="bg-listOfPriceBanner md:!bg-center !bg-left"
       />
-      <div className="w-full flex justify-center pb-10">
+      <div className="w-full flex justify-center sm:pb-10">
         <div className="max-w-[1400px] flex flex-wrap justify-center desktop:gap-10 gap-5 py-20 mobile:px-10 px-5">
           <SubscriptionCard
             cardData={subscriptionCardData}

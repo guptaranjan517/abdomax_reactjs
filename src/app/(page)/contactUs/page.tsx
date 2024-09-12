@@ -5,7 +5,7 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <div className="w-full bg-black pt-20">
+    <div className="w-full bg-black mobile:pt-20 pt-16">
       <DateBanner
         backgroundImage="/images/contactUsBanner.png"
         heading="Contact"
