@@ -40,10 +40,10 @@ const Header = () => {
         scrollPosition >= 30 ? "backdrop-blur-md" : "bg-white bg-opacity-5"
       )}
     >
-      <div className="w-full sm:px-14 px-7 mobile:h-20 h-16 flex items-center justify-between relative">
+      <div className="w-full sm:px-14 px-5 mobile:h-20 h-16 flex items-center justify-between relative">
         <div className="w-full sm:w-fit flex items-center lg:justify-start justify-between gap-5">
           <Link href="/home">
-            <div className="mobile:w-40 w-32 mobile:h-20 h-14">
+            <div className="mobile:w-40 w-28 mobile:h-20 h-14">
               <img
                 src={ImageExport.LOGO}
                 className="w-full h-full"
@@ -93,10 +93,13 @@ const Header = () => {
                 >
                   <h2
                     className={cn(
-                      "group flex items-center mobile:text-base text-sm font-Public_Sans cursor-pointer hover:text-lightGreen transition-all duration-300 ease-in",
+                      "group flex items-center mobile:text-base text-sm font-Public_Sans cursor-pointer hover:text-lightGreen transition-all duration-100 ease-in",
                       data.path === pathname
                         ? "text-lightGreen font-semibold"
-                        : "text-white font-normal text-opacity-80"
+                        : "text-white font-normal text-opacity-80",
+                      data.menu === "Progress" ? "w-[90px]" : "",
+                      data.menu === "List of price" ? "w-[120px]" : "",
+                      data.menu === "Medical notice" ? "w-[132px]" : ""
                     )}
                   >
                     <span

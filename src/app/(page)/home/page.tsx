@@ -23,7 +23,7 @@ const Home = () => {
       <div className="flex justify-center lg:bg-bgStar bg-no-repeat bg-left-top">
         <Banner />
       </div>
-      <div className="w-full flex flex-col items-center mobile:grid lg:grid-cols-4 mobile:grid-cols-2 grid-cols-1 gap-5 sm:gap-10 lg:gap-2 xl:gap-5 pt-5 md:px-14 px-5 sm:pb-32 pb-20 group">
+      <div className="w-full flex flex-col items-center mobile:grid lg:grid-cols-4 mobile:grid-cols-2 grid-cols-1 gap-5 sm:gap-10 lg:gap-2 xl:gap-5 2xl:gap-10 pt-5 md:px-14 px-5 sm:pb-32 pb-20 group">
         {exerciseCardData.map((data) => {
           return (
             <div
