@@ -39,12 +39,16 @@ const ReviewSlider = () => {
     <div className="relative bannerSlider flex justify-center sm:px-5 px-0 lg:px-0 pb-10">
       <div className="relative overflow-hidden max-w-screen-lg arrowStyle sm:px-5 px-0">
         <div className="borderCenterRating"></div>
+        <div className="w-full md:flex justify-between items-start hidden">
+          <img src={ImageExport.REVIEWDOT} alt="review" />
+          <img src={ImageExport.REVIEWDOT} alt="review" />
+        </div>
         <div className="borderLeft borderRight relative">
           <div className="borderRight h-full absolute left-1/2 sm:block hidden"></div>
           <Slider ref={sliderRef} {...settings}>
             {reviewData.map((items) => (
               <div key={items.id}>
-                <div className="pb-16">
+                <div className="md:pb-0 pb-16">
                   <div className="flex flex-col gap-5 mobile:px-10 px-5 py-12 bg-bgReview sm:bg-transparent">
                     <p className="font-normal text-base font-Public_Sans text-white">
                       {items.reviewText}
@@ -71,6 +75,10 @@ const ReviewSlider = () => {
               </div>
             ))}
           </Slider>
+        </div>
+        <div className="w-full md:flex justify-between items-start hidden">
+          <img src={ImageExport.REVIEWDOT} alt="review" />
+          <img src={ImageExport.REVIEWDOT} alt="review" />
         </div>
         <div className="borderCenterRating"></div>
       </div>

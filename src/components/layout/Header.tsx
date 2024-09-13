@@ -156,7 +156,7 @@ const Header = () => {
               </div>
               <div
                 className={cn(
-                  "absolute top-12 border rounded-xl w-full border-lightGreen px-5 flex flex-col gap-5 py-3",
+                  "absolute top-12 border rounded-xl w-fit border-lightGreen px-7 flex flex-col gap-5 py-3 bg-black",
                   isLanguage ? "block" : "hidden"
                 )}
               >

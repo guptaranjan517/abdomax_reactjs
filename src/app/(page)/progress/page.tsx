@@ -4,10 +4,8 @@
 import TickCard from "@/components/TickCard";
 import CommonBanner from "@/components/commonBanner/CommonBanner";
 import Faq from "@/components/faq/Faq";
-import FaqSection from "@/components/faq/FaqSection";
 import Journey from "@/components/journey/Journey";
 import Review from "@/components/review/Review";
-import { faqData } from "@/shared/config";
 import { ImageExport } from "@/shared/images";
 import React from "react";
 

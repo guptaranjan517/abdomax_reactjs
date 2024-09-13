@@ -1,11 +1,9 @@
 import SubscriptionCard from "@/components/SubscriptionCard";
 import CommonBanner from "@/components/commonBanner/CommonBanner";
 import Faq from "@/components/faq/Faq";
-import FaqSection from "@/components/faq/FaqSection";
 import Journey from "@/components/journey/Journey";
 import Review from "@/components/review/Review";
-import { faqData, subscriptionCardData } from "@/shared/config";
-import { ImageExport } from "@/shared/images";
+import { subscriptionCardData } from "@/shared/config";
 import React from "react";
 
 const ListOfPrice = () => {

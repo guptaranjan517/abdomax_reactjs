@@ -23,26 +23,28 @@ const Home = () => {
       <div className="flex justify-center lg:bg-bgStar bg-no-repeat bg-left-top">
         <Banner />
       </div>
-      <div className="w-full flex flex-col items-center mobile:grid lg:grid-cols-4 mobile:grid-cols-2 grid-cols-1 gap-5 sm:gap-10 lg:gap-2 xl:gap-5 2xl:gap-10 pt-5 md:px-14 px-5 sm:pb-32 pb-20 group">
-        {exerciseCardData.map((data) => {
-          return (
-            <div
-              className="bg-transparent mobile:w-full w-72 h-full flex flex-col justify-center items-center rounded-3xl shadow-cardshadow relative lg:even:mt-24 mobile:even:mt-10 group-hover:lg:even:mt-0 mobile:group-hover:mobile:even:mt-0 group-hover:lg:odd:mt-24 mobile:group-hover:odd:mt-10 transition-all duration-300 mobile:px-0 px-5"
-              key={data.id}
-            >
-              <img
-                src={ImageExport.BORDERCARD}
-                className="w-full h-full object-center"
-              />
-              <div className="absolute inset-0 flex flex-col gap-5 items-center justify-center text-center px-8 py-4">
-                <img src={data.icon} alt="Icon" />
-                <p className="text-white font-medium md:text-lg mobile:text-sm text-base font-Public_Sans sm:mx-0 mx-2">
-                  {data.text}
-                </p>
+      <div className="w-full flex justify-center mt-5 lg:mt-0">
+        <div className="w-full lg:max-w-screen-2xl max-w-screen-sm flex flex-col items-center mobile:grid lg:grid-cols-4 mobile:grid-cols-2 grid-cols-1 gap-5 sm:gap-10 lg:gap-2 xl:gap-5 2xl:gap-10 pt-5 2xl:px-0 md:px-14 px-5 sm:pb-32 pb-20 group">
+          {exerciseCardData.map((data) => {
+            return (
+              <div
+                className="bg-transparent mobile:w-full w-72 h-full flex flex-col justify-center items-center rounded-3xl shadow-cardshadow relative 2xl:even:mt-72 lg:even:mt-60 hover:scale-105 transition-all duration-300 mobile:px-0 px-5"
+                key={data.id}
+              >
+                <img
+                  src={ImageExport.BORDERCARD}
+                  className="w-full h-full object-center"
+                />
+                <div className="absolute inset-0 flex flex-col gap-5 items-center justify-center text-center px-8 py-4">
+                  <img src={data.icon} alt="Icon" />
+                  <p className="text-white font-medium md:text-lg mobile:text-sm text-base font-Public_Sans sm:mx-0 mx-2">
+                    {data.text}
+                  </p>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
       <div className="w-full h-full">
         <img
@@ -56,7 +58,7 @@ const Home = () => {
           alt="body parts"
         />
       </div>
-      <div className="w-full h-full">
+      <div className="w-full h-full" id="treatedAreasScroll">
         <TreatedAreas />
       </div>
       <div className="bg-black w-full flex justify-center sm:px-10 px-0">

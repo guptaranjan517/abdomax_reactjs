@@ -7,6 +7,7 @@ import Slider from "react-slick";
 import AppointmentButton from "../AppointmentButton";
 import { bannerData, mobileBannerData } from "@/shared/config";
 import { cn } from "@/app/utils/merger";
+import { ImageExport } from "@/shared/images";
 
 const PrevArrow = () => <div className="hidden"></div>;
 const NextArrow = () => <div className="hidden"></div>;
@@ -64,7 +65,7 @@ const Banner = () => {
       {/* Static text and button */}
       <div className="absolute inset-0 desktop:flex flex-col items-start justify-center z-10 text-center md:pt-24 pt-14 pb-8 bg-bgBlush bg-right-bottom bg-no-repeat hidden">
         <div className="w-fit flex flex-col gap-5 mb-7 pr-5 desktop:pr-0 pl-7 2xl:pl-0">
-          <h2 className="font-bold font-DIN text-white 2xl:text-8xl lg:text-7xl md:text-6xl text-5xl text-start">
+          <h2 className="w-fit font-bold font-DIN text-white 2xl:text-8xl lg:text-7xl md:text-6xl text-5xl text-start relative">
             <span className="text-lightGreen">20,000 abs </span>
             <br className="desktop:block hidden" />
             comfortably and <br className="desktop:block hidden" /> effortlessly
@@ -72,6 +73,11 @@ const Banner = () => {
             <span className="text-lightBlue">
               <br className="desktop:block hidden" /> 30 minutes
             </span>
+            <img
+              src={ImageExport.STARICON}
+              alt="star icon"
+              className="absolute size-12 -top-5 right-12 xl:right-16 2xl:right-24"
+            />
           </h2>
           <p className="desktop:max-w-screen-sm text-white font-Public_Sans font-normal md:text-lg text-sm mb-5 sm:pr-40 mobile:pr-20 text-start leading-9">
             Sculpt your core in 30 minutes! Our revolutionary method uses
@@ -99,15 +105,21 @@ const Banner = () => {
 
         {/* Static text and button */}
         <div className="flex flex-col items-start justify-center z-10 text-center pb-8  desktop:hidden">
-          <div className="w-fit flex flex-col gap-5 mb-7 pr-5 desktop:pr-0 pl-7 2xl:pl-0">
-            <h2 className="font-bold font-DIN text-white 2xl:text-8xl lg:text-7xl md:text-6xl text-5xl text-start">
+          <div className="w-fit flex flex-col gap-5 mb-7 mt-5 pr-10 desktop:pr-0 pl-7 2xl:pl-0">
+            <h2 className="w-fit font-bold font-DIN text-white 2xl:text-8xl lg:text-7xl text-6xl text-start relative">
               <span className="text-lightGreen">20,000 abs </span>
-              <br className="desktop:block hidden" />
-              comfortably and <br className="desktop:block hidden" />{" "}
-              effortlessly in
+              <br className="desktop:block mobile:hidden block" />
+              comfortably and{" "}
+              <br className="desktop:block mobile:hidden block" /> effortlessly
+              in
               <span className="text-lightBlue">
-                <br className="desktop:block hidden" /> 30 minutes
+                <br className="desktop:block mobile:hidden block" /> 30 minutes
               </span>
+              <img
+                src={ImageExport.STARICON}
+                alt="star icon"
+                className="absolute mobile:hidden block size-12 -top-6 right-8"
+              />
             </h2>
             <p className="desktop:max-w-screen-sm text-white font-Public_Sans font-normal md:text-lg text-sm mb-5 sm:pr-40 mobile:pr-20 text-start leading-9">
               Sculpt your core in 30 minutes! Our revolutionary method uses
@@ -117,6 +129,21 @@ const Banner = () => {
             <AppointmentButton href="/bookAppointment" />
           </div>
         </div>
+      </div>
+      <div className="w-full h-7 desktop:flex justify-center absolute hidden">
+        <a
+          href="#treatedAreasScroll"
+          className="flex items-center gap-2 animate-bounce hover:animate-pulse"
+        >
+          <p className="uppercase text-white font-medium font-Public_Sans 2xl:text-15p text-xs">
+            Scroll for more
+          </p>
+          <img
+            src={ImageExport.SCROLLFORMORE}
+            alt="scroll for more"
+            className="h-3 w-5 2xl:h-5 2xl:w-7"
+          />
+        </a>
       </div>
     </div>
   );

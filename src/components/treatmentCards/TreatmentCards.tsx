@@ -20,7 +20,6 @@ const TreatmentCards = () => {
                 Click Here
               </Link>
             </div>
-            {/* <div className="w-full flex sm:flex-row flex-col desktop:gap-16 gap-10 items-center justify-between"> */}
             <div className="w-full grid grid-cols-2 desktop:gap-16 sm:gap-10 gap-5 items-center justify-between">
               <div className="">
                 <img

@@ -55,4 +55,7 @@ export const ImageExport = {
   MOBILEBODYPARTS: "/images/mobileBodyParts.svg",
   ABSBG: "/images/absBg.png",
   MOBILEBANNER: "/images/mobileBanner.png",
+  STARICON: "/images/starIcon.svg",
+  SCROLLFORMORE: "/images/scrollForMore.svg",
+  REVIEWDOT: "/images/reviewDot.svg",
 };
