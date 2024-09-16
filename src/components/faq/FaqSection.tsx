@@ -34,7 +34,7 @@ const FaqSection: React.FC<FaqProps> = ({ question, answer, isOpen, onToggle }) 
           </div>
         </div>
         <div
-          className={`text-sm 2xl:text-base font-light font-Public_Sans text-white pt-4 w-4/5 ${
+          className={`text-15p 2xl:text-base leading-6 font-light font-Public_Sans text-white pt-4 w-4/5 ${
             isOpen ? "block" : "hidden"
           }`}
         >

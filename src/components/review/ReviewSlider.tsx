@@ -50,7 +50,7 @@ const ReviewSlider = () => {
               <div key={items.id}>
                 <div className="md:pb-0 pb-16">
                   <div className="flex flex-col gap-5 mobile:px-10 px-5 py-12 bg-bgReview sm:bg-transparent">
-                    <p className="font-normal text-base font-Public_Sans text-white">
+                    <p className="font-normal text-base leading-7 font-Public_Sans text-white">
                       {items.reviewText}
                     </p>
                     <div className="flex items-center gap-1">

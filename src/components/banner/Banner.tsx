@@ -26,13 +26,13 @@ const Banner = () => {
     slidesToScroll: 1,
     fade: true,
     cssEase: "linear",
-    autoplay: true,
+    autoplay: false,
     afterChange: (current: number) => setCount(current),
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
     appendDots: (dots: any) => (
       <div style={{ display: "flex" }}>
-        <ul className="font-arial font-normal gap-2 flex"> {dots} </ul>
+        <ul className="font-arial font-normal gap-2 sm:flex hidden"> {dots} </ul>
       </div>
     ),
     customPaging: (i: any) => (
@@ -93,7 +93,7 @@ const Banner = () => {
           {mobileBannerData.map((items) => (
             <div key={items.id}>
               <div
-                className="w-full h-72 lg:px-20 sm:px-14 mobile:px-12 px-7 md:pt-24 pt-14 flex items-end 2xl:items-center bg-no-repeat bg-center"
+                className="w-full h-80 lg:px-20 sm:px-14 mobile:px-12 px-7 md:pt-24 pt-14 flex items-end 2xl:items-center bg-no-repeat bg-center"
                 style={{ backgroundImage: `url(${items.img})` }}
               >
                 <div className="h-full w-full bg-mobileBlushImg bg-bottom bg-no-repeat"></div>
@@ -105,7 +105,7 @@ const Banner = () => {
 
         {/* Static text and button */}
         <div className="flex flex-col items-start justify-center z-10 text-center pb-8  desktop:hidden">
-          <div className="w-fit flex flex-col gap-5 mb-7 mt-5 pr-10 desktop:pr-0 pl-7 2xl:pl-0">
+          <div className="w-fit flex flex-col gap-5 desktop:mb-7 mb-0 mt-5 pr-10 desktop:pr-0 pl-7 2xl:pl-0">
             <h2 className="w-fit font-bold font-DIN text-white 2xl:text-8xl lg:text-7xl text-6xl text-start relative">
               <span className="text-lightGreen">20,000 abs </span>
               <br className="desktop:block mobile:hidden block" />
@@ -121,7 +121,7 @@ const Banner = () => {
                 className="absolute mobile:hidden block size-12 -top-6 right-8"
               />
             </h2>
-            <p className="desktop:max-w-screen-sm text-white font-Public_Sans font-normal md:text-lg text-sm mb-5 sm:pr-40 mobile:pr-20 text-start leading-9">
+            <p className="desktop:max-w-screen-sm text-white font-Public_Sans font-normal md:text-lg text-15p mb-5 sm:pr-40 mobile:pr-20 text-start desktop:leading-9 leading-7">
               Sculpt your core in 30 minutes! Our revolutionary method uses
               advanced tech for effortless, painless toning. No sweat, no
               strain, just results.

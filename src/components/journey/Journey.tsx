@@ -59,7 +59,7 @@ const Journey = () => {
               <ul className="grid grid-rows-3 gap-3">
                 {contactData.map((data) => (
                   <li className="flex items-center" key={data.id}>
-                    <div className="flex items-center mb-4 sm:gap-5 gap-2">
+                    <div className="flex items-center mb-4 gap-5">
                       <img src={data.icon} alt="icon" />
                       <span className="text-white self-center font-Public_Sans lg:text-lg text-base font-normal dark:text-white">
                         {data.text}

@@ -13,7 +13,7 @@ const Faq = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
-    <div className="md:py-20 mobile:py-8 flex justify-end px-5 2xl:px-20">
+    <div className="md:py-10 mobile:py-8 flex justify-end px-5 2xl:px-20">
       <div className="xl:max-w-screen-lg 2xl:max-w-screen-xl w-full">
         <div className="flex gap-1">
           <img

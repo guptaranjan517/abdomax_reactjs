@@ -19,7 +19,7 @@ const Review = () => {
             Our <span className="text-lightGreen"> Customer’s </span>Says
           </h2>
         </div>
-        <p className="md:max-w-screen-md w-full 2xl:text-lg text-base font-normal font-Public_Sans text-white sm:text-center my-7 text-left">
+        <p className="md:max-w-screen-md w-full 2xl:text-lg text-15p font-normal font-Public_Sans text-white sm:text-center my-7 text-left leading-7">
           Sculpt your core in 30 minutes! Our revolutionary method uses advanced
           tech for effortless, painless toning. No sweat, no strain, just
           results.

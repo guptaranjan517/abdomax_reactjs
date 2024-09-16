@@ -52,10 +52,11 @@ export const ImageExport = {
   MAPIMG: "/images/mapImg.png",
   CLEFTARROW: "/images/calenderLeftArrow.svg",
   CRIGHTARROW: "/images/calenderRightArrow.svg",
-  MOBILEBODYPARTS: "/images/mobileBodyParts.svg",
+  MOBILEBODYPARTS: "/images/mobileBodyParts1.png",
   ABSBG: "/images/absBg.png",
   MOBILEBANNER: "/images/mobileBanner.png",
   STARICON: "/images/starIcon.svg",
   SCROLLFORMORE: "/images/scrollForMore.svg",
   REVIEWDOT: "/images/reviewDot.svg",
+  ABOUTMOBILE: "/images/about-mobile.png",
 };

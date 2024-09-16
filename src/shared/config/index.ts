@@ -214,6 +214,21 @@ export const aboutData = [
   },
 ];
 
+export const aboutDataMobile = [
+  {
+    id: 1,
+    img: ImageExport.ABOUTMOBILE,
+  },
+  {
+    id: 2,
+    img: ImageExport.ABOUTONE,
+  },
+  {
+    id: 3,
+    img: ImageExport.ABOUTMOBILE,
+  },
+];
+
 export const faqData = [
   {
     id: 1,

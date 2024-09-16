@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import AppointmentButton from "../AppointmentButton";
 import Link from "next/link";
 import { ImageExport } from "@/shared/images";
-import { aboutData } from "@/shared/config";
+import { aboutData, aboutDataMobile } from "@/shared/config";
 import { cn } from "@/app/utils/merger";
 
 const PrevArrow = () => <div className="hidden"></div>;
@@ -39,7 +39,7 @@ const About = () => {
     customPaging: (i: any) => (
       <div
         className={cn(
-          "w-10 h-1 rounded",
+          "md:w-10 w-5 h-1 rounded",
           i === count ? "bg-lightGreen" : "bg-white bg-opacity-50"
         )}
       ></div>
@@ -58,7 +58,7 @@ const About = () => {
   return (
     <div className="relative aboutSlider w-full flex justify-center">
       <div className="relative max-w-screen-xl w-full">
-        <div className="w-full desktop:h-full px-10 md:pt-24 pt-14 desktop:grid desktop:grid-cols-2 grid-cols-1">
+        <div className="w-full desktop:h-full px-10 md:pt-24 pt-0 desktop:grid desktop:grid-cols-2 grid-cols-1">
           <div className="desktop:w-400 2xl:max-w-screen-sm w-full desktop:flex flex-col gap-5 mb-7 pr-5 desktop:pr-0 hidden">
             <div className="flex gap-1 items-start">
               <img
@@ -85,27 +85,47 @@ const About = () => {
               contractions which are extremely important for improving the tone
               and strength of your muscles.
             </p>
-            <Link
+            {/* <Link
               href="#"
               className="text-lightBlue md:text-lg text-base font-medium font-Public_Sans underline underline-offset-4 mb-5"
             >
               Read More
-            </Link>
+            </Link> */}
             <AppointmentButton href="/bookAppointment" />
           </div>
           <Slider
             ref={sliderRef}
             {...settings}
-            className="desktop:h-auto h-400"
+            className="desktop:h-auto h-400 md:block hidden"
           >
             {aboutData.map((items) => (
               <div
                 className="w-full relative !flex desktop:justify-start justify-center"
                 key={items.id}
               >
+                <div className="sm:w-1/2 w-full desktop:w-full">
+                  <img
+                    src={items.img}
+                    className="w-full h-full"
+                    alt="about-one"
+                  />
+                </div>
+              </div>
+            ))}
+          </Slider>
+          <Slider
+            ref={sliderRef}
+            {...settings}
+            className="desktop:h-auto h-400 md:hidden block"
+          >
+            {aboutDataMobile.map((items) => (
+              <div
+                className="w-full relative !flex desktop:justify-start justify-center"
+                key={items.id}
+              >
                 <img
                   src={items.img}
-                  className="sm:w-1/2 w-4/5 desktop:w-full"
+                  className="sm:w-1/2 w-500 desktop:w-full"
                   alt="about-one"
                 />
               </div>
@@ -119,28 +139,28 @@ const About = () => {
               About <span className="text-lightGreen pl-1"> Abdomax</span>
             </h2>
           </div>
-          <p className="text-white font-Public_Sans font-normal md:text-lg text-base py-4">
+          <p className="text-white font-Public_Sans font-normal md:text-lg text-15p leading-7 py-4">
             High-intensity pulsed electromagnetic stimulation provides
             continuous muscle contraction without muscle relaxation, allowing
             the muscle to work at its maximum capacity.
           </p>
-          <p className="text-white font-Public_Sans font-normal md:text-lg text-base py-4">
-            AbdoMax is based on high intensity focused electromagnetic energy.
-            It is the latest technology in non-invasive body slimming and
-            contouring, which can both build muscle and burn fat.
+          <p className="text-white font-Public_Sans font-normal md:text-lg text-15p leading-7 py-4">
+            AbdoMax is 15p leading-7d on high intensity focused electromagnetic
+            energy. It is the latest technology in non-invasive body slimming
+            and contouring, which can both build muscle and burn fat.
           </p>
-          <p className="text-white font-Public_Sans font-normal md:text-lg text-base py-4">
+          <p className="text-white font-Public_Sans font-normal md:text-lg text-15p leading-7 py-4">
             A single session of AbdoMax causes thousands of powerful muscle
             contractions which are extremely important for improving the tone
             and strength of your muscles.
           </p>
-          <Link
+          {/* <Link
             href="#"
             className="text-lightBlue md:text-lg text-lg font-semibold font-Public_Sans underline underline-offset-4 mb-5"
           >
             Read More
-          </Link>
-          <div className="py-4 mt-8">
+          </Link> */}
+          <div className="py-4 mt-5">
             <AppointmentButton href="/bookAppointment" />
           </div>
         </div>

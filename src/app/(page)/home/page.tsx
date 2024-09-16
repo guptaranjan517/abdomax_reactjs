@@ -23,8 +23,8 @@ const Home = () => {
       <div className="flex justify-center lg:bg-bgStar bg-no-repeat bg-left-top">
         <Banner />
       </div>
-      <div className="w-full flex justify-center mt-5 lg:mt-0">
-        <div className="w-full lg:max-w-screen-2xl max-w-screen-sm flex flex-col items-center mobile:grid lg:grid-cols-4 mobile:grid-cols-2 grid-cols-1 gap-5 sm:gap-10 lg:gap-2 xl:gap-5 2xl:gap-10 pt-5 2xl:px-0 md:px-14 px-5 sm:pb-32 pb-20 group">
+      <div className="w-full flex justify-center mt-0 sm:mt-5 lg:mt-0">
+        <div className="w-full lg:max-w-screen-2xl max-w-screen-sm flex flex-col items-center mobile:grid lg:grid-cols-4 mobile:grid-cols-2 grid-cols-1 gap-5 sm:gap-10 lg:gap-2 xl:gap-5 2xl:gap-10 pt-5 2xl:px-0 md:px-14 px-5 sm:pb-10 pb-5 group">
           {exerciseCardData.map((data) => {
             return (
               <div
@@ -46,7 +46,7 @@ const Home = () => {
           })}
         </div>
       </div>
-      <div className="w-full h-full">
+      <div className="w-full h-full sm:pb-0 pb-10">
         <img
           src={ImageExport.BODYPARTS}
           className="w-full h-full sm:block hidden"
@@ -61,7 +61,7 @@ const Home = () => {
       <div className="w-full h-full" id="treatedAreasScroll">
         <TreatedAreas />
       </div>
-      <div className="bg-black w-full flex justify-center sm:px-10 px-0">
+      <div className="bg-black w-full flex justify-center desktop:py-10 sm:px-10 px-0">
         <TreatmentCards />
       </div>
       <div className="sm:bg-bgAbout  bg-black sm:pb-10 pb-0">
@@ -86,7 +86,7 @@ const Home = () => {
               <span className="text-lightGreen"> questions?</span>
             </h2>
           </div>
-          <p className="2xl:text-xl md:text-lg text-base font-normal font-Public_Sans text-lightBlack my-5 sm:ml-10  2xl:ml-14">
+          <p className="2xl:text-xl md:text-lg text-base leading-7 font-normal font-Public_Sans text-lightBlack my-5 sm:ml-10  2xl:ml-14">
             If you have any questions, do not hesitate to contact us!
           </p>
         </div>
@@ -95,7 +95,7 @@ const Home = () => {
         </div>
       </div>
       <Review />
-      <div className="pb-10">
+      <div className="">
         <Faq />
       </div>
       <div id="Journey">

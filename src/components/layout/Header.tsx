@@ -142,7 +142,14 @@ const Header = () => {
                 </Link>
               );
             })}
-            <div className="relative block sm:hidden mb-5">
+            <Link
+              href="/contactUs"
+              onClick={handleMobileMenuClose}
+              className="border border-lightGreen rounded-xl px-4 w-fit h-10 flex items-center justify-center bg-transparent hover:bg-lightGreen hover:text-white text-sm text-lightGreen font-medium font-Public_Sans transition-all duration-300 ease-out sm:hidden"
+            >
+              Contact Us
+            </Link>
+            <div className="relative block sm:hidden mt-5">
               <div
                 className="border border-white rounded-xl px-4 w-fit h-10 flex gap-2 items-center justify-center bg-transparent text-sm text-white font-medium font-Public_Sans cursor-pointer"
                 onClick={() => setIsLanguage(!isLanguage)}
@@ -165,13 +172,6 @@ const Header = () => {
                 </p>
               </div>
             </div>
-            <Link
-              href="/contactUs"
-              onClick={handleMobileMenuClose}
-              className="border border-lightGreen rounded-xl px-4 w-fit h-10 flex items-center justify-center bg-transparent hover:bg-lightGreen hover:text-white text-sm text-lightGreen font-medium font-Public_Sans transition-all duration-300 ease-out sm:hidden"
-            >
-              Contact Us
-            </Link>
           </div>
         </div>
         <div className="flex items-center gap-5 absolute sm:right-14 right-7">

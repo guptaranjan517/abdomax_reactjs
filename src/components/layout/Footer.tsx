@@ -17,7 +17,7 @@ const Footer = () => {
               alt="United AI"
             />
           </div>
-          <p className="xl:w-3/4 md:w-3/4 font-normal text-base font-Public_Sans text-white pt-5">
+          <p className="xl:w-3/4 md:w-3/4 font-normal text-base leading-7 font-Public_Sans text-white pt-5">
             AbdoMax is based on high intensity focused electromagnetic energy.
             It is the latest technology in non-invasive body slimming and
             contouring, which can both build muscle and burn fat.
