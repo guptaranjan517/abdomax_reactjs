@@ -29,7 +29,7 @@ const CommonBanner: React.FC<CommonBannerProps> = ({
           {title}
           <span className="text-lightGreen"> {colorTitle}</span>
         </h2>
-        <p className="md:text-lg max-w-screen-sm text-sm font-normal font-Public_Sans text-white mb-5 text-center">
+        <p className="md:text-lg max-w-screen-sm text-15p font-normal font-Public_Sans text-white mb-5 text-center leading-7">
           {desc}
         </p>
         <AppointmentButton href="/bookAppointment" />
