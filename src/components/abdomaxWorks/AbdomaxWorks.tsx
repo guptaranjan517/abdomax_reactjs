@@ -8,7 +8,7 @@ const AbdomaxWorks = () => {
   return (
     <Fragment>
       <div className="w-full flex flex-col items-center pt-20 px-5">
-        <div className="flex gap-1 justify-center items-start">
+        <div className="flex gap-1 justify-center items-start mb-2">
           <img
             src={ImageExport.STARTLINE}
             alt="line"
@@ -18,7 +18,7 @@ const AbdomaxWorks = () => {
             How <span className="text-lightGreen"> AbdoMax </span>works?
           </h2>
         </div>
-        <p className="md:max-w-screen-md w-full md:text-lg text-15p leading-7 font-normal font-Public_Sans text-white text-center my-7">
+        <p className="md:max-w-screen-md w-full md:text-lg text-15p leading-7 font-normal font-Public_Sans text-white text-center mb-10">
           Sculpt your core in 30 minutes! Our revolutionary method uses advanced
           tech for effortless, painless toning. No sweat, no strain, just
           results.

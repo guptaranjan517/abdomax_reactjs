@@ -153,7 +153,7 @@ const Progress = () => {
           background="desktop:!bg-bgTickCardRight !bg-bgTickCardLeft"
         />
       </div>
-      <div className="py-10">
+      <div className="md:py-10">
         <Review />
       </div>
       <div className="pb-10">

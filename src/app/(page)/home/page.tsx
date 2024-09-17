@@ -23,7 +23,7 @@ const Home = () => {
       <div className="flex justify-center lg:bg-bgStar bg-no-repeat bg-left-top">
         <Banner />
       </div>
-      <div className="w-full flex justify-center mt-0 sm:mt-5 lg:mt-0">
+      <div className="w-full flex justify-center mt-5 lg:mt-0">
         <div className="w-full lg:max-w-screen-2xl max-w-screen-sm flex flex-col items-center mobile:grid lg:grid-cols-4 mobile:grid-cols-2 grid-cols-1 gap-5 sm:gap-10 lg:gap-2 xl:gap-5 2xl:gap-10 pt-5 2xl:px-0 md:px-14 px-5 sm:pb-10 pb-5 group">
           {exerciseCardData.map((data) => {
             return (
@@ -86,11 +86,11 @@ const Home = () => {
               <span className="text-lightGreen"> questions?</span>
             </h2>
           </div>
-          <p className="2xl:text-xl md:text-lg text-base leading-7 font-normal font-Public_Sans text-lightBlack my-5 sm:ml-10  2xl:ml-14">
+          <p className="2xl:text-xl md:text-lg text-base leading-7 font-normal font-Public_Sans text-lightBlack md:my-2 sm:ml-10  2xl:ml-14">
             If you have any questions, do not hesitate to contact us!
           </p>
         </div>
-        <div className="sm:pl-14 pl-5 pt-4">
+        <div className="sm:pl-14 pl-5 pt-7">
           <AppointmentButton href="/bookAppointment" />
         </div>
       </div>

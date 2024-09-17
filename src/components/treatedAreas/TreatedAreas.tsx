@@ -57,7 +57,7 @@ const TreatedAreas: React.FC = () => {
               with <span className="text-lightGreen">Abdomax</span>
             </h2>
           </div>
-          <p className="md:max-w-screen-md w-full md:text-lg text-15p font-normal font-Public_Sans text-white text-center my-7 leading-7">
+          <p className="md:max-w-screen-md w-full md:text-lg text-15p font-normal font-Public_Sans text-white text-center md:mt-2 mb-10 leading-7">
             Abdomax is the first and only non-invasive body shaping procedure
             that uses radio frequency heating for fat reduction and high
             intensity focused electromagnetic energy for muscle strengthening
@@ -71,8 +71,8 @@ const TreatedAreas: React.FC = () => {
               return (
                 <h4
                   className={cn(
-                    "text-white text-opacity-80 2xl:text-lg md:text-base text-sm font-Public_Sans font-light cursor-pointer whitespace-nowrap hover:text-lightBlue transition-colors duration-300 ease-out",
-                    isActive ? "text-lightBlue" : "text-white"
+                    "text-white text-opacity-80 2xl:text-lg md:text-base text-sm font-Public_Sans cursor-pointer whitespace-nowrap hover:text-lightBlue transition-colors duration-300 ease-out",
+                    isActive ? "text-lightBlue font-semibold" : "text-white font-light"
                   )}
                   key={data.id}
                   onClick={() => handleMenuChange(data.id)}

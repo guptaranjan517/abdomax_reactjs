@@ -54,7 +54,7 @@ export const ImageExport = {
   CRIGHTARROW: "/images/calenderRightArrow.svg",
   MOBILEBODYPARTS: "/images/mobileBodyParts1.png",
   ABSBG: "/images/absBg.png",
-  MOBILEBANNER: "/images/mobileBanner.png",
+  MOBILEBANNER: "/images/mobileBanner.svg",
   STARICON: "/images/starIcon.svg",
   SCROLLFORMORE: "/images/scrollForMore.svg",
   REVIEWDOT: "/images/reviewDot.svg",

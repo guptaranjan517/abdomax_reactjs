@@ -39,7 +39,7 @@ const About = () => {
     customPaging: (i: any) => (
       <div
         className={cn(
-          "md:w-10 w-5 h-1 rounded",
+          "md:w-10 w-7 md:h-1 h-2p rounded",
           i === count ? "bg-lightGreen" : "bg-white bg-opacity-50"
         )}
       ></div>
@@ -58,8 +58,8 @@ const About = () => {
   return (
     <div className="relative aboutSlider w-full flex justify-center">
       <div className="relative max-w-screen-xl w-full">
-        <div className="w-full desktop:h-full px-10 md:pt-24 pt-0 desktop:grid desktop:grid-cols-2 grid-cols-1">
-          <div className="desktop:w-400 2xl:max-w-screen-sm w-full desktop:flex flex-col gap-5 mb-7 pr-5 desktop:pr-0 hidden">
+        <div className="w-full desktop:h-full px-10 md:pt-24 pt-16 desktop:grid desktop:grid-cols-2 grid-cols-1">
+          <div className="desktop:w-400 2xl:max-w-screen-sm w-full desktop:block mb-7 pr-5 desktop:pr-0 hidden">
             <div className="flex gap-1 items-start">
               <img
                 src={ImageExport.STARTLINE}
@@ -70,17 +70,17 @@ const About = () => {
                 About <span className="text-lightGreen pl-1"> Abdomax</span>
               </h2>
             </div>
-            <p className="text-white font-Public_Sans font-normal md:text-lg text-sm">
+            <p className="text-white font-Public_Sans font-normal md:text-lg text-sm mb-3">
               High-intensity pulsed electromagnetic stimulation provides
               continuous muscle contraction without muscle relaxation, allowing
               the muscle to work at its maximum capacity.
             </p>
-            <p className="text-white font-Public_Sans font-normal md:text-lg text-sm">
+            <p className="text-white font-Public_Sans font-normal md:text-lg text-sm mb-3">
               AbdoMax is based on high intensity focused electromagnetic energy.
               It is the latest technology in non-invasive body slimming and
               contouring, which can both build muscle and burn fat.
             </p>
-            <p className="text-white font-Public_Sans font-normal md:text-lg text-sm">
+            <p className="text-white font-Public_Sans font-normal md:text-lg text-sm mb-8">
               A single session of AbdoMax causes thousands of powerful muscle
               contractions which are extremely important for improving the tone
               and strength of your muscles.
@@ -134,22 +134,20 @@ const About = () => {
         </div>
 
         <div className="desktop:w-400 2xl:max-w-screen-sm w-full flex-col gap-5 mb-7 px-5 desktop:pr-0 desktop:hidden block mt-8 desktop:mt-0">
-          <div className="flex gap-1 items-start">
-            <h2 className="font-bold font-DIN text-white 2xl:text-7xl mobile:text-6xl text-5xl uppercase flex py-4">
-              About <span className="text-lightGreen pl-1"> Abdomax</span>
-            </h2>
-          </div>
-          <p className="text-white font-Public_Sans font-normal md:text-lg text-15p leading-7 py-4">
+          <h2 className="font-bold font-DIN text-white 2xl:text-7xl mobile:text-6xl text-5xl uppercase flex pt-4">
+            About <span className="text-lightGreen pl-1"> Abdomax</span>
+          </h2>
+          <p className="text-white font-Public_Sans font-normal md:text-lg text-15p leading-7 pb-1 -mt-1 md:mt-0">
             High-intensity pulsed electromagnetic stimulation provides
             continuous muscle contraction without muscle relaxation, allowing
             the muscle to work at its maximum capacity.
           </p>
-          <p className="text-white font-Public_Sans font-normal md:text-lg text-15p leading-7 py-4">
+          <p className="text-white font-Public_Sans font-normal md:text-lg text-15p leading-7 py-1">
             AbdoMax is 15p leading-7d on high intensity focused electromagnetic
             energy. It is the latest technology in non-invasive body slimming
             and contouring, which can both build muscle and burn fat.
           </p>
-          <p className="text-white font-Public_Sans font-normal md:text-lg text-15p leading-7 py-4">
+          <p className="text-white font-Public_Sans font-normal md:text-lg text-15p leading-7 py-1">
             A single session of AbdoMax causes thousands of powerful muscle
             contractions which are extremely important for improving the tone
             and strength of your muscles.
@@ -160,7 +158,7 @@ const About = () => {
           >
             Read More
           </Link> */}
-          <div className="py-4 mt-5">
+          <div className="py-4 md:mt-5 mt-3">
             <AppointmentButton href="/bookAppointment" />
           </div>
         </div>

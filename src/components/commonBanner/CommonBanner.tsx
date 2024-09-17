@@ -24,12 +24,12 @@ const CommonBanner: React.FC<CommonBannerProps> = ({
         mainStyle
       )}
     >
-      <div className="w-full flex flex-col items-center gap-3 px-5">
+      <div className="w-full flex flex-col items-center md:gap-3 gap-1 px-5">
         <h2 className="font-bold font-DIN text-white 2xl:text-8xl lg:text-7xl mobile:text-6xl text-5xl text-center">
           {title}
           <span className="text-lightGreen"> {colorTitle}</span>
         </h2>
-        <p className="md:text-lg max-w-screen-sm text-15p font-normal font-Public_Sans text-white mb-5 text-center leading-7">
+        <p className="md:text-lg max-w-screen-sm text-sm font-normal font-Public_Sans text-white mb-6 text-center">
           {desc}
         </p>
         <AppointmentButton href="/bookAppointment" />

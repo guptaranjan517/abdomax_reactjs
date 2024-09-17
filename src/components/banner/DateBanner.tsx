@@ -29,7 +29,7 @@ const DateBanner: React.FC<DateBannerProps> = ({
               <span className="text-lightGreen ml-2">{colorHeading}</span>
             </h2>
             {subheading && (
-              <h4 className="my-5 text-lg font-normal">{subheading}</h4>
+              <h4 className="md:my-5 text-lg font-normal">{subheading}</h4>
             )}
           </div>
         </div>

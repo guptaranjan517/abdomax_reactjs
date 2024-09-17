@@ -20,7 +20,7 @@ const Abs = () => {
         <h2 className="font-bold 2xl:text-3xl md:text-2xl text-3xl text-white font-DIN uppercase hidden sm:block">
           Abdomen
         </h2>
-        <p className="text-white font-Public_Sans font-normal md:text-base text-sm pb-3 hidden sm:block">
+        <p className="text-white font-Public_Sans font-normal md:text-base text-sm pb-1 hidden sm:block">
           High RF · Fat Reduction | HIFEM+ · Muscle Growth
         </p>
         <p className="text-white font-Public_Sans font-normal md:text-base text-15p leading-7">
@@ -31,7 +31,7 @@ const Abs = () => {
           revealed.
         </p>
       </div>
-      <div className="pt-7 px-5 sm:px-0">
+      <div className="desktop:pt-9 pt-7 px-5 sm:px-0">
         <AppointmentButton href="/bookAppointment" />
       </div>
     </div>

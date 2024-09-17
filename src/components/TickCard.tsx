@@ -15,8 +15,8 @@ const TickCard: React.FC<TickCardProps> = ({ text, background }) => {
         background
       )}
     >
-      <img src={ImageExport.BLUETICK} alt="tick" className="size-5 mt-1 md:mt-0" />
-      <p className="text-sm md:text-base 2xl:text-lg font-normal text-white font-Public_Sans leading-7">{text}</p>
+      <img src={ImageExport.BLUETICK} alt="tick" className="size-5" />
+      <p className="text-sm md:text-base 2xl:text-lg font-normal text-white font-Public_Sans">{text}</p>
     </div>
   );
 };
