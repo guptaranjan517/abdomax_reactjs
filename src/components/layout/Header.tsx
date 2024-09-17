@@ -10,6 +10,8 @@ import { ImageExport } from "@/shared/images";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import BottomArrow from "../svg/BottomArrow";
+import TopArrow from "../svg/TopArrow";
 
 const Header = () => {
   const [isMobileMenu, setIsMobileMenu] = useState(false);
@@ -55,7 +57,14 @@ const Header = () => {
             <img src={ImageExport.MENUBORDER} className="h-full" />
           </div>
           <div
-            className="lg:hidden block mobile:size-9 size-8"
+            className={cn(
+              "lg:hidden block mobile:size-9 size-8",
+              pathname === "/privacyPolicy" ||
+                pathname === "/termsCondition" ||
+                pathname === "/aboutUs"
+                ? "bg-black rounded-lg"
+                : ""
+            )}
             onClick={() => setIsMobileMenu(true)}
           >
             <img
@@ -99,7 +108,12 @@ const Header = () => {
                         : "text-white font-normal text-opacity-80",
                       data.menu === "Progress" ? "w-[90px]" : "",
                       data.menu === "List of price" ? "w-[120px]" : "",
-                      data.menu === "Medical notice" ? "w-[132px]" : ""
+                      data.menu === "Medical notice" ? "w-[132px]" : "",
+                      pathname === "/privacyPolicy" ||
+                        pathname === "/termsCondition" ||
+                        pathname === "/aboutUs"
+                        ? "lg:text-txtBlack"
+                        : ""
                     )}
                   >
                     <span
@@ -149,7 +163,7 @@ const Header = () => {
             >
               Contact Us
             </Link>
-            <div className="relative block sm:hidden mt-5">
+            <div className={cn("relative block sm:hidden mt-5")}>
               <div
                 className="border border-white rounded-xl px-4 w-fit h-10 flex gap-2 items-center justify-center bg-transparent text-sm text-white font-medium font-Public_Sans cursor-pointer"
                 onClick={() => setIsLanguage(!isLanguage)}
@@ -177,15 +191,18 @@ const Header = () => {
         <div className="flex items-center gap-5 absolute sm:right-14 right-7">
           <div className="relative sm:block hidden">
             <div
-              className="border border-white rounded-xl px-4 w-fit h-10 flex gap-2 items-center justify-center bg-transparent text-sm text-white font-medium font-Public_Sans cursor-pointer"
+              className={cn(
+                "border rounded-xl px-4 w-fit h-10 flex gap-2 items-center justify-center text-sm bg-transparent font-medium font-Public_Sans cursor-pointer",
+                pathname === "/privacyPolicy" ||
+                  pathname === "/termsCondition" ||
+                  pathname === "/aboutUs"
+                  ? "border-black text-black"
+                  : "border-white text-white"
+              )}
               onClick={() => setIsLanguage(!isLanguage)}
             >
               English
-              <img
-                src={ImageExport.BOTTOMARROW}
-                className=""
-                alt="bottom arrow"
-              />
+              {isLanguage ? <TopArrow /> : <BottomArrow />}
             </div>
             <div
               className={cn(
@@ -193,7 +210,16 @@ const Header = () => {
                 isLanguage ? "block" : "hidden"
               )}
             >
-              <p className="text-white font-medium font-Public_Sans text-sm cursor-pointer hover:text-lightGreen transition-colors duration-300">
+              <p
+                className={cn(
+                  "font-medium font-Public_Sans text-sm cursor-pointer hover:text-lightGreen transition-colors duration-300",
+                  pathname === "/privacyPolicy" ||
+                    pathname === "/termsCondition" ||
+                    pathname === "/aboutUs"
+                    ? "text-black"
+                    : " text-white"
+                )}
+              >
                 French
               </p>
             </div>

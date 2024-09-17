@@ -101,6 +101,7 @@ const config: Config = {
       },
       spacing: {
         "2p": "2px",
+        "10p": "10px"
       },
       fontSize: {
         "15p": "15px",

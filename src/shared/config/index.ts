@@ -52,7 +52,7 @@ export const footerLinksData = [
       {
         id: 1,
         text: "About Us",
-        link: "",
+        link: "/aboutUs",
       },
       {
         id: 2,
@@ -62,12 +62,12 @@ export const footerLinksData = [
       {
         id: 3,
         text: "Privacy Policy",
-        link: "",
+        link: "/privacyPolicy",
       },
       {
         id: 4,
         text: "Terms & Conditions",
-        link: "",
+        link: "/termsCondition",
       },
     ],
   },
@@ -556,5 +556,124 @@ export const appointmentData = [
         time: "02:45 PM",
       },
     ],
+  },
+];
+
+export const termsConditionData = [
+  {
+    id: 1,
+    title: "Purpose",
+    desc: "These general terms and conditions govern the use of the AbdoMax website and the services provided by AbdoMax, including muscle toning and fat reduction treatments. By accessing the site and using our services,you agree to these terms in their entirety.",
+  },
+  {
+    id: 2,
+    title: "Offered Services",
+    desc: "AbdoMax offers non-invasive aesthetic treatments based on electromagnetic technology. These services are provided at our institute inLausanne. Results may vary from person to person, and no specific guarantee of results is given.",
+  },
+  {
+    id: 3,
+    title: "Site Access",
+    desc: "Access to the site is restricted to individuals aged 18 and over. AbdoMax reserves the right to modify or suspend access to the site or certain services at any time, without prior notice.",
+  },
+  {
+    id: 4,
+    title: "Use of the Site",
+    desc: "Users agree not to use the site for fraudulent or illegal purposes. Any use that does not comply with these terms may result in the suspension or termination of access to the services.",
+  },
+  {
+    id: 5,
+    title: "Appointment Booking and Cancellation",
+    desc: "Users can book appointments through the website. In case of cancellation,AbdoMax requires at least 24 hours' notice. Any cancellation outside this timeframe may incur fees.",
+  },
+  {
+    id: 6,
+    title: "Prices and Payments",
+    desc: "Service prices are indicated in Swiss Francs (CHF) and are subject to change without prior notice. Payment is due at the time of the treatment unless otherwise stated. Accepted payment methods are detailed at the time of booking.",
+  },
+  {
+    id: 7,
+    title: "Personal Data",
+    desc: "Information collected through the site is used solely for processing appointments and managing customer relations. AbdoMax is committed to maintaining the confidentiality of data in accordance with applicable Swiss data protection laws.",
+  },
+  {
+    id: 8,
+    title: "Refund Policy",
+    desc: "Due to the nature of the services provided, no refunds will be granted afterthe service has been delivered, except in cases of major issues related to the treatment itself. Requests must be made within 7 days of the treatment.",
+  },
+  {
+    id: 9,
+    title: "Intellectual Property",
+    desc: "All content on the site (text, images, logos, etc.) is the property of AbdoMax. Any reproduction, modification, or distribution without authorization is strictly prohibited.",
+  },
+  {
+    id: 10,
+    title: "Limitation of Liability",
+    desc: "AbdoMax strives to provide quality service but cannot be held liable for direct or indirect damages resulting from the use of the site or the treatments provided, except in cases of gross or intentional misconduct.",
+  },
+  {
+    id: 11,
+    title: "Warranties",
+    desc: "AbdoMax provides no express or implied warranties regarding treatment results. Each client acknowledges that results may vary based on individual factors, including health condition and lifestyle.",
+  },
+  {
+    id: 12,
+    title: "Changes to Terms",
+    desc: "AbdoMax reserves the right to modify these general terms and conditions at any time. Changes will take effect as soon as they are published on the site. It is the user’s responsibility to check for updates regularly.",
+  },
+  {
+    id: 13,
+    title: "Applicable Law and Jurisdiction",
+    desc: "These general terms and conditions are governed by Swiss law. Any disputes related to the use of the site or the services provided will be subject to the exclusive jurisdiction of the competent courts in Lausanne, Switzerland.",
+  },
+];
+
+export const privacyPolicyData = [
+  {
+    id: 1,
+    title: "Collection of Personal Data",
+    desc: "AbdoMax collects personal information through the contact form and appointment booking, including name, email address, and phone number. This data is used solely to process your requests and improve our services.",
+  },
+  {
+    id: 2,
+    title: "Use of Data",
+    desc: "The collected data is used for appointment management, sending promotional communications, and improving user experience. AbdoMax does not share this information with third parties without explicit consent.",
+  },
+  {
+    id: 3,
+    title: "Data Security",
+    desc: "AbdoMax implements technical and organizational measures to protect your data from unauthorized access, loss, or disclosure. However, no Internet transmission method is entirely secure.",
+  },
+  {
+    id: 4,
+    title: "Cookies",
+    desc: "The site uses cookies to enhance navigation and analyze traffic. You can disable cookies by adjusting your browser settings.",
+  },
+  {
+    id: 5,
+    title: "User Rights",
+    desc: "In accordance with Swiss data protection law, you have the right to access, correct, or delete your personal information by contacting us at the address provided on the site.",
+  },
+  {
+    id: 6,
+    title: "Policy Changes",
+    desc: "This policy may be modified at any time. Changes will take effect as soon as they are published on the site. It is recommended to review this page regularly to stay informed of any changes.",
+  },
+  {
+    id: 7,
+    title: "Contact",
+    desc: "For any questions regarding this privacy policy, please contact us via email or phone number.",
+  },
+];
+
+export const aboutUsData = [
+  {
+    id: 1,
+    title: "Our Vision",
+    desc: "At AbdoMax, our mission is to help our clients achieve their physical well-being goals by offering non-invasive muscle toning and fat reduction treatments. We believe that everyone deserves to feel good about their body and benefit from a modern and effective approach to physical transformation.",
+  },
+  {
+    id: 2,
+    title: "Our Story",
+    desc: "Founded in Lausanne, AbdoMax emerged from a passion for health and innovation. We sought to combine the latest wellness technologies with non-invasive methods to offer our clients a safe and sustainable body transformation solution. Since our inception, we have helped many clients achieve their goals in muscle toning and fat reduction.",
   },
 ];
