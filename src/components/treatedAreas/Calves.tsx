@@ -4,7 +4,11 @@ import { ImageExport } from "@/shared/images";
 
 const Abs = () => {
   return (
-    <div className="w-full md:h-600 sm:h-500 h-full sm:bg-bgAbs bg-none bg-no-repeat bg-cover md:pt-24 sm:pt-14 pt-0 md:pl-16 sm:pl-5 pl-0">
+    <div className="w-full md:h-700 sm:h-500 h-full sm:bg-bgAbs bg-none bg-no-repeat bg-cover md:pt-24 sm:pt-14 pt-0 md:pl-16 sm:pl-5 pl-0 relative">
+
+    {/* <div className="absolute w-full h-00 bottom-0 bg-bgBlush bg-right-bottom bg-repeat-x flex flex-col items-start justify-center z-10 ">
+    </div> */}
+
       <div className="relative sm:hidden block">
         <img src={ImageExport.ABSBG} alt="abs" className="" />
         <div className="absolute bottom-3 left-5">

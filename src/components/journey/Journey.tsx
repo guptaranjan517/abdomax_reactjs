@@ -35,8 +35,8 @@ const Journey = () => {
     <Fragment>
       <div className="w-full flex justify-center">
         <div className="xl:max-w-screen-2xl md:bg-bgJourney bg-none bg-left-top w-full bg-28% bg-no-repeat h-fit lg:py-20 pt-0 md:px-20 sm:px-5 px-0 sm:mt-0 mt-10 sm:pb-0 pb-10">
-          <div className="w-full flex flex-col md:items-center items-start lg:px-l md:pl-14 pl-4">
-            <div className="flex gap-1 text-center">
+          <div className="w-full flex flex-col md:items-center items-start lg:px-l md:pl-0 pl-4">
+            <div className="flex gap-1 text-center pr-12">
               <img
                 src={ImageExport.STARTLINE}
                 alt="line"

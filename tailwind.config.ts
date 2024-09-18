@@ -11,7 +11,8 @@ const config: Config = {
       screens: {
         mobile: "475px",
         desktop: "991px",
-        "3xl": "1800px"
+        "3xl": "1700px",
+        bigscreen: "1900px"
       },
       backgroundSize: {
         '50%': '50%',
@@ -37,7 +38,7 @@ const config: Config = {
         mobileBlushImg: "url('/images/mobileBlushImg.svg')",
         bgStar: "url('/images/bgStar.png')",
         bgAbout:
-          "linear-gradient(to bottom right, rgba(149, 219, 50, 0.15) 0%, #0c0c0c 50%)",
+          "linear-gradient(to bottom right, rgba(149, 219, 50, 0.15) 0%, #0c0c0c 30%)",
         bgBannercolor:
           "linear-gradient(to right, rgba(149, 219, 50, 0.15) 0%, #000000 50%)",
         bgTreatedArea:
@@ -89,8 +90,15 @@ const config: Config = {
         "10p": "10px",
         "18p": "18px",
         "52p": "52px",
+        100: "100px",
+        200: "200px",
+        300: "300px",
         500: "500px",
         600: "600px",
+        700: "700px",
+        800: "800px",
+        900: "900px",
+        1100: "1100px"
       },
       width: {
         "52p": "52px",

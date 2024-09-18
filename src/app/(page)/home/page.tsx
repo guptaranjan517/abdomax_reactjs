@@ -23,12 +23,12 @@ const Home = () => {
       <div className="flex justify-center lg:bg-bgStar bg-no-repeat bg-left-top">
         <Banner />
       </div>
-      <div className="w-full flex justify-center mt-5 lg:mt-0">
-        <div className="w-full lg:max-w-screen-2xl max-w-screen-sm flex flex-col items-center mobile:grid lg:grid-cols-4 mobile:grid-cols-2 grid-cols-1 gap-5 sm:gap-10 lg:gap-2 xl:gap-5 2xl:gap-10 pt-5 2xl:px-0 md:px-14 px-5 sm:pb-10 pb-5 group">
+      <div className="w-full flex justify-center md:items-start items-center  max-w-screen mx-auto lg:-mt-34 mt-5">
+        <div className="w-full lg:max-w-screen-2xl max-w-screen-sm flex flex-col md:items-start items-center mobile:grid lg:grid-cols-4 mobile:grid-cols-2 grid-cols-1 gap-5 sm:gap-10 lg:gap-2 xl:gap-5 2xl:gap-10 pt-5 2xl:px-0 md:px-14 px-5 sm:pb-10 pb-5 group">
           {exerciseCardData.map((data) => {
             return (
               <div
-                className="bg-transparent mobile:w-full w-72 h-full flex flex-col justify-center items-center rounded-3xl shadow-cardshadow relative 2xl:even:mt-72 lg:even:mt-60 hover:scale-105 transition-all duration-300 mobile:px-0 px-5"
+                className="bg-transparent mobile:w-full w-72 h-auto flex flex-col justify-center md:items-start items-center rounded-3xl shadow-cardshadow relative custom-even hover:scale-105 transition-all duration-300 mobile:px-0 px-5"
                 key={data.id}
               >
                 <img
@@ -46,7 +46,7 @@ const Home = () => {
           })}
         </div>
       </div>
-      <div className="w-full h-full sm:pb-0 pb-10">
+      <div className="w-full h-full sm:pb-0 pb-10 lg:-mt-8">
         <img
           src={ImageExport.BODYPARTS}
           className="w-full h-full sm:block hidden"

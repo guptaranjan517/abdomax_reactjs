@@ -57,7 +57,7 @@ const TreatedAreas: React.FC = () => {
               with <span className="text-lightGreen">Abdomax</span>
             </h2>
           </div>
-          <p className="md:max-w-screen-md w-full md:text-lg text-15p font-normal font-Public_Sans text-white text-center md:mt-2 mb-10 leading-7">
+          <p className="md:max-w-screen-md w-full md:text-lg text-15p font-normal font-Public_Sans text-white text-center md:mt-2 mt-4 mb-10 leading-7">
             Abdomax is the first and only non-invasive body shaping procedure
             that uses radio frequency heating for fat reduction and high
             intensity focused electromagnetic energy for muscle strengthening

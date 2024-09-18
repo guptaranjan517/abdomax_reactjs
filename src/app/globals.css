@@ -34,14 +34,15 @@ html {
 
 .bannerSlider .slick-dots {
   position: absolute;
-  bottom: 0px;
-  left: 0px;
+  bottom: 150px;
+  left: 80px;
   width: 100% !important;
   height: fit-content;
   display: flex !important;
   align-items: center !important;
   justify-content: left !important;
   z-index: 10;
+  display: none!important;
 }
 
 .bannerSlider .slick-dots li {
@@ -64,11 +65,32 @@ html {
   width: fit-content;
 }
 
+.custom-even:nth-child(even) {
+  margin-top: 10rem; 
+}
+@media (max-width: 1000px) {
+  .custom-even:nth-child(even) {
+    margin-top: 0rem; 
+  } 
+}
+
 @media (max-width: 1400px) {
   .bannerSlider .slick-dots {
     left: 28px;
   }
+  .bannerSlider .slick-dots {
+    position: absolute;
+    bottom: 150px;
+  } 
+ 
 }
+@media (min-width: 1700px) {
+  .bannerSlider .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 80px;
+  } 
+ }
 
 .background-container-works {
   position: relative;
@@ -361,6 +383,10 @@ html {
     height: 44px !important;
     padding-left: 70px !important;
   }
+
+  .custom-even:nth-child(even) {
+     margin-top: 0rem; 
+   }
 }
 @media (max-width: 991px) {
   .aboutSlider .slick-dots {

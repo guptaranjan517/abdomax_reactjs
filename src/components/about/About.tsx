@@ -70,7 +70,7 @@ const About = () => {
                 About <span className="text-lightGreen pl-1"> Abdomax</span>
               </h2>
             </div>
-            <p className="text-white font-Public_Sans font-normal md:text-lg text-sm mb-3">
+            <p className="text-white font-Public_Sans font-normal md:text-lg text-sm mb-3 md:mt-2">
               High-intensity pulsed electromagnetic stimulation provides
               continuous muscle contraction without muscle relaxation, allowing
               the muscle to work at its maximum capacity.
@@ -80,7 +80,7 @@ const About = () => {
               It is the latest technology in non-invasive body slimming and
               contouring, which can both build muscle and burn fat.
             </p>
-            <p className="text-white font-Public_Sans font-normal md:text-lg text-sm mb-8">
+            <p className="text-white font-Public_Sans font-normal md:text-lg text-sm mb-9">
               A single session of AbdoMax causes thousands of powerful muscle
               contractions which are extremely important for improving the tone
               and strength of your muscles.
@@ -137,7 +137,7 @@ const About = () => {
           <h2 className="font-bold font-DIN text-white 2xl:text-7xl mobile:text-6xl text-5xl uppercase flex pt-4">
             About <span className="text-lightGreen pl-1"> Abdomax</span>
           </h2>
-          <p className="text-white font-Public_Sans font-normal md:text-lg text-15p leading-7 pb-1 -mt-1 md:mt-0">
+          <p className="text-white font-Public_Sans font-normal md:text-lg text-15p leading-7 pb-1 mt-4 md:mt-0">
             High-intensity pulsed electromagnetic stimulation provides
             continuous muscle contraction without muscle relaxation, allowing
             the muscle to work at its maximum capacity.

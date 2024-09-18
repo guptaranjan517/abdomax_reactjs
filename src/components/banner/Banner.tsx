@@ -49,13 +49,13 @@ const Banner = () => {
   };
 
   return (
-    <div className="relative max-w-screen-2xl w-full">
-      <div className="relative bannerSlider overflow-hidden hidden desktop:block">
+    <div className="relative w-full">
+      <div className="relative bannerSlider overflow-hidden hidden desktop:block mt-4 md:h-[900px]">
         <Slider ref={sliderRef} {...settings}>
           {bannerData.map((items) => (
             <div key={items.id}>
               <div
-                className="w-full h-screen md:h-[75vh] desktop:h-[115vh] 2xl:h-[100vh] 3xl:h-[88vh] lg:px-20 sm:px-14 mobile:px-12 px-7 md:pt-24 pt-14 pb-8 flex items-end 2xl:items-center bg-bgBanner bg-no-repeat sm:bg-right-top bg-top"
+                className="w-full h-screen md:h-[75vh] desktop:h-[90vh] 2xl:h-[100vh] 3xl:h-[800px] lg:px-20 sm:px-14 mobile:px-12 px-7 md:pt-4 pt-14 3xl:pb-0 pb-8 flex items-end 2xl:items-center bg-bgBanner bg-no-repeat sm:bg-right-top bg-top"
                 style={{ backgroundImage: `url(${items.img})` }}
               >
                 {/* Empty div to allow Slider to work properly */}
@@ -66,7 +66,7 @@ const Banner = () => {
       </div>
 
       {/* Static text and button */}
-      <div className="absolute inset-0 desktop:flex flex-col items-start justify-center z-10 text-center md:pt-24 pt-14 pb-8 bg-bgBlush bg-right-bottom bg-no-repeat hidden">
+      <div className="absolute inset-0 desktop:flex flex-col items-start justify-center z-10 text-center md:pt-0 pt-4 3xl:pb-0 pb-8 bg-bgBlush bg-right-bottom bg-no-repeat hidden 2xl:bottom-16 3xl:bottom-0 2xl:pl-20">
         <div className="w-fit flex flex-col gap-2 mb-7 pr-5 desktop:pr-0 pl-7 2xl:pl-0">
           <h2 className="w-fit font-bold font-DIN text-white 2xl:text-8xl lg:text-7xl md:text-6xl text-5xl text-start relative">
             <span className="text-lightGreen">20,000 abs </span>
@@ -133,7 +133,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-7 desktop:flex justify-center absolute hidden">
+      <div className="w-full h-7 desktop:flex justify-center absolute hidden bottom-28 3xl:bottom-24 z-10">
         <a
           href="#treatedAreasScroll"
           className="flex items-center gap-2 animate-bounce hover:animate-pulse"
