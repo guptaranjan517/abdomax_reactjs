@@ -159,7 +159,7 @@ const Header = () => {
             <Link
               href="/contactUs"
               onClick={handleMobileMenuClose}
-              className="border border-lightGreen rounded-xl px-4 w-fit h-10 flex items-center justify-center bg-transparent hover:bg-lightGreen hover:text-white text-sm text-lightGreen font-medium font-Public_Sans transition-all duration-300 ease-out sm:hidden"
+              className="border hover:border-lightGreen rounded-xl px-4 w-fit h-10 flex items-center justify-center bg-transparent text-white text-sm hover:text-lightGreen font-medium font-Public_Sans transition-all duration-300 ease-out sm:hidden"
             >
               Contact Us
             </Link>
@@ -226,7 +226,14 @@ const Header = () => {
           </div>
           <Link
             href="/contactUs"
-            className="border border-lightGreen rounded-xl px-4 w-fit h-10 sm:flex hidden items-center justify-center bg-transparent hover:bg-lightGreen hover:text-black text-sm text-lightGreen font-medium font-Public_Sans transition-all duration-300 ease-out"
+            className={cn(
+              "border hover:border-lightGreen rounded-xl px-4 w-fit h-10 sm:flex hidden items-center justify-center bg-transparent hover:text-lightGreen text-sm font-medium font-Public_Sans transition-all duration-300 ease-out",
+              pathname === "/privacyPolicy" ||
+                pathname === "/termsCondition" ||
+                pathname === "/aboutUs"
+                ? "border-black text-black"
+                : "border-white text-white"
+            )}
           >
             Contact Us
           </Link>

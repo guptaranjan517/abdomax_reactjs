@@ -12,12 +12,12 @@ const TermsAndCondition = () => {
           return (
             <div className="mb-5" key={data.id}>
               <div className="flex gap-2 items-start mb-2">
-                <span className="bg-txtBlack !h-2 w-2 mt-10p rounded-full border border-txtBlack"></span>
-                <h2 className="text-lg text-txtBlack font-semibold font-Public_Sans">
+                <span className="bg-txtBlack !h-2 w-2 mt-3 rounded-full border border-txtBlack"></span>
+                <h2 className="text-2xl text-black font-medium font-Public_Sans">
                   {data.title}
                 </h2>
               </div>
-              <p className="text-sm text-txtBlack font-medium font-Public_Sans mx-4">
+              <p className="text-base text-txtBlack font-medium font-Public_Sans mx-4">
                 {data.desc}
               </p>
             </div>

@@ -12,11 +12,11 @@ const config: Config = {
         mobile: "475px",
         desktop: "991px",
         "3xl": "1700px",
-        bigscreen: "1900px"
+        bigscreen: "1900px",
       },
       backgroundSize: {
-        '50%': '50%',
-        '28%': '28%',
+        "50%": "50%",
+        "28%": "28%",
       },
       fontFamily: {
         Public_Sans: ["Public Sans", "sans-serif"],
@@ -29,11 +29,16 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "formbottomborderbg":
+        formbottomborderbg:
           "linear-gradient(left, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.20), rgba(0, 0, 0, 0))",
-        "selecttimebggradient":
-          "linear-gradient(to right, transparent 10%, #33c7de0d 60%, transparent 100%)",    
+        selecttimebggradient:
+          "linear-gradient(to right, transparent 10%, #33c7de0d 60%, transparent 100%)",
         bgAbs: "url('/images/absBg.png')",
+        bgFlanks: "url('/images/flanksArea.png')",
+        bgUpperArms: "url('/images/upperArmsArea.png')",
+        bgButtocks: "url('/images/buttocksArea.png')",
+        bgThigh: "url('/images/thighArea.png')",
+        bgClaves: "url('/images/clavesArea.png')",
         bgBlush: "url('/images/blushImg.svg')",
         mobileBlushImg: "url('/images/mobileBlushImg.svg')",
         bgStar: "url('/images/bgStar.png')",
@@ -43,7 +48,7 @@ const config: Config = {
           "linear-gradient(to right, rgba(149, 219, 50, 0.15) 0%, #000000 50%)",
         bgTreatedArea:
           "linear-gradient(to bottom, rgba(149, 219, 50, 0.07) 0%, #0c0c0c 100%)",
-      
+
         bgAnyQuestion: "url('/images/anyQusetion.png')",
         bgAnyQuestionMobile: "url('/images/anyQusetion-mobile.svg')",
         bgBanner: "url('/images/banner.png')",
@@ -84,7 +89,7 @@ const config: Config = {
         inputfieldtxt: "#ffffffb3",
         popuptext: "#000000b3",
         bgSubscriptionCard: "#383C42",
-        bgReview: "#131212"
+        bgReview: "#131212",
       },
       height: {
         "10p": "10px",
@@ -98,7 +103,7 @@ const config: Config = {
         700: "700px",
         800: "800px",
         900: "900px",
-        1100: "1100px"
+        1100: "1100px",
       },
       width: {
         "52p": "52px",
@@ -109,7 +114,7 @@ const config: Config = {
       },
       spacing: {
         "2p": "2px",
-        "10p": "10px"
+        "10p": "10px",
       },
       fontSize: {
         "15p": "15px",

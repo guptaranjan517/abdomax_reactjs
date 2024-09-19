@@ -15,11 +15,11 @@ const PrivacyPolicy = () => {
                 <span className="text-xl text-txtBlack font-semibold font-Public_Sans">
                   {data.id}.
                 </span>
-                <h2 className="text-lg text-txtBlack font-semibold font-Public_Sans">
+                <h2 className="text-2xl text-black font-medium font-Public_Sans">
                   {data.title}
                 </h2>
               </div>
-              <p className="text-sm text-txtBlack font-medium font-Public_Sans">
+              <p className="text-base text-txtBlack font-normal font-Public_Sans">
                 {data.desc}
               </p>
             </div>

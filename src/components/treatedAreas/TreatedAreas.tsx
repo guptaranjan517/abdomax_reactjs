@@ -27,15 +27,15 @@ const TreatedAreas: React.FC = () => {
 
   const renderComponent = () => {
     switch (activeMenu) {
-      case "menu1":
+      case 1:
         return <Abs />;
-      case "menu2":
+      case 2:
         return <Flanks />;
-      case "menu3":
+      case 3:
         return <UpperArms />;
-      case "menu4":
+      case 4:
         return <Buttocks />;
-      case "menu5":
+      case 5:
         return <Thighs />;
       default:
         return <Calves />;
@@ -72,7 +72,9 @@ const TreatedAreas: React.FC = () => {
                 <h4
                   className={cn(
                     "text-white text-opacity-80 2xl:text-lg md:text-base text-sm font-Public_Sans cursor-pointer whitespace-nowrap hover:text-lightBlue transition-colors duration-300 ease-out",
-                    isActive ? "text-lightBlue font-semibold" : "text-white font-light"
+                    isActive
+                      ? "text-lightBlue font-semibold"
+                      : "text-white font-light"
                   )}
                   key={data.id}
                   onClick={() => handleMenuChange(data.id)}

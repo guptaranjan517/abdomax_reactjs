@@ -59,4 +59,9 @@ export const ImageExport = {
   SCROLLFORMORE: "/images/scrollForMore.svg",
   REVIEWDOT: "/images/reviewDot.svg",
   ABOUTMOBILE: "/images/about-mobile.png",
+  FLANKSBG: "/images/flanksArea.png",
+  UPPERARMSBG: "/images/upperArmsArea.png",
+  BUTTOCKSBG: "/images/buttocksArea.png",
+  THIGHSBG: "/images/thighArea.png",
+  CLAVESBG: "/images/clavesArea.png",
 };
