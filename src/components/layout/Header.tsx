@@ -202,26 +202,58 @@ const Header = () => {
             </Link>
             <div className={cn("relative block sm:hidden mt-5")}>
               <div
-                className="border border-white rounded-xl px-4 w-fit h-10 flex gap-2 items-center justify-center bg-transparent text-sm text-white font-medium font-Public_Sans cursor-pointer"
+                className={cn(
+                  "border rounded-xl px-4 w-fit h-10 flex gap-2 items-center justify-center text-sm bg-transparent font-medium font-Public_Sans cursor-pointer",
+                  (pathname.startsWith("/en/") ||
+                    pathname.startsWith("/fr/")) &&
+                    (pathname.includes("privacy-policy") ||
+                      pathname.includes("terms-condition") ||
+                      pathname.includes("about-us"))
+                    ? "border-black text-black"
+                    : "border-white text-white"
+                )}
                 onClick={() =>
                   setIsLanguageDropdownOpen(!isLanguageDropdownOpen)
                 }
               >
-                English
-                <img
-                  src={ImageExport.BOTTOMARROW}
-                  className=""
-                  alt="bottom arrow"
-                />
+                {language === "fr" ? "Français" : "English"}
+                {isLanguageDropdownOpen ? <TopArrow /> : <BottomArrow />}
               </div>
               <div
                 className={cn(
-                  "absolute top-12 border rounded-xl w-fit border-lightGreen px-7 flex flex-col gap-5 py-3 bg-black",
+                  "absolute top-12 border rounded-xl w-full border-lightGreen px-5 flex flex-col gap-5 py-3",
                   isLanguageDropdownOpen ? "block" : "hidden"
                 )}
               >
-                <p className="text-white font-medium font-Public_Sans text-sm cursor-pointer hover:text-lightGreen transition-colors duration-300">
-                  French
+                <p
+                  className={cn(
+                    "font-medium font-Public_Sans text-sm cursor-pointer hover:text-lightGreen transition-colors duration-300 mb-5",
+                    (pathname.startsWith("/en/") ||
+                      pathname.startsWith("/fr/")) &&
+                      (pathname.includes("privacy-policy") ||
+                        pathname.includes("terms-condition") ||
+                        pathname.includes("about-us"))
+                      ? "text-black"
+                      : " text-white"
+                  )}
+                  onClick={() => handleLanguageChange("en")}
+                >
+                  English
+                </p>
+                <p
+                  className={cn(
+                    "font-medium font-Public_Sans text-sm cursor-pointer hover:text-lightGreen transition-colors duration-300",
+                    (pathname.startsWith("/en/") ||
+                      pathname.startsWith("/fr/")) &&
+                      (pathname.includes("privacy-policy") ||
+                        pathname.includes("terms-condition") ||
+                        pathname.includes("about-us"))
+                      ? "text-black"
+                      : " text-white"
+                  )}
+                  onClick={() => handleLanguageChange("fr")}
+                >
+                  Français
                 </p>
               </div>
             </div>
