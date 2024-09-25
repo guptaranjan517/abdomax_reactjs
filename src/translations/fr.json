@@ -1,0 +1,570 @@
+{
+  "Index": {
+    "title": "Bonjour abdomax Abdomen!",
+    "anyquestiontitle": "Avez-vous des",
+    "anyquestiontitlegreen": "questions ?",
+    "nothesitate": "Si vous avez des questions, n'hésitez pas à nous contacter !",
+    "faq": "fréquemment posée",
+    "faqgreen": "question",
+    "launch": "Lançons votre",
+    "journey": "voyage",
+    "love": "Nous serions ravis d’avoir de vos nouvelles ! Obtenons",
+    "touchs": "en contact",
+    "review": "Notre",
+    "Says": "Dit",
+    "Customer": "Clientes",
+    "reviewsub": "Sculptez votre cœur en 30 minutes ! Notre méthode révolutionnaire utilise une technologie avancée pour une tonification sans effort et sans douleur. Pas de sueur, pas de tension, juste des résultats",
+    "What": "Quoi",
+    "areas": "domaines",
+    "treated": "peut être traité avec",
+    "Abdomaxname": "Abdomax",
+    "areastreatedsub": "Abdomax est la première et la seule procédure non invasive de mise en forme du corps qui utilise le chauffage par radiofréquence pour la réduction des graisses et une énergie électromagnétique focalisée de haute intensité pour le renforcement et la tonification musculaire au cours d'une séance de 30 minutes.",
+    "highrf": "RF élevé · Réduction des graisses | HIFEM+ · Croissance musculaire",
+    "morethan": "Plus que la plupart des autres zones du corps, l’estomac est particulièrement sujet au développement d’un excès de graisse. Après avoir subi un seul traitement avec Emsculpt, les patients peuvent constater une augmentation considérable de leur tonus. Les abdos maigres et musclés qui se cachent sous des couches de graisse sont enfin révélés.",
+    "subscription": "Abonnez-vous",
+    "makeanappointment": "Prendre un rendez-vous.",
+    "scheduleyour": "Schedule Your",
+    "appointmentonline": "Rendez-vous en ligne",
+    "youcanbook": "Vous pouvez réserver un rendez-vous ici uniquement du lundi au jeudi.",
+    "selectdate": "Sélectionner une date",
+    "next": "Suivant",
+    "step": "Étape",
+    "selecttime": "Sélectionner une heure",
+    "personaldetails": "Données personnelles",
+    "selecteddate": "Date sélectionnée",
+    "selectedtime": "Horaire sélectionné",
+    "Full Name": "Nom complet",
+    "Enter Mobile Number": "Entrez le numéro de portable",
+    "Email ID": "Adresse e-mail",
+    "Book an appointment": "Réserver un rendez-vous",
+    "Medical": "Médical",
+    "Notice": "Avis",
+    "Sculpt your core": "Sculptez votre sangle abdominale en 30 minutes ! Notre méthode révolutionnaire utilise une technologie avancée pour un tonus sans effort et sans douleur. Pas de transpiration, pas de tension, juste des résultats.",
+    "List of": "Liste de",
+    "Price": "Prix",
+    "Privacy Policy": "Politique de confidentialité",
+    "General Terms and Conditions": "Conditions générales",
+    "Contact": "Contact",
+    "Us": "Nous",
+    "FullName": "Nom et prénom",
+    "EmaiId": "Identifiant de courrier électronique",
+    "Mobile": "Numéro de portable",
+    "Message": "Message",
+    "SendMessage": "Envoyer un message",
+    "Namerequired": "Le nom complet est requis",
+    "contact": "Contactez-nous",
+    "clickhere": "Cliquez ici",
+    "before": "Avant",
+    "aftre": "Après",
+     "Waiting": "En attendant"
+  },
+  "Inquire": {
+    "FullNameRequired": "Le nom complet est requis",
+    "InvalidEmail": "Adresse e-mail invalide",
+    "EmailRequired": "L'ID e-mail est requis",
+    "MobileNumberRequired": "Le numéro de mobile est requis",
+    "MessageRequired": "Le message est requis"
+  },
+  "About": {
+    "About Us": "À propos de nous",
+    "Our values": "Nos valeurs",
+    "Innovation": "Innovation",
+    "Using cutting-edge": "Utiliser des technologies de pointe pour des résultats optimaux.",
+    "Excellence": "Excellence",
+    "Providing high-quality": "Offrir des traitements de haute qualité avec un service client impeccable.",
+    "Well-being": "Bien-être",
+    "Putting the health": "Mettre la santé et le confort de nos clients au cœur de notre approche.",
+    "Commitment": "Engagement",
+    "Supporting each client": "Accompagner chaque client dans son parcours pour devenir une meilleure version de lui-même."
+  },
+  "Bannercont": {
+    "abs": "20 000 abdominaux",
+    "comfortably": "confortablement et",
+    "effortlessly": "sans effort",
+    "minutes": "30 minutes",
+    "bannersubhead": "Sculptez votre cœur en 30 minutes ! Notre méthode révolutionnaire utilise une technologie avancée pour une tonification sans effort et sans douleur. Pas de sueur, pas de tension, juste des résultats.",
+    "Scroll": "Faites défiler pour en savoir plus"
+  },
+  "Clickable": {
+    "Abdomaxname": "ABDOMAX",
+    "highrf": "RF élevé · Réduction des graisses | HIFEM+ · Croissance musculaire",
+    "stomach": "Plus que la plupart des autres zones du corps, l’estomac est particulièrement sujet au développement d’un excès de graisse. Après avoir subi un seul traitement avec Emsculpt, les patients peuvent constater une augmentation considérable de leur tonus. Les abdos maigres et musclés qui se cachent sous des couches de graisse sont enfin révélés.",
+    "Flanksub": "Fréquence de rayonnement élevée · Perte de graisse | HIFEM+ · Gain musculaire",
+    "Flankcont": "Les flancs, parfois appelés poignées d’amour, sont un endroit fréquent où la graisse s’accumule. Notre traitement Emsculpt avec l'applicateur EDGE peut aider les patients qui ont du mal à perdre de la graisse dans ces régions. Cet appareil est capable de traiter chaque zone de l'abdomen latéral, y compris tous les muscles obliques et 4 points graisseux (la plus grande zone de traitement de tous les appareils de sculpture corporelle de l'industrie).",
+    "Upperarmsub": "HIFEM+ · Croissance musculaire | RF élevé · Réduction des graisses | Biceps : HIFEM+ · Croissance musculaire",
+    "Upperarmcont": "L'application d'Emsculpt sur les bras permet de réduire le tissu adipeux et de mettre en valeur la définition musculaire sous-jacente. Un RF élevé est désormais utilisé dans ce traitement pour améliorer considérablement la perte de graisse. Des bras plus maigres rayonnent de vitalité et semblent en meilleure santé.",
+    "Buttockssub": "HIFEM+ · Croissance musculaire",
+    "Buttockscont": "Beaucoup de graisse s’accumule dans les fesses. Les fessiers peuvent avoir des couches de graisse fondues par Emsculpt, donnant à la forme une apparence plus attrayante. Le corps du patient semble plus mince et plus fort car les muscles fessiers deviennent plus définis et plus apparents.",
+    "Thingssub": "Quatre régions : avant, arrière, intérieur et côté des cuisses RF élevé · Perte de graisse | HIFEM+ · Renforcement musculaire",
+    "Thingscont": "Des traits forts et jeunes sont liés à des cuisses bien toniques. Afin de donner aux jambes du patient l'apparence de leurs plus jeunes années, Emsculpt peut les aider à les façonner. Les jambes des patients semblent plus fortes et plus minces, et elles rayonnent de force.",
+    "Calvessub": "HIFEM+ · Gain de Muscle",
+    "Calvescont": "Même si beaucoup d'entre nous comptent sur la course pour avoir des mollets toniques et définis, l'exercice seul n'est pas toujours suffisant. Emsculpt peut aider les contours musculaires des mollets à « ressortir » davantage en éliminant les couches de graisse résistantes. Avoir des mollets forts et toniques est le signe d’une santé physique optimale, même s’il est parfois méconnu.",
+    "Calves": "Mollets",
+    "Thighs": "Cuisses",
+    "Buttocks": "Fessiers",
+    "Upper arms": "Bras supérieurs",
+    "Flanks": "Flancs"
+  },
+  "Aboutabdomax": {
+    "about": "À propos",
+    "AbdoMax": "Abdomax",
+    "firstpara": "La stimulation électromagnétique pulsée de haute intensité permet une contraction musculaire continue sans relâchement musculaire, permettant au muscle de travailler à sa capacité maximale.",
+    "secondpara": "AbdoMax est basé sur une énergie électromagnétique focalisée de haute intensité. Il s’agit de la dernière technologie en matière d’amincissement et de remodelage corporel non invasif, qui peut à la fois développer les muscles et brûler les graisses.",
+    "thirdpara": "Une seule séance d'AbdoMax provoque des milliers de contractions musculaires puissantes qui sont extrêmement importantes pour améliorer le tonus et la force de vos muscles."
+  },
+  "Abdomaxwork": {
+    "how": "Comment",
+    "AbdoMax": "AbdoMax",
+    "works": "travaux?",
+    "worksub": "Sculptez votre cœur en 30 minutes ! Notre méthode révolutionnaire utilise une technologie avancée pour une tonification sans effort et sans douleur. Pas de sueur, pas de tension, juste des résultats.",
+    "appointment": "Prendre rendez-vous",
+    "appointmentsub": "C'est un fait établi depuis longtemps qu'un lecteur sera distrait par le contenu lisible d'une page lorsqu'il examinera sa mise en page.",
+    "datetime": "Sélectionnez la date et l'heure",
+    "datetimesub": "C'est un fait établi depuis longtemps qu'un lecteur sera distrait par le contenu lisible d'une page lorsqu'il examinera sa mise en page.",
+    "booking": "Confirmer la réservation",
+    "bookingsub": "C'est un fait établi depuis longtemps qu'un lecteur sera distrait par le contenu lisible d'une page lorsqu'il examinera sa mise en page."
+  },
+  "Footercont": {
+    "leftcont": "AbdoMax est basé sur une énergie électromagnétique focalisée de haute intensité. Il s’agit de la dernière technologie en matière d’amincissement et de remodelage corporel non invasif, qui peut à la fois développer les muscles et brûler les graisses.",
+    "reserved": "© 2023 ABDOEMAX, Inc. Tous droits réservés."
+  },
+  "progress": {
+    "commonBanner": {
+      "title": "Abdomax",
+      "colorTitle": "Progrès",
+      "desc": "Sculptez votre corps en 30 minutes ! Notre méthode révolutionnaire utilise une technologie avancée pour un tonus sans effort et sans douleur. Pas de sueur, pas de contrainte, juste des résultats."
+    },
+    "tickCard": {
+      "position": "Pendant l'application, les patients ne reçoivent pas d'anesthésie et sont allongés en position supine.",
+      "applicator": "Un applicateur est placé sur la zone à traiter.",
+      "fixationBelt": "L'applicateur est maintenu par une ceinture de fixation désinfectée pour minimiser le mouvement pendant la procédure.",
+      "intensity": "Le praticien augmente progressivement l'intensité de stimulation selon la tolérance du patient dans les 60 secondes.",
+      "preparation": "Aucune préparation spéciale n'est nécessaire avant le traitement, mais il est recommandé de bien s'hydrater pour réduire les crampes.",
+      "sensation": "Le traitement AbdoMax ressemble à un entraînement intensif mais est décrit comme une sensation de pulsation.",
+      "minTreatments": "Le nombre minimum de traitements est de 6, adapté à vos objectifs et à votre IMC.",
+      "contractions": "Une séance AbdoMax provoque 20 000 contractions musculaires.",
+      "following": "Suite au",
+      "session": "séance, le patient pourra reprendre ses activités. Il peut cependant ressentir des douleurs semblables à celles qui suivent un",
+      "effects": {
+        "sideEffects": "Y a-t-il des effets secondaires ?",
+        "noEffects": "Non, il n'y en a pas. Comme nous l'avons dit précédemment, le patient ressentira seulement quelques douleurs."
+      }
+    }
+  },
+  "menuData": [
+    {
+      "id": 1,
+      "menu": "Progression",
+      "path": "/progression"
+    },
+    {
+      "id": 2,
+      "menu": "Liste des prix",
+      "path": "/listeDesPrix"
+    },
+    {
+      "id": 3,
+      "menu": "Avis médical",
+      "path": "/avisMedical"
+    }
+  ],
+  "exerciseCardData": [
+    {
+      "id": 1,
+      "icon": "ImageExport.NONSURGICAL",
+      "text": "AbdoMax est reconnu comme étant le seul lifting corporel non chirurgical."
+    },
+    {
+      "id": 2,
+      "icon": "ImageExport.ABS",
+      "text": "Vous voulez un corps tonique et plus ferme ? Obtenez des abdos, des fessiers, des bras et des cuisses plus fermes !"
+    },
+    {
+      "id": 3,
+      "icon": "ImageExport.TREATING2",
+      "text": "Possibilité de traiter 2 zones à la fois !"
+    },
+    {
+      "id": 4,
+      "icon": "ImageExport.PROMISES",
+      "text": "AbdoMax promet un gain musculaire de 28 % et une perte de graisse de 30 % en seulement 6 séances."
+    }
+  ],
+  "treatedAreasMenus": [
+    {
+      "id": 1,
+      "menu": "Abdominaux"
+    },
+    {
+      "id": 2,
+      "menu": "Flancs"
+    },
+    {
+      "id": 3,
+      "menu": "Bras supérieurs"
+    },
+    {
+      "id": 4,
+      "menu": "Fessiers"
+    },
+    {
+      "id": 5,
+      "menu": "Cuisses"
+    },
+    {
+      "id": 6,
+      "menu": "Mollets"
+    }
+  ],
+  "faqData": [
+    {
+      "id": 1,
+      "menu": "Combien de temps durent les résultats avec AbdoMax ?",
+      "answer": "Les études montrent qu'après le premier ensemble de 6 séances, les résultats sur les muscles peuvent durer un an ou plus, et les résultats de la perte de graisse sont permanents."
+    },
+    {
+      "id": 2,
+      "menu": "À quoi ressemble la procédure AbdoMax ?",
+      "answer": "Contrairement à la croyance populaire, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une œuvre de littérature latine classique datant de 45 avant J.-C., ce qui lui donne plus de 2000 ans. Richard McClintock."
+    },
+    {
+      "id": 3,
+      "menu": "Combien de temps dure le traitement AbdoMax ?",
+      "answer": "Contrairement à la croyance populaire, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une œuvre de littérature latine classique datant de 45 avant J.-C., ce qui lui donne plus de 2000 ans. Richard McClintock."
+    },
+    {
+      "id": 4,
+      "menu": "Des traitements d'entretien sont-ils nécessaires avec AbdoMax ?",
+      "answer": "Contrairement à la croyance populaire, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une œuvre de littérature latine classique datant de 45 avant J.-C., ce qui lui donne plus de 2000 ans. Richard McClintock."
+    },
+    {
+      "id": 5,
+      "menu": "Combien de temps durent les résultats avec AbdoMax ?",
+      "answer": "Contrairement à la croyance populaire, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une œuvre de littérature latine classique datant de 45 avant J.-C., ce qui lui donne plus de 2000 ans. Richard McClintock."
+    }
+  ],
+  "reviewData": [
+    {
+      "id": 1,
+      "reviewText": "Une excellente équipe. Ils sont consciencieux et attentifs à leurs clients et à leurs besoins. Je recommande vivement les séances d'abdomax dans cet institut.",
+      "userImg": "ImageExport.USER1",
+      "userName": "Rohit Sharma"
+    },
+    {
+      "id": 2,
+      "reviewText": "Une excellente équipe. Ils sont consciencieux et attentifs à leurs clients et à leurs besoins. Je recommande vivement les séances d'abdomax dans cet institut.",
+      "userImg": "ImageExport.USER2",
+      "userName": "Rohit Sharma"
+    },
+    {
+      "id": 3,
+      "reviewText": "Une excellente équipe. Ils sont consciencieux et attentifs à leurs clients et à leurs besoins. Je recommande vivement les séances d'abdomax dans cet institut.",
+      "userImg": "ImageExport.USER1",
+      "userName": "Ishan Kishan"
+    }
+  ],
+  "medicalContraindicationsData": [
+    {
+      "id": 1,
+      "text": "Personnes atteintes de maladies cardiaques, d'hypertension artérielle ou portant un stimulateur cardiaque configuré."
+    },
+    {
+      "id": 2,
+      "text": "Personnes souffrant d'inflammation aiguë, d'asthme, de thrombose ou de cancer."
+    },
+    {
+      "id": 3,
+      "text": "Personnes atteintes d'une maladie hémorragique, d'un traumatisme ou qui saignent."
+    },
+    {
+      "id": 4,
+      "text": "Personnes portant des pièces médicales en plastique ou des parties avec des implants artificiels à l'intérieur du corps."
+    },
+    {
+      "id": 5,
+      "text": "Personnes ayant du métal dans le corps (y compris les prothèses dentaires)."
+    },
+    {
+      "id": 6,
+      "text": "Personnes atteintes d'inflammation cutanée ou d'œdème."
+    },
+    {
+      "id": 7,
+      "text": "Personnes ayant un système immunitaire anormal."
+    },
+    {
+      "id": 8,
+      "text": "Personnes insensibles ou non réactives à la chaleur."
+    },
+    {
+      "id": 9,
+      "text": "Personnes souffrant d'épilepsie."
+    },
+    {
+      "id": 10,
+      "text": "Personnes ayant des implants mammaires."
+    },
+    {
+      "id": 11,
+      "text": "Femmes enceintes et enfants."
+    },
+    {
+      "id": 12,
+      "text": "Femmes avec un stérilet en cuivre."
+    }
+  ],
+  "subscriptionCardData": [
+    {
+      "id": 1,
+      "bgImage": "/images/subs-1.png",
+      "amount": "80 cHF",
+      "noOfSessions": "Analyse corporelle",
+      "listData": [
+        {
+          "id": 1,
+          "listText": "Obtenez 1 session GRATUITE supplémentaire"
+        },
+        {
+          "id": 2,
+          "listText": "Bénéficiez de 10% de réduction supplémentaire sur votre montant total"
+        },
+        {
+          "id": 3,
+          "listText": "Accès à la communauté Abdomax"
+        },
+        {
+          "id": 4,
+          "listText": "Conseils de santé et de fitness"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "bgImage": "/images/subs-2.png",
+      "amount": "600 cHF",
+      "noOfSessions": "6 Sessions",
+      "listData": [
+        {
+          "id": 1,
+          "listText": "Obtenez 1 session GRATUITE supplémentaire"
+        },
+        {
+          "id": 2,
+          "listText": "Bénéficiez de 10% de réduction supplémentaire sur votre montant total"
+        },
+        {
+          "id": 3,
+          "listText": "Accès à la communauté Abdomax"
+        },
+        {
+          "id": 4,
+          "listText": "Conseils de santé et de fitness"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "bgImage": "/images/subs-3.png",
+      "amount": "990 CHF",
+      "noOfSessions": "12 Sessions",
+      "mainPrice": "1’200 CHF",
+      "listData": [
+        {
+          "id": 1,
+          "listText": "Obtenez 1 session GRATUITE supplémentaire"
+        },
+        {
+          "id": 2,
+          "listText": "Bénéficiez de 10% de réduction supplémentaire sur votre montant total"
+        },
+        {
+          "id": 3,
+          "listText": "Accès à la communauté Abdomax"
+        },
+        {
+          "id": 4,
+          "listText": "Conseils de santé et de fitness"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "bgImage": "/images/subs-4.png",
+      "amount": "1’890 CHF",
+      "noOfSessions": "24 Sessions",
+      "mainPrice": "2400 CHF",
+      "listData": [
+        {
+          "id": 1,
+          "listText": "Obtenez 1 session GRATUITE supplémentaire"
+        },
+        {
+          "id": 2,
+          "listText": "Bénéficiez de 10% de réduction supplémentaire sur votre montant total"
+        },
+        {
+          "id": 3,
+          "listText": "Accès à la communauté Abdomax"
+        },
+        {
+          "id": 4,
+          "listText": "Conseils de santé et de fitness"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "bgImage": "/images/subs-5.png",
+      "amount": "3600 CHF",
+      "noOfSessions": "24 Sessions « DUO »",
+      "listData": [
+        {
+          "id": 1,
+          "listText": "Obtenez 1 session GRATUITE supplémentaire"
+        },
+        {
+          "id": 2,
+          "listText": "Bénéficiez de 10% de réduction supplémentaire sur votre montant total"
+        },
+        {
+          "id": 3,
+          "listText": "Accès à la communauté Abdomax"
+        },
+        {
+          "id": 4,
+          "listText": "Conseils de santé et de fitness"
+        }
+      ]
+    }
+  ],
+  "contactData": [
+    {
+      "id": 1,
+      "menu": "021 213 08 20"
+    },
+    {
+      "id": 2,
+      "menu": "info@abdomax.ch"
+    },
+    {
+      "id": 3,
+      "menu": "Place Chauderon 18, 2ème étage, 1003 Lausanne"
+    }
+  ],
+  "termsConditionData": [
+    {
+      "id": 1,
+      "title": "Objet",
+      "desc": "Ces conditions générales régissent l'utilisation du site web AbdoMax et des services fournis par AbdoMax, y compris les traitements de tonification musculaire et de réduction de graisse. En accédant au site et en utilisant nos services, vous acceptez ces conditions dans leur intégralité."
+    },
+    {
+      "id": 2,
+      "title": "Services Offerts",
+      "desc": "AbdoMax propose des traitements esthétiques non invasifs basés sur la technologie électromagnétique. Ces services sont fournis dans notre institut à Lausanne. Les résultats peuvent varier d'une personne à l'autre, et aucune garantie spécifique de résultats n'est donnée."
+    },
+    {
+      "id": 3,
+      "title": "Accès au Site",
+      "desc": "L'accès au site est réservé aux personnes âgées de 18 ans et plus. AbdoMax se réserve le droit de modifier ou de suspendre l'accès au site ou à certains services à tout moment, sans préavis."
+    },
+    {
+      "id": 4,
+      "title": "Utilisation du Site",
+      "desc": "Les utilisateurs s'engagent à ne pas utiliser le site à des fins frauduleuses ou illégales. Toute utilisation non conforme à ces conditions peut entraîner la suspension ou la résiliation de l'accès aux services."
+    },
+    {
+      "id": 5,
+      "title": "Réservation et Annulation de Rendez-vous",
+      "desc": "Les utilisateurs peuvent réserver des rendez-vous via le site web. En cas d'annulation, AbdoMax exige un préavis d'au moins 24 heures. Toute annulation en dehors de ce délai peut entraîner des frais."
+    },
+    {
+      "id": 6,
+      "title": "Prix et Paiements",
+      "desc": "Les prix des services sont indiqués en Francs Suisses (CHF) et peuvent être modifiés sans préavis. Le paiement est dû au moment du traitement, sauf indication contraire. Les méthodes de paiement acceptées sont détaillées au moment de la réservation."
+    },
+    {
+      "id": 7,
+      "title": "Données Personnelles",
+      "desc": "Les informations collectées via le site sont utilisées uniquement pour le traitement des rendez-vous et la gestion des relations clients. AbdoMax s'engage à maintenir la confidentialité des données conformément aux lois suisses sur la protection des données."
+    },
+    {
+      "id": 8,
+      "title": "Politique de Remboursement",
+      "desc": "En raison de la nature des services fournis, aucun remboursement ne sera accordé après la prestation du service, sauf en cas de problèmes majeurs liés au traitement lui-même. Les demandes doivent être faites dans les 7 jours suivant le traitement."
+    },
+    {
+      "id": 9,
+      "title": "Propriété Intellectuelle",
+      "desc": "Tout le contenu du site (texte, images, logos, etc.) est la propriété d'AbdoMax. Toute reproduction, modification ou distribution sans autorisation est strictement interdite."
+    },
+    {
+      "id": 10,
+      "title": "Limitation de Responsabilité",
+      "desc": "AbdoMax s'efforce de fournir un service de qualité mais ne peut être tenu responsable des dommages directs ou indirects résultant de l'utilisation du site ou des traitements fournis, sauf en cas de faute lourde ou intentionnelle."
+    },
+    {
+      "id": 11,
+      "title": "Garanties",
+      "desc": "AbdoMax ne fournit aucune garantie expresse ou implicite concernant les résultats des traitements. Chaque client reconnaît que les résultats peuvent varier en fonction de facteurs individuels, y compris l'état de santé et le mode de vie."
+    },
+    {
+      "id": 12,
+      "title": "Modifications des Conditions",
+      "desc": "AbdoMax se réserve le droit de modifier ces conditions générales à tout moment. Les modifications entreront en vigueur dès leur publication sur le site. Il appartient à l'utilisateur de vérifier régulièrement les mises à jour."
+    },
+    {
+      "id": 13,
+      "title": "Droit Applicable et Juridiction",
+      "desc": "Ces conditions générales sont régies par le droit suisse. Tout litige relatif à l'utilisation du site ou des services fournis sera soumis à la juridiction exclusive des tribunaux compétents de Lausanne, en Suisse."
+    }
+  ],
+  "privacyPolicyData": [
+    {
+      "id": 1,
+      "title": "Collecte de Données Personnelles",
+      "desc": "AbdoMax collecte des informations personnelles via le formulaire de contact et la réservation de rendez-vous, y compris le nom, l'adresse e-mail et le numéro de téléphone. Ces données sont utilisées uniquement pour traiter vos demandes et améliorer nos services."
+    },
+    {
+      "id": 2,
+      "title": "Utilisation des Données",
+      "desc": "Les données collectées sont utilisées pour la gestion des rendez-vous, l'envoi de communications promotionnelles et l'amélioration de l'expérience utilisateur. AbdoMax ne partage pas ces informations avec des tiers sans consentement explicite."
+    },
+    {
+      "id": 3,
+      "title": "Sécurité des Données",
+      "desc": "AbdoMax met en œuvre des mesures techniques et organisationnelles pour protéger vos données contre l'accès non autorisé, la perte ou la divulgation. Cependant, aucune méthode de transmission sur Internet n'est entièrement sécurisée."
+    },
+    {
+      "id": 4,
+      "title": "Cookies",
+      "desc": "Le site utilise des cookies pour améliorer la navigation et analyser le trafic. Vous pouvez désactiver les cookies en ajustant les paramètres de votre navigateur."
+    },
+    {
+      "id": 5,
+      "title": "Droits des Utilisateurs",
+      "desc": "Conformément à la loi suisse sur la protection des données, vous avez le droit d'accéder, de corriger ou de supprimer vos informations personnelles en nous contactant à l'adresse fournie sur le site."
+    },
+    {
+      "id": 6,
+      "title": "Modifications de la Politique",
+      "desc": "Cette politique peut être modifiée à tout moment. Les changements entreront en vigueur dès leur publication sur le site. Il est recommandé de consulter régulièrement cette page pour rester informé des modifications."
+    },
+    {
+      "id": 7,
+      "title": "Contact",
+      "desc": "Pour toute question concernant cette politique de confidentialité, veuillez nous contacter par e-mail ou par téléphone."
+    }
+  ],
+  "aboutUsData": [
+    {
+      "id": 1,
+      "title": "Notre Vision",
+      "desc": "Chez AbdoMax, notre mission est d'aider nos clients à atteindre leurs objectifs de bien-être physique en offrant des traitements de tonification musculaire et de réduction des graisses non invasifs. Nous croyons que tout le monde mérite de se sentir bien dans son corps et de bénéficier d'une approche moderne et efficace de la transformation physique."
+    },
+    {
+      "id": 2,
+      "title": "Notre Histoire",
+      "desc": "Fondé à Lausanne, AbdoMax est né d'une passion pour la santé et l'innovation. Nous avons cherché à combiner les dernières technologies de bien-être avec des méthodes non invasives pour offrir à nos clients une solution de transformation corporelle sûre et durable. Depuis notre création, nous avons aidé de nombreux clients à atteindre leurs objectifs en matière de tonification musculaire et de réduction des graisses."
+    }
+  ]
+}

@@ -9,8 +9,12 @@ import UpperArms from "./UpperArms";
 import Buttocks from "./Buttocks";
 import Thighs from "./Thighs";
 import Calves from "./Calves";
+import { useTranslations } from "next-intl";
+import useGlobalStore from "@/stores/useGlobalStore";
 
 const TreatedAreas: React.FC = () => {
+   const {language, setLanguage} = useGlobalStore()
+  const t = useTranslations("Index");
   const [activeMenu, setActiveMenu] = useState<any>("");
 
   useEffect(() => {
@@ -53,15 +57,13 @@ const TreatedAreas: React.FC = () => {
               className="2xl:h-14 mobile:h-11 sm:block hidden"
             />
             <h2 className="font-bold font-DIN text-white 2xl:text-7xl mobile:text-6xl text-5xl uppercase sm:text-left text-center">
-              What <span className="text-lightGreen">areas</span> can be treated
-              with <span className="text-lightGreen">Abdomax</span>
+              {t("What")} <span className="text-lightGreen">{t("areas")}</span>{" "}
+              {t("treated")}{" "}
+              <span className="text-lightGreen"> {t("Abdomaxname")} </span>
             </h2>
           </div>
           <p className="md:max-w-screen-md w-full md:text-lg text-15p font-normal font-Public_Sans text-white text-center md:mt-2 mt-4 mb-10 leading-7">
-            Abdomax is the first and only non-invasive body shaping procedure
-            that uses radio frequency heating for fat reduction and high
-            intensity focused electromagnetic energy for muscle strengthening
-            and toning in a 30-minute session.
+            {t("areastreatedsub")}
           </p>
         </div>
         <div className="w-full flex sm:justify-center border-t border-b borderCenter border-opacity-20 overflow-x-auto px-10">
@@ -79,7 +81,7 @@ const TreatedAreas: React.FC = () => {
                   key={data.id}
                   onClick={() => handleMenuChange(data.id)}
                 >
-                  {data.menu}
+                  {data.menu[language]}
                 </h4>
               );
             })}

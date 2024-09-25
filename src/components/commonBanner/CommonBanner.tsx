@@ -3,6 +3,7 @@
 import React from "react";
 import AppointmentButton from "../AppointmentButton";
 import { cn } from "@/app/utils/merger";
+import { useTranslations } from "next-intl";
 
 interface CommonBannerProps {
   title: string;
@@ -17,6 +18,7 @@ const CommonBanner: React.FC<CommonBannerProps> = ({
   desc,
   mainStyle,
 }) => {
+  const t = useTranslations("Bannercont");
   return (
     <div
       className={cn(
@@ -30,9 +32,9 @@ const CommonBanner: React.FC<CommonBannerProps> = ({
           <span className="text-lightGreen"> {colorTitle}</span>
         </h2>
         <p className="md:text-lg max-w-screen-sm text-15p font-normal font-Public_Sans text-white mb-6 text-center leading-7">
-          {desc}
+          {t("bannersubhead")}
         </p>
-        <AppointmentButton href="/bookAppointment" />
+        <AppointmentButton  />
       </div>
     </div>
   );

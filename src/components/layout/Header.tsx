@@ -5,19 +5,27 @@
 "use client";
 
 import { cn } from "@/app/utils/merger";
-import { menuData } from "@/shared/config";
 import { ImageExport } from "@/shared/images";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import BottomArrow from "../svg/BottomArrow";
 import TopArrow from "../svg/TopArrow";
+import { menuData } from "@/shared/config";
+import { useTranslations } from "next-intl";
+import useGlobalStore from "@/stores/useGlobalStore";
 
 const Header = () => {
   const [isMobileMenu, setIsMobileMenu] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [isLanguage, setIsLanguage] = useState(false);
+  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
   const pathname = usePathname();
+  const [isPending, startTransition] = React.useTransition();
+  const t = useTranslations("Index");
+
+  const router = useRouter();
+
+  const { language, setLanguage } = useGlobalStore();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +43,32 @@ const Header = () => {
   const handleMobileMenuClose = () => {
     setIsMobileMenu(false);
   };
+
+  const handleLanguageChange = (nextLocale: "en" | "fr") => {
+    if (language !== nextLocale) {
+      setLanguage(nextLocale);
+
+      const segments = pathname.split("/");
+      segments[1] = nextLocale; // Replace the current locale with the next one
+      const newPath = segments.join("/");
+
+      router.replace(newPath); // Then navigate
+    }
+    setIsLanguageDropdownOpen(false); // Close dropdown after selection
+  };
+
+  const homeLink = {
+    en: "/en/home",
+    fr: "/fr/home",
+  };
+
+  const contactLink = {
+    en: "/en/contact-us",
+    fr: "/fr/contact-us",
+  };
+
+  type Language = "en" | "fr";
+
   return (
     <div
       className={cn(
@@ -44,13 +78,9 @@ const Header = () => {
     >
       <div className="w-full sm:px-14 px-5 mobile:h-20 h-16 flex items-center justify-between relative">
         <div className="w-full sm:w-fit flex items-center lg:justify-start justify-between gap-5">
-          <Link href="/home">
+          <Link href={homeLink[language as Language]}>
             <div className="mobile:w-40 w-28 mobile:h-20 h-14">
-              <img
-                src={ImageExport.LOGO}
-                className="w-full h-full"
-                alt="United Ai"
-              />
+              <img src={ImageExport.LOGO} className="w-full h-full" alt="" />
             </div>
           </Link>
           <div className="h-full lg:block hidden">
@@ -59,9 +89,10 @@ const Header = () => {
           <div
             className={cn(
               "lg:hidden block mobile:size-9 size-8",
-              pathname === "/privacyPolicy" ||
-                pathname === "/termsCondition" ||
-                pathname === "/aboutUs"
+              (pathname.startsWith("/en/") || pathname.startsWith("/fr/")) &&
+                (pathname.includes("privacy-policy") ||
+                  pathname.includes("terms-condition") ||
+                  pathname.includes("about-us"))
                 ? "bg-black rounded-lg"
                 : ""
             )}
@@ -92,10 +123,10 @@ const Header = () => {
                 className="size-full"
               />
             </div>
-            {menuData?.map((data) => {
+            {menuData?.map((data: any) => {
               return (
                 <Link
-                  href={data.path}
+                  href={data.path[language]}
                   className="flex items-center gap-5 mb-5 lg:mb-0"
                   key={data.id}
                   onClick={handleMobileMenuClose}
@@ -103,15 +134,21 @@ const Header = () => {
                   <h2
                     className={cn(
                       "group flex items-center mobile:text-base text-sm font-Public_Sans cursor-pointer hover:text-lightGreen transition-all duration-100 ease-in",
-                      data.path === pathname
-                        ? "text-lightGreen font-semibold"
+                      data.path[language] === pathname
+                        ? "text-lightGreen font-medium"
                         : "text-white font-normal text-opacity-80",
-                      data.menu === "Progress" ? "w-[90px]" : "",
-                      data.menu === "List of price" ? "w-[120px]" : "",
-                      data.menu === "Medical notice" ? "w-[132px]" : "",
-                      pathname === "/privacyPolicy" ||
-                        pathname === "/termsCondition" ||
-                        pathname === "/aboutUs"
+                      data.menu[language] === "Progress" ? "w-[90px]" : "",
+                      data.menu[language] === "List of price"
+                        ? "w-[120px]"
+                        : "",
+                      data.menu[language] === "Medical notice"
+                        ? "w-[132px]"
+                        : "",
+                      (pathname.startsWith("/en/") ||
+                        pathname.startsWith("/fr/")) &&
+                        (pathname.includes("privacy-policy") ||
+                          pathname.includes("terms-condition") ||
+                          pathname.includes("about-us"))
                         ? "lg:text-txtBlack"
                         : ""
                     )}
@@ -119,7 +156,7 @@ const Header = () => {
                     <span
                       className={cn(
                         "border-l-2 group-hover:border-lightGreen h-10p mr-2p transition-all duration-300 ease-in-out",
-                        data.path === pathname
+                        data.path[language] === pathname
                           ? "border-lightGreen"
                           : "border-transparent"
                       )}
@@ -127,16 +164,16 @@ const Header = () => {
                     <span
                       className={cn(
                         "border-l-2 group-hover:border-lightGreen h-18p mr-1 transition-all duration-300 ease-in-out",
-                        data.path === pathname
+                        data.path[language] === pathname
                           ? "border-lightGreen"
                           : "border-transparent"
                       )}
                     ></span>
-                    {data.menu}
+                    {data.menu[language]}
                     <span
                       className={cn(
                         "border-l-2 group-hover:border-lightGreen h-10p ml-1 transition-all duration-300 ease-in-out",
-                        data.path === pathname
+                        data.path[language] === pathname
                           ? "border-lightGreen"
                           : "border-transparent"
                       )}
@@ -144,7 +181,7 @@ const Header = () => {
                     <span
                       className={cn(
                         "border-l-2 group-hover:border-lightGreen h-18p ml-2p transition-all duration-300 ease-in-out",
-                        data.path === pathname
+                        data.path[language] === pathname
                           ? "border-lightGreen"
                           : "border-transparent"
                       )}
@@ -157,16 +194,18 @@ const Header = () => {
               );
             })}
             <Link
-              href="/contactUs"
+              href={contactLink[language as Language]}
               onClick={handleMobileMenuClose}
               className="border hover:border-lightGreen rounded-xl px-4 w-fit h-10 flex items-center justify-center bg-transparent text-white text-sm hover:text-lightGreen font-medium font-Public_Sans transition-all duration-300 ease-out sm:hidden"
             >
-              Contact Us
+              {t("contact")}
             </Link>
             <div className={cn("relative block sm:hidden mt-5")}>
               <div
                 className="border border-white rounded-xl px-4 w-fit h-10 flex gap-2 items-center justify-center bg-transparent text-sm text-white font-medium font-Public_Sans cursor-pointer"
-                onClick={() => setIsLanguage(!isLanguage)}
+                onClick={() =>
+                  setIsLanguageDropdownOpen(!isLanguageDropdownOpen)
+                }
               >
                 English
                 <img
@@ -178,7 +217,7 @@ const Header = () => {
               <div
                 className={cn(
                   "absolute top-12 border rounded-xl w-fit border-lightGreen px-7 flex flex-col gap-5 py-3 bg-black",
-                  isLanguage ? "block" : "hidden"
+                  isLanguageDropdownOpen ? "block" : "hidden"
                 )}
               >
                 <p className="text-white font-medium font-Public_Sans text-sm cursor-pointer hover:text-lightGreen transition-colors duration-300">
@@ -193,49 +232,73 @@ const Header = () => {
             <div
               className={cn(
                 "border rounded-xl px-4 w-fit h-10 flex gap-2 items-center justify-center text-sm bg-transparent font-medium font-Public_Sans cursor-pointer",
-                pathname === "/privacyPolicy" ||
-                  pathname === "/termsCondition" ||
-                  pathname === "/aboutUs"
+                (pathname.startsWith("/en/") || pathname.startsWith("/fr/")) &&
+                  (pathname.includes("privacy-policy") ||
+                    pathname.includes("terms-condition") ||
+                    pathname.includes("about-us"))
                   ? "border-black text-black"
                   : "border-white text-white"
               )}
-              onClick={() => setIsLanguage(!isLanguage)}
+              onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
             >
-              English
-              {isLanguage ? <TopArrow /> : <BottomArrow />}
+              {language === "fr" ? "Français" : "English"}
+              {isLanguageDropdownOpen ? <TopArrow /> : <BottomArrow />}
             </div>
             <div
               className={cn(
                 "absolute top-12 border rounded-xl w-full border-lightGreen px-5 flex flex-col gap-5 py-3",
-                isLanguage ? "block" : "hidden"
+                isLanguageDropdownOpen ? "block" : "hidden"
               )}
             >
               <p
                 className={cn(
-                  "font-medium font-Public_Sans text-sm cursor-pointer hover:text-lightGreen transition-colors duration-300",
-                  pathname === "/privacyPolicy" ||
-                    pathname === "/termsCondition" ||
-                    pathname === "/aboutUs"
+                  "font-medium font-Public_Sans text-sm cursor-pointer hover:text-lightGreen transition-colors duration-300 mb-5",
+                  (pathname.startsWith("/en/") ||
+                    pathname.startsWith("/fr/")) &&
+                    (pathname.includes("privacy-policy") ||
+                      pathname.includes("terms-condition") ||
+                      pathname.includes("about-us"))
                     ? "text-black"
                     : " text-white"
                 )}
+                onClick={() => handleLanguageChange("en")}
               >
-                French
+                English
+              </p>
+              <p
+                className={cn(
+                  "font-medium font-Public_Sans text-sm cursor-pointer hover:text-lightGreen transition-colors duration-300",
+                  (pathname.startsWith("/en/") ||
+                    pathname.startsWith("/fr/")) &&
+                    (pathname.includes("privacy-policy") ||
+                      pathname.includes("terms-condition") ||
+                      pathname.includes("about-us"))
+                    ? "text-black"
+                    : " text-white"
+                )}
+                onClick={() => handleLanguageChange("fr")}
+              >
+                Français
               </p>
             </div>
           </div>
           <Link
-            href="/contactUs"
+            href={contactLink[language as Language]}
             className={cn(
               "border hover:border-lightGreen rounded-xl px-4 w-fit h-10 sm:flex hidden items-center justify-center bg-transparent hover:text-lightGreen text-sm font-medium font-Public_Sans transition-all duration-300 ease-out",
-              pathname === "/privacyPolicy" ||
-                pathname === "/termsCondition" ||
-                pathname === "/aboutUs"
+              (pathname.startsWith("/en/") || pathname.startsWith("/fr/")) &&
+                pathname.includes("contact-us")
+                ? "!border-lightGreen !text-lightGreen"
+                : "",
+              (pathname.startsWith("/en/") || pathname.startsWith("/fr/")) &&
+                (pathname.includes("privacy-policy") ||
+                  pathname.includes("terms-condition") ||
+                  pathname.includes("about-us"))
                 ? "border-black text-black"
                 : "border-white text-white"
             )}
           >
-            Contact Us
+            {t("contact")}
           </Link>
         </div>
       </div>

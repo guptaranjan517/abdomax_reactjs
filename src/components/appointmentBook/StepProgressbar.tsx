@@ -3,6 +3,7 @@
 "use client";
 
 import { cn } from "@/app/utils/merger";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 interface StepProgressbarProps {
@@ -10,6 +11,7 @@ interface StepProgressbarProps {
 }
 
 const StepProgressbar: React.FC<StepProgressbarProps> = ({ step }) => {
+  const t = useTranslations("Index");
   return (
     <div className="w-full">
       <ol className="py-4 flex items-center sm:px-16 px-4 lg:w-6/12 w-11/12 text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base mx-auto">
@@ -32,7 +34,7 @@ const StepProgressbar: React.FC<StepProgressbarProps> = ({ step }) => {
             >
               {step >= 1 && (
                 <img
-                  src="images/vector-tick.png"
+                  src="/images/vector-tick.png"
                   alt="Step 1"
                   className="inline-block"
                 />
@@ -59,7 +61,7 @@ const StepProgressbar: React.FC<StepProgressbarProps> = ({ step }) => {
             >
               {step >= 2 && (
                 <img
-                  src="images/vector-tick.png"
+                  src="/images/vector-tick.png"
                   alt="Step 2"
                   className="inline-block"
                 />
@@ -77,7 +79,7 @@ const StepProgressbar: React.FC<StepProgressbarProps> = ({ step }) => {
             >
               {step >= 3 && (
                 <img
-                  src="images/vector-tick.png"
+                  src="/images/vector-tick.png"
                   alt="Step 3"
                   className="inline-block"
                 />
@@ -91,23 +93,23 @@ const StepProgressbar: React.FC<StepProgressbarProps> = ({ step }) => {
         <li className="flex w-full items-center">
           <span className="sm:w-40 w-20 sm:px-4 px-0 text-white sm:text-base text-sm font-Public_Sans font-medium">
             <span className="text-stepstext mb-1 block text-xs font-Public_Sans font-normal">
-              Step 1
+             {t('step')} 1
             </span>
-            Select Date
+            {t('selectdate')}
           </span>
         </li>
         <li className="flex w-full items-center">
           <span className="sm:w-40 w-20 sm:px-4 px-0 text-white sm:text-base text-sm font-Public_Sans font-medium">
             <span className="text-stepstext mb-1 block text-xs font-Public_Sans font-normal">
-              Step 2
+            {t('step')} 2
             </span>
-            Select Time
+            {t('selecttime')}
           </span>
         </li>
         <li className="flex items-center">
           <span className="sm:w-40 w-24 sm:px-4 px-0 text-white sm:text-base text-sm font-Public_Sans font-medium">
             <span className="text-stepstext mb-1 block text-xs font-Public_Sans font-normal">
-              Step 3
+            {t('step')} 3
             </span>
             Personal Details
           </span>

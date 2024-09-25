@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -33,6 +32,8 @@ const config: Config = {
           "linear-gradient(left, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.20), rgba(0, 0, 0, 0))",
         selecttimebggradient:
           "linear-gradient(to right, transparent 10%, #33c7de0d 60%, transparent 100%)",
+        selecttimebggradientcard:
+          "linear-gradient(to right, transparent 10%, #34c9df80 50%, transparent 100%)",
         bgAbs: "url('/images/absBg.png')",
         bgFlanks: "url('/images/flanksArea.png')",
         bgUpperArms: "url('/images/upperArmsArea.png')",
@@ -43,12 +44,13 @@ const config: Config = {
         mobileBlushImg: "url('/images/mobileBlushImg.svg')",
         bgStar: "url('/images/bgStar.png')",
         bgAbout:
-          "linear-gradient(to bottom right, rgba(149, 219, 50, 0.15) 0%, #0c0c0c 30%)",
+          "linear-gradient(to bottom right, rgba(149, 219, 50, 0.15) 0%, #0C0C0C 30%)",
         bgBannercolor:
           "linear-gradient(to right, rgba(149, 219, 50, 0.15) 0%, #000000 50%)",
         bgTreatedArea:
-          "linear-gradient(to bottom, rgba(149, 219, 50, 0.07) 0%, #0c0c0c 100%)",
-
+          "linear-gradient(to bottom, rgba(149, 219, 50, 0.07) 0%, #0C0C0C 100%)",
+        journerbordergrad:
+            "linear-gradient(90deg, #19D5F2 80%, #4DBCCD 20%)",
         bgAnyQuestion: "url('/images/anyQusetion.png')",
         bgAnyQuestionMobile: "url('/images/anyQusetion-mobile.svg')",
         bgBanner: "url('/images/banner.png')",
@@ -90,10 +92,14 @@ const config: Config = {
         popuptext: "#000000b3",
         bgSubscriptionCard: "#383C42",
         bgReview: "#131212",
+        journerborder: "#19d5f266",
+        journerwhiteborder: "#ffffff33",
+        cardborder: "#34C9DFB2"
       },
       height: {
         "10p": "10px",
         "18p": "18px",
+        "25": "25px",
         "52p": "52px",
         100: "100px",
         200: "200px",
@@ -115,6 +121,7 @@ const config: Config = {
       spacing: {
         "2p": "2px",
         "10p": "10px",
+        '-25': '-25px',
       },
       fontSize: {
         "15p": "15px",

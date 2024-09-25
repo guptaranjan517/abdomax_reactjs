@@ -1,27 +1,23 @@
 "use client";
 
 import { ImageExport } from "@/shared/images";
+import useAppointmentStore from "@/stores/useAppointmentStore";
 import React, { Fragment } from "react";
 import ReactModal from "react-modal";
 
-interface AppointmentConfirmedProps {
-  isOpen: boolean;
-  setIsOpen: any;
-}
-
-const AppointmentConfirmed: React.FC<AppointmentConfirmedProps> = ({
-  isOpen,
-  setIsOpen,
-}) => {
+const AppointmentConfirmed = () => {
+  const { finalSubmit, setFinalSubmit, resetFlow, clearPersistedState } =
+    useAppointmentStore();
   const handleClose = () => {
-    setIsOpen(false);
+    setFinalSubmit(false);
+    clearPersistedState();
+    resetFlow();
   };
-
   return (
     <Fragment>
       <ReactModal
         className="fixed inset-0 flex items-center justify-center p-4 z-30 outline-none"
-        isOpen={isOpen}
+        isOpen={finalSubmit}
         onAfterOpen={() => (document.body.style.overflow = "hidden")}
         onAfterClose={() => (document.body.style.overflow = "unset")}
         ariaHideApp={false}

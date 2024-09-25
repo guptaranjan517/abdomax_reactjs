@@ -1,3 +1,4 @@
+// SelectDate.tsx
 "use client";
 
 import React, { Fragment, useState } from "react";
@@ -7,12 +8,13 @@ import "react-datepicker/dist/react-datepicker.css";
 import { ImageExport } from "@/shared/images";
 import { format, addDays } from "date-fns";
 import { cn } from "@/app/utils/merger";
+import { useTranslations } from "next-intl";
+import useAppointmentStore from "@/stores/useAppointmentStore";
 
-interface SelectDateProps {
-  onClick: React.MouseEventHandler<HTMLButtonElement> | undefined;
-}
-
-const SelectDate: React.FC<SelectDateProps> = ({ onClick }) => {
+const SelectDate = () => {
+  const step = 1;
+  const { setStepData, nextStep } = useAppointmentStore();
+  const t = useTranslations("Index");
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
 
   const handleDateChange = (date: Date | null) => {
@@ -26,6 +28,14 @@ const SelectDate: React.FC<SelectDateProps> = ({ onClick }) => {
   const unavailableDates = [addDays(new Date(), 2), addDays(new Date(), 4)];
 
   const getDayClassName = (date: Date) => {
+    const formattedCurrentDate = format(date, "yyyy-MM-dd");
+    if (
+      selectedDate &&
+      formattedCurrentDate === format(selectedDate, "yyyy-MM-dd")
+    ) {
+      return "selectedClass"; // Class for the selected date
+    }
+
     if (
       availableDates.some(
         (d) => format(d, "yyyy-MM-dd") === format(date, "yyyy-MM-dd")
@@ -43,11 +53,18 @@ const SelectDate: React.FC<SelectDateProps> = ({ onClick }) => {
     return "";
   };
 
+  const onSubmit = () => {
+    setStepData(step, {
+      date: selectedDate,
+    });
+    nextStep();
+  };
+
   return (
     <Fragment>
       <div className="bg-selecttimebg h-auto max-w-screen-md w-full rounded-3xl shadow-inner lg:p-12 mobile:px-6 px-3 py-12">
         <p className="text-white font-Public_Sans text-2xl font-medium">
-          Select Date
+          {t("selectdate")}
         </p>
         <div className="w-full selectDate">
           <DatePicker
@@ -91,12 +108,12 @@ const SelectDate: React.FC<SelectDateProps> = ({ onClick }) => {
 
         <div className="mt-4 flex justify-end">
           <Button
-            textButton="Next"
+            textButton={t("next")}
             restStyle={cn(
               "!w-48 !justify-between",
               selectedDate === null ? "pointer-events-none" : ""
             )}
-            onClick={onClick}
+            onClick={onSubmit}
           />
         </div>
       </div>

@@ -8,11 +8,13 @@ import AppointmentButton from "../AppointmentButton";
 import { bannerData, mobileBannerData } from "@/shared/config";
 import { cn } from "@/app/utils/merger";
 import { ImageExport } from "@/shared/images";
+import { useTranslations } from "next-intl";
 
 const PrevArrow = () => <div className="hidden"></div>;
 const NextArrow = () => <div className="hidden"></div>;
 
 const Banner = () => {
+  const t = useTranslations("Bannercont");
   const [count, setCount] = useState(0);
 
   const sliderRef = useRef(null);
@@ -32,10 +34,7 @@ const Banner = () => {
     nextArrow: <NextArrow />,
     appendDots: (dots: any) => (
       <div style={{ display: "flex" }}>
-        <ul className="font-arial font-normal gap-2 sm:flex hidden">
-          {" "}
-          {dots}{" "}
-        </ul>
+        <ul className="font-arial font-normal gap-2 sm:flex hidden">{dots}</ul>
       </div>
     ),
     customPaging: (i: any) => (
@@ -69,12 +68,12 @@ const Banner = () => {
       <div className="absolute inset-0 desktop:flex flex-col items-start justify-center z-10 text-center md:pt-0 pt-4 3xl:pb-0 pb-8 bg-bgBlush bg-right-bottom bg-no-repeat hidden 2xl:bottom-16 3xl:bottom-0 2xl:pl-20">
         <div className="w-fit flex flex-col gap-2 mb-7 pr-5 desktop:pr-0 pl-7 2xl:pl-0">
           <h2 className="w-fit font-bold font-DIN text-white 2xl:text-8xl lg:text-7xl md:text-6xl text-5xl text-start relative">
-            <span className="text-lightGreen">20,000 abs </span>
+            <span className="text-lightGreen">{t("abs")} </span>
             <br className="desktop:block hidden" />
-            comfortably and <br className="desktop:block hidden" /> effortlessly
-            in
+            {t("comfortably")} <br className="desktop:block hidden" />{" "}
+            {t("effortlessly")}
             <span className="text-lightBlue">
-              <br className="desktop:block hidden" /> 30 minutes
+              <br className="desktop:block hidden" /> {t("minutes")}
             </span>
             <img
               src={ImageExport.STARICON}
@@ -83,11 +82,9 @@ const Banner = () => {
             />
           </h2>
           <p className="desktop:max-w-screen-sm text-white font-Public_Sans font-normal md:text-lg text-sm mb-10 sm:pr-40 mobile:pr-20 text-start leading-9">
-            Sculpt your core in 30 minutes! Our revolutionary method uses
-            advanced tech for effortless, painless toning. No sweat, no strain,
-            just results.
+            {t("bannersubhead")}
           </p>
-          <AppointmentButton href="/bookAppointment" />
+          <AppointmentButton />
         </div>
       </div>
 
@@ -129,7 +126,7 @@ const Banner = () => {
               advanced tech for effortless, painless toning. No sweat, no
               strain, just results.
             </p>
-            <AppointmentButton href="/bookAppointment" />
+            <AppointmentButton />
           </div>
         </div>
       </div>
@@ -139,7 +136,7 @@ const Banner = () => {
           className="flex items-center gap-2 animate-bounce hover:animate-pulse"
         >
           <p className="uppercase text-white font-medium font-Public_Sans 2xl:text-15p text-xs">
-            Scroll for more
+            {t("Scroll")}
           </p>
           <img
             src={ImageExport.SCROLLFORMORE}

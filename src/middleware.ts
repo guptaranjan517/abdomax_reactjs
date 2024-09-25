@@ -1,25 +1,14 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import createMiddleware from "next-intl/middleware";
 
-export function middleware(request: NextRequest) {
-  const url = request.nextUrl.clone();
+export default createMiddleware({
+  // A list of all locales that are supported
+  locales: ["en", "fr"],
 
-  // Define route mappings
-  const routes: Record<string, string> = {
-    '/': '/home',
-    '/progress': '/progress',
-    '/listOfPrice': '/listOfPrice',
-    '/medicalNotice': '/medicalNotice',
-    '/contactUs': '/contactUs',
-    '/bookAppointment': '/bookAppointment'
-  };
+  // Used when no locale matches; change to "en" for default
+  defaultLocale: "en",
+});
 
-  // Check if the request path matches any of the routes
-  if (routes[url.pathname]) {
-    url.pathname = routes[url.pathname];
-    return NextResponse.rewrite(url);
-  }
-
-  // If no match, allow the request to proceed as usual
-  return NextResponse.next();
-}
+export const config = {
+  // Match only internationalized pathnames
+  matcher: ["/", "/(en|fr)/:path*"],
+};
