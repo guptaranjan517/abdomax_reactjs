@@ -1,3 +1,5 @@
+"use client";
+
 import DateBanner from "@/components/banner/DateBanner";
 import Journey from "@/components/journey/Journey";
 import { ImageExport } from "@/shared/images";

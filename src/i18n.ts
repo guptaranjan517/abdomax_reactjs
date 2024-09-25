@@ -1,33 +1,37 @@
+// src/i18n.ts
+
 import { notFound } from "next/navigation";
 import { getRequestConfig } from "next-intl/server";
+import { getTranslations } from "./app/utils/translations";
 
-// Can be imported from a shared config
+// Define supported locales
 const locales = ["en", "fr"];
 
-export default getRequestConfig(async ({ locale }) => {
-  // Validate that the incoming `locale` parameter is valid
-  if (!locales.includes(locale as any)) notFound();
+// Define RequestConfig interface
+interface RequestConfig {
+  locale: string;
+  messages: Record<string, any>;
+}
 
-  try {
-    const baseUrl = process.env.SERVER_URL
-      ? `https://${process.env.SERVER_URL}`
-      : "http://localhost:3000";
-    const apiUrl = `${baseUrl}/api/translations/${locale}`;
-    // console.log("Fetching translations from:", apiUrl);
-    // Fetch translations from the API
-    const response = await fetch(apiUrl);
-    const translations = await response.json();
-
-    if (!translations) {
-      // console.error("Translations not found for locale:", locale);
+export default getRequestConfig(
+  async ({ locale }: { locale: string }): Promise<RequestConfig> => {
+    // Validate locale
+    if (!locales.includes(locale)) {
       notFound();
     }
 
+    // Fetch translations
+    const messages = getTranslations(locale);
+    // console.log("Fetched messages:", messages); // Check the structure of messages
+    // Ensure messages is a plain object
+    if (!messages || typeof messages !== "object") {
+      notFound();
+    }
+
+    // Return the RequestConfig object with the correct structure
     return {
-      messages: translations,
+      locale,
+      messages, // This should be a simple object or record
     };
-  } catch (error) {
-    // console.error("Error fetching translations:", error);
-    notFound();
   }
-});
+);

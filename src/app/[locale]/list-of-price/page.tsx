@@ -1,9 +1,9 @@
+"use client";
 import SubscriptionCard from "@/components/SubscriptionCard";
 import CommonBanner from "@/components/commonBanner/CommonBanner";
 import Faq from "@/components/faq/Faq";
 import Journey from "@/components/journey/Journey";
 import Review from "@/components/review/Review";
-import { subscriptionCardData } from "@/shared/config";
 import React from "react";
 import { useTranslations } from "next-intl";
 
