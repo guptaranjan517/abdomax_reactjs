@@ -303,7 +303,7 @@ html {
   align-items: center !important;
   justify-content: center !important;
 }
-.selectDate .react-datepicker__day--keyboard-selected,
+/* .selectDate .react-datepicker__day--keyboard-selected, */
 .react-datepicker__month-text--keyboard-selected,
 .react-datepicker__quarter-text--keyboard-selected,
 .react-datepicker__year-text--keyboard-selected {
@@ -334,8 +334,7 @@ html {
   background-color: #95db32;
 }
 .selectDate .selectedClass {
-  background-color: #5429e0 !important;
-  border: 1px solid #ffffff;
+  background-color: #95db32 !important;
   border-radius: 100%;
 }
 .selectDate .unavailable {
@@ -365,6 +364,19 @@ html {
     margin: auto;
   }
 }
+@media (max-width: 520px) {
+  .mob {
+    background-position: top!important;
+    background-size: auto;
+    height: 500px;
+  }
+  .selectDate .react-datepicker__day {
+    border-radius: 50% !important;
+    height: 30px !important;
+    width: 30px !important;
+    font-size: 14px !important;
+  } 
+}
 @media (max-width: 420px) {
   .selectDate .react-datepicker__navigation--previous {
     margin-left: 4px !important;
@@ -384,4 +396,22 @@ html {
   }
 }
 
+.selectedClass {
+  background-color: #4CAF50 !important; /* Green background for the selected date */
+  color: white !important;
+}
+/* Class for unavailable dates (Friday, Saturday, Sunday) */
+.unavailableClass {
+  background-color: #999 !important; /* Grey background for disabled dates */
+  color: #666 !important; /* Text color for disabled dates */
+}
+/* Class for all other non-selected dates */
+.defaultClass {
+  background-color: #000 !important; /* Black background for non-selected dates */
+  color: #fff !important; /* White text color */
+}
+/* Disable pointer events for unavailable dates */
+.pointer-events-none {
+  pointer-events: none !important;
+}
 /* custom calender end */

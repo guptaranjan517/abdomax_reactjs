@@ -20,7 +20,7 @@ import { useTranslations } from "next-intl";
 import React from "react";
 
 const Home = () => {
-   const {language, setLanguage} = useGlobalStore()
+  const { language, setLanguage } = useGlobalStore()
 
   const t = useTranslations("Index");
   return (
@@ -53,7 +53,7 @@ const Home = () => {
       </div>
       <div className="w-full h-full sm:pb-0 pb-10 lg:-mt-8">
         <img
-          src={ImageExport.BODYPARTS}
+          src={language === "en" ? ImageExport.ENBODYPARTS : ImageExport.FRBODYPARTS}
           className="w-full h-full sm:block hidden"
           alt="body parts"
         />
@@ -78,7 +78,7 @@ const Home = () => {
       <div className="sm:hidden block">
         <AbdomaxWorksMobile />
       </div>
-      <div className="sm:bg-bgAnyQuestion bg-bgAnyQuestionMobile h-600 w-full bg-cover bg-right-bottom bg-no-repeat sm:h-full lg:py-24 py-16 desktop:pl-20 mb-10 lg:mb-0">
+      <div className="sm:bg-bgAnyQuestion bg-bgAnyQuestionMobile h-600 w-full bg-cover bg-right-bottom bg-no-repeat sm:h-full lg:py-40 py-16 desktop:pl-20 mb-10 lg:mb-0">
         <div className="w-full flex flex-col px-5">
           <div className="flex gap-1">
             <img
@@ -87,18 +87,18 @@ const Home = () => {
               className="2xl:h-14 mobile:h-11 sm:block hidden"
             />
             <h2 className="font-bold font-DIN text-black 2xl:text-7xl mobile:text-6xl text-5xl uppercase">
-            {t("anyquestiontitle")}
-              
+              {t("anyquestiontitle")}
+
               <span className="text-lightGreen"> {t("anyquestiontitlegreen")}</span>
             </h2>
           </div>
           <p className="2xl:text-xl md:text-lg text-base leading-7 font-normal font-Public_Sans text-lightBlack md:my-2 sm:ml-10  2xl:ml-14">
-           
+
             {t("nothesitate")}
           </p>
         </div>
         <div className="sm:pl-14 pl-5 pt-7">
-          <AppointmentButton  />
+          <AppointmentButton />
         </div>
       </div>
       <Review />

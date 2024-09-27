@@ -8,6 +8,7 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
+        smmobile: "300px",
         mobile: "475px",
         desktop: "991px",
         "3xl": "1700px",
@@ -45,6 +46,8 @@ const config: Config = {
         bgStar: "url('/images/bgStar.png')",
         bgAbout:
           "linear-gradient(to bottom right, rgba(149, 219, 50, 0.15) 0%, #0C0C0C 30%)",
+        bgreview:
+          "linear-gradient(to bottom , rgba(122, 180, 41, 0.15) 40%, #000000 100%)",
         bgBannercolor:
           "linear-gradient(to right, rgba(149, 219, 50, 0.15) 0%, #000000 50%)",
         bgTreatedArea:
@@ -59,7 +62,10 @@ const config: Config = {
         SelectDatebgshadow: "url('/images/datebanner-shadow.png')",
         ContactUsbg: "url('/images/contact-us-banner.png')",
         progressBanner: "url('/images/progressBanner.png')",
+        progressBannerMobile: "url('/images/progressBannerMobile.png')",
         medicalNoticeBanner: "url('/images/medicalNoticeBanner.png')",
+        medicalNoticeBannermobile: "url('/images/medicalNoticeBannermobile.png')",
+        listOfPriceBannermobile: "url('/images/listOfPriceBannerMobile.png')",
         listOfPriceBanner: "url('/images/listOfPriceBanner.png')",
         bgTickCardLeft:
           "linear-gradient(to right, rgba(25, 25, 25, 0.5) 30%, rgba(0, 0, 0, 0.5) 50%)",
@@ -126,6 +132,8 @@ const config: Config = {
       fontSize: {
         "15p": "15px",
         "22p": "22px",
+        "80p": "80px",
+        "90p": "90px",
       },
     },
   },

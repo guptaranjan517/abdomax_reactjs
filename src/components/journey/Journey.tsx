@@ -134,11 +134,11 @@ const Journey = () => {
                   error={formik.touched.email ? formik.errors.email : ""}
                 />
                 <div className="flex flex-col gap-2 mb-10">
-                  <p className="font-Public_Sans  text-md text-placeholdertxt pl-1">
+                <p className="font-Public_Sans  text-md text-placeholdertxt pl-1">
                     {t("Mobile")}
                   </p>
                   <PhoneInput
-                    country={"us"}
+                    country={"ch"}
                     specialLabel=""
                     value={
                       formik.values.countryCode + formik.values.phoneNumber

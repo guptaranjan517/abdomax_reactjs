@@ -78,7 +78,7 @@ const Banner = () => {
             <img
               src={ImageExport.STARICON}
               alt="star icon"
-              className="absolute size-12 -top-5 right-12 xl:right-16 2xl:right-24"
+              className="absolute size-12 -top-12 right-12 xl:right-16 2xl:right-24"
             />
           </h2>
           <p className="desktop:max-w-screen-sm text-white font-Public_Sans font-normal md:text-lg text-sm mb-10 sm:pr-40 mobile:pr-20 text-start leading-9">
@@ -107,13 +107,13 @@ const Banner = () => {
         <div className="flex flex-col items-start justify-center z-10 text-center  desktop:hidden">
           <div className="w-fit flex flex-col md:gap-2 pr-5 desktop:pr-0 pl-7 2xl:pl-0">
             <h2 className="w-fit font-bold font-DIN text-white 2xl:text-8xl lg:text-7xl mobile:text-6xl text-6xl text-start relative">
-              <span className="text-lightGreen">20,000 abs </span>
+              <span className="text-lightGreen">{t("abs")}</span>
               <br className="desktop:block mobile:hidden block" />
-              comfortably and{" "}
-              <br className="desktop:block mobile:hidden block" /> effortlessly
-              in
+              {t("comfortably")}{" "}
+              <br className="desktop:block mobile:hidden block" />
+              {t("effortlessly")}
               <span className="text-lightBlue">
-                <br className="desktop:block mobile:hidden block" /> 30 minutes
+                <br className="desktop:block mobile:hidden block" /> {t("minutes")}
               </span>
               <img
                 src={ImageExport.STARICON}
@@ -122,9 +122,7 @@ const Banner = () => {
               />
             </h2>
             <p className="desktop:max-w-screen-sm text-white font-Public_Sans font-normal md:text-lg text-15p md:mb-7 mb-6 sm:pr-40 mobile:pr-20 text-start desktop:leading-9 leading-7">
-              Sculpt your core in 30 minutes! Our revolutionary method uses
-              advanced tech for effortless, painless toning. No sweat, no
-              strain, just results.
+              {t("bannersubhead")}
             </p>
             <AppointmentButton />
           </div>

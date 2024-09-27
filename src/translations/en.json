@@ -56,14 +56,23 @@
     "clickhere": "Click Here",
     "before": "Before",
     "aftre": "After",
-    "Waiting": "Waiting"
+    "Waiting": "Waiting",
+    "appointmenthead": "Your Appointment has been Confirmed",
+    "appointmentsub": "Your appointment has been confirmed, please visit on the correct date and time so that we can give you complete information.",
+    "enquiryhead": "Your enquiry submitted successfully",
+    "enquirysub": "We have received your request and will get back to you shortly.",
+    "done": "DONE",
+    "AM": "AM",
+    "PM": "PM"
   },
   "Inquire": {
     "FullNameRequired": "Full Name is required",
     "InvalidEmail": "Invalid email address",
     "EmailRequired": "Email ID is required",
     "MobileNumberRequired": "Mobile Number is required",
-    "MessageRequired": "Message is required"
+    "MessageRequired": "Message is required",
+    "Placeholderfullname": "Enter your full name",
+    "PlaceholderfullEmail": "Enter your email ID"
   },
   "About": {
     "About Us": "About Us",
@@ -83,7 +92,16 @@
     "effortlessly": "effortlessly in",
     "minutes": "30 minutes",
     "bannersubhead": "Sculpt your core in 30 minutes! Our revolutionary method uses advanced tech for effortless, painless toning. No sweat, no strain, just results.",
-    "Scroll": "Scroll for more"
+    "Scroll": "Scroll for more",
+    "Course": "Course of a",
+    "session": "session",
+    "sessions": "sessions",
+    "how": "How many",
+    "are": "are",
+    "needed": "needed?",
+    "following": "Following the",
+    "Medical": "Medical",
+    "contraindications": "contraindications"
   },
   "Clickable": {
     "highrf": "High RF · Fat Reduction | HIFEM+ · Muscle Growth",

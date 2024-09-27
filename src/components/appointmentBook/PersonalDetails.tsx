@@ -1,4 +1,3 @@
-// / components/Baeikmnnooopptt / PersonalDetails.tsx;
 "use client";
 import React, { Fragment, useState } from "react";
 import Button from "../Button";
@@ -6,13 +5,18 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useTranslations } from "next-intl";
 import useAppointmentStore from "@/stores/useAppointmentStore";
-import { formatDate, generatePackageId } from "@/app/utils/formatter";
+import {
+  formatDate,
+  formatTimeString,
+  generatePackageId,
+} from "@/app/utils/formatter";
 import { isErrorResponse } from "@/shared/lib/axiosInstance";
 import { appointmentSubmit } from "@/shared/lib/common";
 import AppointmentConfirmed from "../modal/AppointmentConfirmed";
 import { toast } from "react-toastify";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import useGlobalStore from "@/stores/useGlobalStore";
 interface PersonalDetailsProps {
   onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
 }
@@ -22,6 +26,7 @@ const PersonalDetails: React.FC<PersonalDetailsProps> = ({ onClick }) => {
   const [loading, setLoading] = useState(false);
   const [responseError, setResponseError] = useState("");
   const { stepsData, packageId, setFinalSubmit } = useAppointmentStore();
+  const { language } = useGlobalStore();
   const validationSchema = Yup.object({
     fullName: Yup.string().required(trans("FullNameRequired")),
     email: Yup.string()
@@ -35,7 +40,7 @@ const PersonalDetails: React.FC<PersonalDetailsProps> = ({ onClick }) => {
       fullName: "",
       email: "",
       phoneNumber: "",
-      countryCode: "+91",
+      countryCode: "",
     },
     validationSchema,
     onSubmit: (values) => {
@@ -66,6 +71,10 @@ const PersonalDetails: React.FC<PersonalDetailsProps> = ({ onClick }) => {
     formik.setFieldValue("countryCode", `+${country.dialCode}`);
     formik.setFieldValue("phoneNumber", value.slice(country.dialCode.length));
   };
+  const [time, period] = stepsData?.[2]?.time?.split(" ") || [];
+  const translatedPeriod =
+    period === "AM" || period === "SUIS" ? t("AM") : t("PM");
+
   return (
     <Fragment>
       <div className="max-w-screen-md sm:px-10 px-5 w-full bg-selecttimebg h-auto rounded-3xl shadow-inner py-12 mb-4">
@@ -82,7 +91,7 @@ const PersonalDetails: React.FC<PersonalDetailsProps> = ({ onClick }) => {
             {t("selectedtime")}:
           </p>
           <p className="text-white  text-base font-medium font-Public_Sans">
-            {stepsData?.[2]?.time}
+            {time} {translatedPeriod}
           </p>
         </div>
         <p className="text-white  text-2xl font-medium font-Public_Sans pt-5">
@@ -105,7 +114,7 @@ const PersonalDetails: React.FC<PersonalDetailsProps> = ({ onClick }) => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 className="h-12 px-6 font-Public_Sans bg-inputfieldbg  text-inputfieldtxt text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Enter your full name"
+                placeholder={trans("Placeholderfullname")}
               />
               <p className="text-red-500 font-bold font-openSans text-sm mt-2">
                 {formik.touched.fullName ? formik.errors.fullName : ""}
@@ -116,7 +125,7 @@ const PersonalDetails: React.FC<PersonalDetailsProps> = ({ onClick }) => {
                 {t("Enter Mobile Number")}
               </p>
               <PhoneInput
-                country={"us"}
+                country="ch"
                 specialLabel=""
                 value={formik.values.countryCode + formik.values.phoneNumber}
                 countryCodeEditable={false}
@@ -148,7 +157,7 @@ const PersonalDetails: React.FC<PersonalDetailsProps> = ({ onClick }) => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 className="h-12 px-6 font-Public_Sans bg-inputfieldbg  text-inputfieldtxt text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Enter your email ID"
+                placeholder={trans("PlaceholderfullEmail")}
               />
               <p className="text-red-500 font-bold font-openSans text-sm mt-2">
                 {formik.touched.email ? formik.errors.email : ""}

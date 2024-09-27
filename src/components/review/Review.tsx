@@ -10,8 +10,8 @@ const Review = () => {
   const t = useTranslations("Index");
   return (
     <Fragment>
-      <div className="w-full flex flex-col items-center lg:pt-20 pt-8 px-5">
-        <div className="flex gap-1 justify-center items-start">
+      <div className="w-full flex flex-col sm:items-center lg:pt-20 pt-8 px-5 bg-bgreview ">
+        <div className="flex sm:gap-1 gap-0 sm:justify-center items-start">
           <img
             src={ImageExport.STARTLINE}
             alt="line"

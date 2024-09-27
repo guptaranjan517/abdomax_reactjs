@@ -30,7 +30,7 @@
     "next": "Suivant",
     "step": "Étape",
     "selecttime": "Sélectionner une heure",
-    "personaldetails": "Données personnelles",
+    "personaldetails": "Détails personnels",
     "selecteddate": "Date sélectionnée",
     "selectedtime": "Horaire sélectionné",
     "Full Name": "Nom complet",
@@ -56,14 +56,23 @@
     "clickhere": "Cliquez ici",
     "before": "Avant",
     "aftre": "Après",
-     "Waiting": "En attendant"
+    "Waiting": "En attendant",
+    "appointmenthead": "Votre rendez-vous a été confirmé",
+    "appointmentsub": "Votre rendez-vous a été confirmé, veuillez vous présenter à la bonne date et heure afin que nous puissions vous donner des informations complètes.",
+    "enquiryhead": "Votre demande soumise avec succès",
+    "enquirysub": "Nous avons reçu votre demande et vous répondrons sous peu.",
+    "done": "FAIT",
+    "AM": "SUIS",
+    "PM": "MP"
   },
   "Inquire": {
     "FullNameRequired": "Le nom complet est requis",
     "InvalidEmail": "Adresse e-mail invalide",
     "EmailRequired": "L'ID e-mail est requis",
     "MobileNumberRequired": "Le numéro de mobile est requis",
-    "MessageRequired": "Le message est requis"
+    "MessageRequired": "Le message est requis",
+    "Placeholderfullname": "Entrez votre nom complet",
+    "PlaceholderfullEmail": "Entrez votre identifiant de messagerie"
   },
   "About": {
     "About Us": "À propos de nous",
@@ -83,7 +92,16 @@
     "effortlessly": "sans effort",
     "minutes": "30 minutes",
     "bannersubhead": "Sculptez votre cœur en 30 minutes ! Notre méthode révolutionnaire utilise une technologie avancée pour une tonification sans effort et sans douleur. Pas de sueur, pas de tension, juste des résultats.",
-    "Scroll": "Faites défiler pour en savoir plus"
+    "Scroll": "Faites défiler pour en savoir plus",
+    "Course": "COURS D'UN",
+    "session": "session",
+    "sessions": "séances",
+    "how": "Combien",
+    "are": "sont",
+    "needed": "nécessaire?",
+    "following": "Suite à la",
+    "Medical": "Médical",
+    "contraindications": "contre-indications"
   },
   "Clickable": {
     "Abdomaxname": "ABDOMAX",

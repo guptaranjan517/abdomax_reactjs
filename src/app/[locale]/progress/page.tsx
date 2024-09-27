@@ -10,6 +10,9 @@ import Review from "@/components/review/Review";
 import { ImageExport } from "@/shared/images";
 import React from "react";
 import { useTranslations } from "next-intl";
+import TextBanner from "@/components/text-banner/page";
+import ProgessThreeBanner from "@/components/text-banner/progressthree";
+import ProgessTwoBanner from "@/components/text-banner/progresstwo";
 
 const Progress = () => {
   const t = useTranslations("progress");
@@ -20,15 +23,19 @@ const Progress = () => {
         title={t("commonBanner.title")}
         colorTitle={t("commonBanner.colorTitle")}
         desc={t("commonBanner.desc")}
-        mainStyle="bg-progressBanner"
+        mainStyle="sm:bg-progressBanner bg-progressBannerMobile mob"
       />
-      <div className="w-full md:px-10 px-5 lg:px-20 md:py-10 py-7 mt-10">
+
+      <TextBanner />
+      
+      
+      {/* <div className="w-full md:px-10 px-5 lg:px-20 md:py-10 py-7 mt-10">
         <img
           src={ImageExport.COURSEOFASESSION}
           alt="Cours d'une séance"
           className="w-full"
         />
-      </div>
+      </div> */}
       <div className="grid desktop:grid-cols-2 grid-cols-1 gap-5 md:px-10 px-5 lg:px-20">
         <TickCard
           text={<>{t("tickCard.position")}</>}
@@ -55,13 +62,15 @@ const Progress = () => {
           background="desktop:!bg-bgTickCardRight !bg-bgTickCardLeft"
         />
       </div>
-      <div className="w-full md:px-10 px-5 lg:px-20 md:py-10 py-7">
+
+      <ProgessTwoBanner />
+      {/* <div className="w-full md:px-10 px-5 lg:px-20 md:py-10 py-7">
         <img
           src={ImageExport.NEEDEDSESSION}
           alt="Cours d'une séance"
           className="w-full"
         />
-      </div>
+      </div> */}
       <div className="grid grid-cols-1 md:px-10 px-5 lg:px-20">
         <TickCard
           text={
@@ -99,13 +108,15 @@ const Progress = () => {
         />
       </div>
 
-      <div className="w-full md:px-10 px-5 lg:px-20 md:py-10 py-7">
+      <ProgessThreeBanner />
+
+      {/* <div className="w-full md:px-10 px-5 lg:px-20 md:py-10 py-7">
         <img
           src={ImageExport.FOLLOWINGSESSION}
           alt="Course of a session"
           className="w-full"
         />
-      </div>
+      </div> */}
       <div className="grid grid-cols-1 md:px-10 px-5 lg:px-20">
         <TickCard
           text={

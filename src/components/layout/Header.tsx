@@ -209,7 +209,7 @@ const Header = () => {
                     (pathname.includes("privacy-policy") ||
                       pathname.includes("terms-condition") ||
                       pathname.includes("about-us"))
-                    ? "border-black text-black"
+                    ? "border-white text-white"
                     : "border-white text-white"
                 )}
                 onClick={() =>
@@ -233,7 +233,7 @@ const Header = () => {
                       (pathname.includes("privacy-policy") ||
                         pathname.includes("terms-condition") ||
                         pathname.includes("about-us"))
-                      ? "text-black"
+                      ? "text-white"
                       : " text-white"
                   )}
                   onClick={() => handleLanguageChange("en")}
@@ -248,7 +248,7 @@ const Header = () => {
                       (pathname.includes("privacy-policy") ||
                         pathname.includes("terms-condition") ||
                         pathname.includes("about-us"))
-                      ? "text-black"
+                      ? "text-white"
                       : " text-white"
                   )}
                   onClick={() => handleLanguageChange("fr")}
@@ -263,7 +263,7 @@ const Header = () => {
           <div className="relative sm:block hidden">
             <div
               className={cn(
-                "border rounded-xl px-4 w-fit h-10 flex gap-2 items-center justify-center text-sm bg-transparent font-medium font-Public_Sans cursor-pointer",
+                "border rounded-xl px-4 w-32 h-10 flex gap-2 items-center justify-center text-sm bg-transparent font-medium font-Public_Sans cursor-pointer",
                 (pathname.startsWith("/en/") || pathname.startsWith("/fr/")) &&
                   (pathname.includes("privacy-policy") ||
                     pathname.includes("terms-condition") ||
@@ -317,7 +317,7 @@ const Header = () => {
           <Link
             href={contactLink[language as Language]}
             className={cn(
-              "border hover:border-lightGreen rounded-xl px-4 w-fit h-10 sm:flex hidden items-center justify-center bg-transparent hover:text-lightGreen text-sm font-medium font-Public_Sans transition-all duration-300 ease-out",
+              "border hover:border-lightGreen rounded-xl px-4 w-36 h-10 sm:flex hidden items-center justify-center bg-transparent hover:text-lightGreen text-sm font-medium font-Public_Sans transition-all duration-300 ease-out",
               (pathname.startsWith("/en/") || pathname.startsWith("/fr/")) &&
                 pathname.includes("contact-us")
                 ? "!border-lightGreen !text-lightGreen"

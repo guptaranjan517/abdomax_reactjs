@@ -182,16 +182,16 @@ export const socialIcons = [
   },
   {
     id: 2,
-    icon: ImageExport.TWITTER,
-    alt: "Twitter",
-    link: "",
+    icon: ImageExport.INSTAGRAME,
+    alt: "Intagrame",
+    link: "https://instagram.com/abdomax.ch/?igsh=NnYxZnQ2ZG9wNDE%3D",
   },
-  {
-    id: 3,
-    icon: ImageExport.LINKEDIN,
-    alt: "LinkedIn",
-    link: "",
-  },
+  // {
+  //   id: 3,
+  //   icon: ImageExport.LINKEDIN,
+  //   alt: "LinkedIn",
+  //   link: "",
+  // },
 ];
 
 export const exerciseCardData = [
@@ -824,25 +824,43 @@ export const appointmentData = [
     timeData: [
       {
         id: 1,
-        time: "07:45 AM",
+        time: {
+          en: "07:45 AM",
+          fr: "07:45 SUIS"
+        },
+        available: true,
       },
       {
         id: 2,
-        time: "08:45 AM",
+        time: {
+          en: "08:45 AM",
+          fr: "08:45 SUIS"
+        },
         available: true,
       },
       {
         id: 3,
-        time: "09:45 AM",
-        unAvailable: true,
+        time: {
+          en: "09:45 AM",
+          fr: "09:45 SUIS"
+        },
+        available: true,
       },
       {
         id: 4,
-        time: "10:45 AM",
+        time: {
+          en: "10:45 AM",
+          fr: "10:45 SUIS"
+        },
+        available: true,
       },
       {
         id: 5,
-        time: "11:45 AM",
+        time: {
+          en: "11:45 AM",
+          fr: "11:45 SUIS"
+        },
+        available: true,
       },
     ],
   },
@@ -855,15 +873,27 @@ export const appointmentData = [
     timeData: [
       {
         id: 1,
-        time: "12:45 PM",
+        time: {
+          en: "12:45 PM",
+          fr: "12:45 MP"
+        },
+        available: true,
       },
       {
         id: 2,
-        time: "01:45 PM",
+        time: {
+          en: "01:45 PM",
+          fr: "01:45 MP"
+        },
+        available: true,
       },
       {
         id: 3,
-        time: "02:45 PM",
+        time: {
+          en: "02:45 PM",
+          fr: "02:45 MP"
+        },
+        available: true,
       },
     ],
   },

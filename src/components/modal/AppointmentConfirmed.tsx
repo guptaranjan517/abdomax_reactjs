@@ -4,14 +4,25 @@ import { ImageExport } from "@/shared/images";
 import useAppointmentStore from "@/stores/useAppointmentStore";
 import React, { Fragment } from "react";
 import ReactModal from "react-modal";
+import { useTranslations } from "next-intl";
+import useGlobalStore from "@/stores/useGlobalStore";
+import { useRouter } from "next/navigation";
 
 const AppointmentConfirmed = () => {
+  const { language } = useGlobalStore();
+  const t = useTranslations("Index");
+  const route = useRouter();
   const { finalSubmit, setFinalSubmit, resetFlow, clearPersistedState } =
     useAppointmentStore();
   const handleClose = () => {
     setFinalSubmit(false);
     clearPersistedState();
     resetFlow();
+    if (language === "en") {
+      route.push("/en/home");
+    } else {
+      route.push("/fr/home");
+    }
   };
   return (
     <Fragment>
@@ -31,17 +42,16 @@ const AppointmentConfirmed = () => {
             />
           </div>
           <h2 className="text-xl font-semibold font-Public_Sans text-black my-4">
-            Your Appointment has been Confirmed{" "}
+            {t("appointmenthead")}
           </h2>
           <p className="text-popuptext mb-6 px-6 font-Public_Sans text-base">
-            Your appointment has been confirmed, please visit on the correct
-            date and time so that we can give you complete information.
+            {t("appointmentsub")}
           </p>
           <button
             className="px-10 py-4 font-bold font-Public_Sans text-base bg-lightGreen text-black rounded-xl"
             onClick={handleClose}
           >
-            DONE
+            {t("done")}
           </button>
         </div>
       </ReactModal>

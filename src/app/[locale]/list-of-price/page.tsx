@@ -15,7 +15,7 @@ const ListOfPrice = () => {
         title={t("List of")}
         colorTitle={t("Price")}
         desc={t("Sculpt your core")}
-        mainStyle="bg-listOfPriceBanner md:!bg-center !bg-left"
+        mainStyle="sm:bg-listOfPriceBanner bg-listOfPriceBannermobile md:!bg-center !bg-left mob"
       />
       <div className="w-full flex justify-center sm:pb-10">
         <div className="max-w-[1400px] flex flex-wrap justify-center desktop:gap-10 gap-5 py-20 mobile:px-10 px-5">

@@ -4,8 +4,10 @@ import { ImageExport } from "@/shared/images";
 import useAppointmentStore from "@/stores/useAppointmentStore";
 import React, { Fragment } from "react";
 import ReactModal from "react-modal";
+import { useTranslations } from "next-intl";
 
 const EnquirySubmitted = () => {
+  const t = useTranslations("Index");
   const { finalSubmit, setFinalSubmit } = useAppointmentStore();
   const handleClose = () => {
     setFinalSubmit(false);
@@ -28,16 +30,16 @@ const EnquirySubmitted = () => {
             />
           </div>
           <h2 className="text-xl font-semibold font-Public_Sans text-black my-4">
-            Your enquiry submitted successfully
+          {t("enquiryhead")}
           </h2>
           <p className="text-popuptext mb-6 px-6 font-Public_Sans text-base">
-            We have received your request and will get back to you shortly.
+          {t("enquirysub")}
           </p>
           <button
             className="px-10 py-4 font-bold font-Public_Sans text-base bg-lightGreen text-black rounded-xl"
             onClick={handleClose}
           >
-            DONE
+            {t("done")}
           </button>
         </div>
       </ReactModal>

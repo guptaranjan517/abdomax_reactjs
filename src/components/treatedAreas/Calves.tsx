@@ -6,9 +6,9 @@ import { useTranslations } from "next-intl";
 const Calves = () => {
   const t = useTranslations("Clickable");
   return (
-    <div className="w-full 2xl:h-700 md:h-600 sm:h-500 h-full sm:bg-bgClaves bg-none bg-no-repeat bg-cover 2xl:bg-bottom md:pt-24 sm:pt-14 pt-0 md:pl-16 sm:pl-5 pl-0 relative">
+    <div className="w-full 2xl:h-700 md:h-600 sm:h-500 h-full sm:bg-bgClaves bg-none bg-no-repeat bg-cover 2xl:bg-bottom md:pt-24 sm:pt-14 pt-0 md:pl-16 sm:pl-5 pl-5 relative">
       <div className="relative sm:hidden block">
-        <img src={ImageExport.CLAVESBG} alt="abs" className="" />
+        <img src={ImageExport.CLAVESBG} alt="abs" className="h-44 sm:auto" />
         <div className="absolute bottom-3 left-5">
           <h2 className="font-bold 2xl:text-3xl md:text-2xl text-3xl text-white font-DIN uppercase">
             {t("Calves")}

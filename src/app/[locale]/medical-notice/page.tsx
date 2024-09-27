@@ -6,6 +6,7 @@ import CommonBanner from "@/components/commonBanner/CommonBanner";
 import Faq from "@/components/faq/Faq";
 import Journey from "@/components/journey/Journey";
 import Review from "@/components/review/Review";
+import MedicalContract from "@/components/text-banner/medicalcontract";
 import { medicalContraindicationsData } from "@/shared/config";
 import { ImageExport } from "@/shared/images";
 import useGlobalStore from "@/stores/useGlobalStore";
@@ -22,15 +23,17 @@ const MedicalNotice = () => {
         title={t("Medical")}
         colorTitle={t("Notice")}
         desc={t("Sculpt your core")}
-        mainStyle="bg-medicalNoticeBanner"
+        mainStyle="sm:bg-medicalNoticeBanner bg-medicalNoticeBannermobile mob"
       />
-      <div className="w-full md:px-10 px-5 lg:px-20 md:py-10 py-7 mt-10">
+      <MedicalContract />
+
+      {/* <div className="w-full md:px-10 px-5 lg:px-20 md:py-10 py-7 mt-10">
         <img
           src={ImageExport.MEDICALCONTRAINDICATION}
           alt="Course of a session"
           className="w-full"
         />
-      </div>
+      </div> */}
       <div className="grid md:grid-cols-2 grid-cols-1 gap-5 md:px-10 px-5 lg:px-20 pb-10">
         {medicalContraindicationsData.map((data) => {
           return (

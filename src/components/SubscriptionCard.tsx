@@ -73,13 +73,13 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({ mainStyle }) => {
                 </p>
               )}
             </div>
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 px-2">
               {data.listData.map((item) => (
                 <p
-                  className="text-sm font-Public_Sans font-medium text-white"
+                  className="text-sm font-Public_Sans font-medium text-white -indent-5"
                   key={item.id}
                 >
-                  + {styleText(item.listText[language as Language])}
+                  + &nbsp;   {styleText(item.listText[language as Language])}
                 </p>
               ))}
             </div>

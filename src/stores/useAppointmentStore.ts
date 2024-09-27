@@ -6,7 +6,6 @@ interface PersonalData {
   phoneNumber: string;
   countryCode: string;
 }
-
 interface StepData {
   1?: { date: Date | null };
   2?: { time: string | null };
@@ -23,39 +22,32 @@ interface AppointmentState {
   clearPersistedState: () => void;
   setStepData: (step: keyof StepData, data: StepData[keyof StepData]) => void;
   finalSubmit: boolean;
+  setCurrentStep: (step: number) => void;
   setFinalSubmit: (status: boolean) => void;
 }
 const useAppointmentStore = create<AppointmentState>()(
-  persist(
-    (set, get, store) => ({
-      currentStep: 1,
-      stepsData: null,
-      packageId: "",
-      finalSubmit: false,
-      setFinalSubmit: (status) => set({ finalSubmit: status }),
-      setPackageId: (id) => set({ packageId: id }),
-      nextStep: () => set((state) => ({ currentStep: state.currentStep + 1 })),
-      prevStep: () => set((state) => ({ currentStep: state.currentStep - 1 })),
-      setStepData: (step, data) =>
-        set((state) => ({
-          stepsData: { ...state.stepsData, [step]: data },
-        })),
-      resetFlow: () =>
-        set({
-          currentStep: 1,
-          stepsData: null,
-        }),
-      clearPersistedState: () => {
-        store.persist.clearStorage();
-      },
-    }),
-    {
-      name: "global-store",
-      partialize: (state) => ({
-        currentStep: state.currentStep,
-        stepsData: state.stepsData,
+  (set, get) => ({
+    currentStep: 1,
+    stepsData: null,
+    packageId: "",
+    finalSubmit: false,
+    setFinalSubmit: (status) => set({ finalSubmit: status }),
+    setPackageId: (id) => set({ packageId: id }),
+    nextStep: () => set((state) => ({ currentStep: state.currentStep + 1 })),
+    prevStep: () => set((state) => ({ currentStep: state.currentStep - 1 })),
+    setCurrentStep: (step: any) => set({ currentStep: step }),  // Implemented here
+    setStepData: (step, data) =>
+      set((state) => ({
+        stepsData: { ...state.stepsData, [step]: data },
+      })),
+    resetFlow: () =>
+      set({
+        currentStep: 1,
+        stepsData: null,
       }),
-    }
-  )
+    clearPersistedState: () => {
+      // store.persist.clearStorage();
+    },
+  })
 );
 export default useAppointmentStore;

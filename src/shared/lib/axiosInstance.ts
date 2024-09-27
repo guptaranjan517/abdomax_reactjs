@@ -10,10 +10,9 @@ export const isErrorResponse = (error: unknown): error is ErrorResponse => {
 
 // Create an Axios instance
 const axiosInstance = axios.create({
-  baseURL: `${
-    process.env.NEXT_PUBLIC_BASE_URL ||
-    " https://c675-2401-4900-1c64-159b-1bc4-2cc6-cad-9cd1.ngrok-free.app"
-  }/api/v1`,
+  baseURL: `${process.env.NEXT_PUBLIC_BASE_URL ||
+    " https://6e16-2405-201-4019-6a7d-4730-beeb-3449-20ac.ngrok-free.app"
+    }/api/v1`,
   headers: {
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",

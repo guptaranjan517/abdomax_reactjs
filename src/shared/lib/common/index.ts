@@ -47,3 +47,19 @@ export async function enquirySubmit(payload: EnquiryPayload): Promise<any> {
     throw error;
   }
 }
+
+// Service for appointment submit
+export async function getTimeSlots(date: any): Promise<any> {
+  try {
+    const response = await axiosInstance.get(
+      `/user/booking/timeSlotList?date=${date}`
+    );
+
+    return {
+      availableSlots: response.data.data,
+    };
+  } catch (error) {
+    // Error is handled globally by Axios instance
+    throw error;
+  }
+}

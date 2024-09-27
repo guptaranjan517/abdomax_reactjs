@@ -24,3 +24,27 @@ export const generatePackageId = () => {
 
   return packageId;
 };
+export const formatTimeString = (timeString: string, locale: string) => {
+  // Split the input time string into time and period (AM/PM)
+  const [time, period] = timeString.split(" ");
+  console.log("time", time, period);
+
+  // Parse the hours and minutes
+  let [hours, minutes] = time.split(":").map(Number);
+
+  // Convert 12-hour format to 24-hour format for correct Date object creation
+  if (period === "PM" && hours < 12) hours += 12;
+  if (period === "AM" && hours === 12) hours = 0;
+
+  // Create a date object using today's date and the parsed time
+  const date = new Date();
+  date.setHours(hours, minutes);
+  console.log("Da", date, locale);
+
+  // Use Intl.DateTimeFormat to format the time according to the specified locale
+  return new Intl.DateTimeFormat("fr-FR", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true, // Keep 12-hour format with AM/PM
+  }).format(date);
+};

@@ -54,7 +54,7 @@ const TreatedAreas: React.FC = () => {
             <img
               src={ImageExport.STARTLINE}
               alt="line"
-              className="2xl:h-14 mobile:h-11 sm:block hidden"
+              className="2xl:h-14 mobile:h-11 sm:block hidden h-44 sm:auto"
             />
             <h2 className="font-bold font-DIN text-white 2xl:text-7xl mobile:text-6xl text-5xl uppercase sm:text-left text-center">
               {t("What")} <span className="text-lightGreen">{t("areas")}</span>{" "}
@@ -75,7 +75,7 @@ const TreatedAreas: React.FC = () => {
                   className={cn(
                     "text-white text-opacity-80 2xl:text-lg md:text-base text-sm font-Public_Sans cursor-pointer whitespace-nowrap hover:text-lightBlue transition-colors duration-300 ease-out",
                     isActive
-                      ? "text-lightBlue font-semibold"
+                      ? "text-lightBlue"
                       : "text-white font-light"
                   )}
                   key={data.id}
