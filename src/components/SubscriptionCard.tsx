@@ -46,7 +46,7 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({ mainStyle }) => {
         <div
           key={data.id}
           className={cn(
-            "p-3 bg-bgSubscriptionCard bg-opacity-30 w-full bg-cover bg-right-top bg-no-repeat",
+            "p-3 bg-bgSubscriptionCard bg-opacity-30 w-full bg-cover bg-no-repeat",
             mainStyle
           )}
           style={{
@@ -73,10 +73,10 @@ const SubscriptionCard: React.FC<SubscriptionCardProps> = ({ mainStyle }) => {
                 </p>
               )}
             </div>
-            <div className="flex flex-col gap-5 px-2">
+            <div className="w-full flex flex-col gap-5 px-2">
               {data.listData.map((item) => (
                 <p
-                  className="text-sm font-Public_Sans font-medium text-white -indent-5"
+                  className="w-[calc(100%-20px)] text-sm font-Public_Sans font-medium text-white -indent-5"
                   key={item.id}
                 >
                   + &nbsp;   {styleText(item.listText[language as Language])}

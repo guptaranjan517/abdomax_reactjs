@@ -24,7 +24,7 @@ const Home = () => {
 
   const t = useTranslations("Index");
   return (
-    <div className="w-full bg-black pt-16">
+    <div className="w-full bg-black mobile:pt-20 pt-16">
       <div className="flex justify-center lg:bg-bgStar bg-no-repeat bg-left-top">
         <Banner />
       </div>

@@ -13,7 +13,7 @@ interface FaqProps {
 const FaqSection: React.FC<FaqProps> = ({ question, answer, isOpen, onToggle }) => {
   return (
     <Fragment>
-      <div className="w-full h-auto pt-10">
+      <div className="w-full h-auto py-10 border-b gradient-border-bottom">
         <div
           className="flex items-start justify-between gap-3 cursor-pointer"
           onClick={onToggle}
@@ -35,9 +35,6 @@ const FaqSection: React.FC<FaqProps> = ({ question, answer, isOpen, onToggle }) 
           }`}
         >
           {answer} {/* Changed to use the answer prop directly */}
-        </div>
-        <div className="w-full pt-10">
-          <img src={ImageExport.FAQBORDER} className="w-full" alt="border" />
         </div>
       </div>
     </Fragment>

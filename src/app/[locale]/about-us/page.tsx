@@ -13,7 +13,7 @@ const AboutUs = () => {
   return (
     <div className="w-full flex justify-center pt-20 pb-10 px-5">
       <div className="max-w-screen-lg w-full">
-        <h1 className="text-4xl text-txtBlack font-semibold font-DIN text-center mb-5 underline underline-offset-4">
+        <h1 className="text-4xl text-txtBlack font-semibold font-DIN text-center mb-5 underline underline-offset-4 pt-5">
           {t("About Us")}
         </h1>
         {aboutUsData.map((data) => {

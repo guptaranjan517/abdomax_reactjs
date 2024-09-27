@@ -11,7 +11,7 @@ export const isErrorResponse = (error: unknown): error is ErrorResponse => {
 // Create an Axios instance
 const axiosInstance = axios.create({
   baseURL: `${process.env.NEXT_PUBLIC_BASE_URL ||
-    " https://6e16-2405-201-4019-6a7d-4730-beeb-3449-20ac.ngrok-free.app"
+    " https://abdomax.ddns.net"
     }/api/v1`,
   headers: {
     "Content-Type": "application/json",

@@ -67,20 +67,22 @@ const Banner = () => {
       {/* Static text and button */}
       <div className="absolute inset-0 desktop:flex flex-col items-start justify-center z-10 text-center md:pt-0 pt-4 3xl:pb-0 pb-8 bg-bgBlush bg-right-bottom bg-no-repeat hidden 2xl:bottom-16 3xl:bottom-0 2xl:pl-20">
         <div className="w-fit flex flex-col gap-2 mb-7 pr-5 desktop:pr-0 pl-7 2xl:pl-0">
-          <h2 className="w-fit font-bold font-DIN text-white 2xl:text-8xl lg:text-7xl md:text-6xl text-5xl text-start relative">
-            <span className="text-lightGreen">{t("abs")} </span>
-            <br className="desktop:block hidden" />
-            {t("comfortably")} <br className="desktop:block hidden" />{" "}
-            {t("effortlessly")}
-            <span className="text-lightBlue">
-              <br className="desktop:block hidden" /> {t("minutes")}
-            </span>
+          <div className="w-fit flex gap-2 items-start">
+            <h2 className="w-fit font-bold font-DIN text-white 2xl:text-8xl lg:text-7xl md:text-6xl text-5xl text-start relative">
+              <span className="text-lightGreen">{t("abs")} </span>
+              <br className="desktop:block hidden" />
+              {t("comfortably")} <br className="desktop:block hidden" />{" "}
+              {t("effortlessly")}
+              <span className="text-lightBlue">
+                <br className="desktop:block hidden" /> {t("minutes")}
+              </span>
+            </h2>
             <img
               src={ImageExport.STARICON}
               alt="star icon"
-              className="absolute size-12 -top-12 right-12 xl:right-16 2xl:right-24"
+              className="w-14 h-14 -mt-5"
             />
-          </h2>
+          </div>
           <p className="desktop:max-w-screen-sm text-white font-Public_Sans font-normal md:text-lg text-sm mb-10 sm:pr-40 mobile:pr-20 text-start leading-9">
             {t("bannersubhead")}
           </p>
@@ -106,21 +108,24 @@ const Banner = () => {
         {/* Static text and button */}
         <div className="flex flex-col items-start justify-center z-10 text-center  desktop:hidden">
           <div className="w-fit flex flex-col md:gap-2 pr-5 desktop:pr-0 pl-7 2xl:pl-0">
-            <h2 className="w-fit font-bold font-DIN text-white 2xl:text-8xl lg:text-7xl mobile:text-6xl text-6xl text-start relative">
-              <span className="text-lightGreen">{t("abs")}</span>
-              <br className="desktop:block mobile:hidden block" />
-              {t("comfortably")}{" "}
-              <br className="desktop:block mobile:hidden block" />
-              {t("effortlessly")}
-              <span className="text-lightBlue">
-                <br className="desktop:block mobile:hidden block" /> {t("minutes")}
-              </span>
+            <div className="w-fit flex gap-0 items-start">
+              <h2 className="w-fit font-bold font-DIN text-white 2xl:text-8xl lg:text-7xl mobile:text-6xl text-6xl text-start relative">
+                <span className="text-lightGreen">{t("abs")}</span>
+                <br className="desktop:block mobile:hidden block" />
+                {t("comfortably")}{" "}
+                <br className="desktop:block mobile:hidden block" />
+                {t("effortlessly")}
+                <span className="text-lightBlue">
+                  <br className="desktop:block mobile:hidden block" />{" "}
+                  {t("minutes")}
+                </span>
+              </h2>
               <img
                 src={ImageExport.STARICON}
                 alt="star icon"
-                className="absolute mobile:hidden block size-12 -top-6 right-8"
+                className="w-10 h-10 -mt-5 z-20"
               />
-            </h2>
+            </div>
             <p className="desktop:max-w-screen-sm text-white font-Public_Sans font-normal md:text-lg text-15p md:mb-7 mb-6 sm:pr-40 mobile:pr-20 text-start desktop:leading-9 leading-7">
               {t("bannersubhead")}
             </p>

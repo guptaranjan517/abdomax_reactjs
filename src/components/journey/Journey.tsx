@@ -96,7 +96,7 @@ const Journey = () => {
                   <li className="flex items-center" key={data.id}>
                     <div className="flex items-center mb-4 gap-5">
                       <img src={data.icon} alt="icon" />
-                      <span className="text-white self-center font-Public_Sans lg:text-lg text-base font-normal dark:text-white">
+                      <span className="text-white self-center font-Public_Sans lg:text-lg text-base font-normal">
                         {data.text[language as Language]}
                       </span>
                     </div>

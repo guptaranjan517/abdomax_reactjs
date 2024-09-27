@@ -8,12 +8,13 @@ import { cn } from "@/app/utils/merger";
 import { ImageExport } from "@/shared/images";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import BottomArrow from "../svg/BottomArrow";
 import TopArrow from "../svg/TopArrow";
 import { menuData } from "@/shared/config";
 import { useTranslations } from "next-intl";
 import useGlobalStore from "@/stores/useGlobalStore";
+import useClickOutside from "@/shared/lib/useClickOutside";
 
 const Header = () => {
   const [isMobileMenu, setIsMobileMenu] = useState(false);
@@ -69,6 +70,9 @@ const Header = () => {
 
   type Language = "en" | "fr";
 
+  const dropdownRef = useRef(null);
+  useClickOutside(dropdownRef, () => setIsLanguageDropdownOpen(false));
+
   return (
     <div
       className={cn(
@@ -83,9 +87,17 @@ const Header = () => {
               <img src={ImageExport.LOGO} className="w-full h-full" alt="" />
             </div>
           </Link>
-          <div className="h-full lg:block hidden">
-            <img src={ImageExport.MENUBORDER} className="h-full" />
-          </div>
+          <div
+            className={cn(
+              "h-16 lg:block hidden",
+              (pathname.startsWith("/en/") || pathname.startsWith("/fr/")) &&
+                (pathname.includes("privacy-policy") ||
+                  pathname.includes("terms-condition") ||
+                  pathname.includes("about-us"))
+                ? "whiteMenuBorder"
+                : "blackMenuBorder"
+            )}
+          ></div>
           <div
             className={cn(
               "lg:hidden block mobile:size-9 size-8",
@@ -187,9 +199,18 @@ const Header = () => {
                       )}
                     ></span>
                   </h2>
-                  <div className="h-full lg:block hidden">
-                    <img src={ImageExport.MENUBORDER} className="h-full" />
-                  </div>
+                  <div
+                    className={cn(
+                      "h-16 lg:block hidden",
+                      (pathname.startsWith("/en/") ||
+                        pathname.startsWith("/fr/")) &&
+                        (pathname.includes("privacy-policy") ||
+                          pathname.includes("terms-condition") ||
+                          pathname.includes("about-us"))
+                        ? "whiteMenuBorder"
+                        : "blackMenuBorder"
+                    )}
+                  ></div>
                 </Link>
               );
             })}
@@ -200,7 +221,7 @@ const Header = () => {
             >
               {t("contact")}
             </Link>
-            <div className={cn("relative block sm:hidden mt-5")}>
+            <div className="relative block sm:hidden mt-5" ref={dropdownRef}>
               <div
                 className={cn(
                   "border rounded-xl px-4 w-fit h-10 flex gap-2 items-center justify-center text-sm bg-transparent font-medium font-Public_Sans cursor-pointer",
@@ -260,7 +281,7 @@ const Header = () => {
           </div>
         </div>
         <div className="flex items-center gap-5 absolute sm:right-14 right-7">
-          <div className="relative sm:block hidden">
+          <div className="relative sm:block hidden" ref={dropdownRef}>
             <div
               className={cn(
                 "border rounded-xl px-4 w-32 h-10 flex gap-2 items-center justify-center text-sm bg-transparent font-medium font-Public_Sans cursor-pointer",

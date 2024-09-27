@@ -113,7 +113,7 @@ const PersonalDetails: React.FC<PersonalDetailsProps> = ({ onClick }) => {
                 value={formik.values.fullName}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                className="h-12 px-6 font-Public_Sans bg-inputfieldbg  text-inputfieldtxt text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="h-12 px-6 font-Public_Sans bg-inputfieldbg  text-inputfieldtxt text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder={trans("Placeholderfullname")}
               />
               <p className="text-red-500 font-bold font-openSans text-sm mt-2">
@@ -132,7 +132,7 @@ const PersonalDetails: React.FC<PersonalDetailsProps> = ({ onClick }) => {
                 onChange={handlePhoneChange}
                 inputProps={{ name: "phoneNumber", required: true }}
                 containerClass="w-full !rounded-lg !bg-inputfieldbg !h-12 focus-visible:!outline-none"
-                inputClass="h-12 px-6 font-Public_Sans bg-inputfieldbg  text-inputfieldtxt text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 focus-visible:!border-0"
+                inputClass="h-12 px-6 font-Public_Sans bg-inputfieldbg  text-inputfieldtxt text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 focus-visible:!border-0"
               />
               {formik.touched.phoneNumber && formik.errors.phoneNumber && (
                 <div className="text-red-500 font-bold font-openSans text-sm ml-2">
@@ -156,7 +156,7 @@ const PersonalDetails: React.FC<PersonalDetailsProps> = ({ onClick }) => {
                 value={formik.values.email}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                className="h-12 px-6 font-Public_Sans bg-inputfieldbg  text-inputfieldtxt text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="h-12 px-6 font-Public_Sans bg-inputfieldbg  text-inputfieldtxt text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder={trans("PlaceholderfullEmail")}
               />
               <p className="text-red-500 font-bold font-openSans text-sm mt-2">
